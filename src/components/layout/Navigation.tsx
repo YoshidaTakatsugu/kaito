@@ -9,14 +9,14 @@ export function Navigation() {
         aria-label="グローバルナビゲーション"
         className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8"
       >
-        <Link href="/#hero" className="group inline-flex items-center gap-3">
-          <span className="grid h-11 w-28 place-items-center rounded-sm border border-white/15 bg-white/95 px-2 shadow-[0_14px_40px_rgba(0,0,0,0.22)]">
+        <Link href="/#hero" className="group inline-flex items-center gap-2.5">
+          <span className="grid h-9 w-24 shrink-0 place-items-center overflow-hidden rounded-sm border border-white/15 bg-white/95 px-2 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
             <Image
               src="/images/Logo1.png"
               alt="NARERU 結果に相応しい自分になれるスポーツメンタルコーチングのロゴ"
               width={120}
               height={63}
-              className="h-auto w-full"
+              className="max-h-7 w-full object-contain"
             />
           </span>
           <span className="flex flex-col leading-none">
