@@ -1,0 +1,270 @@
+export const site = {
+  name: "NARERU",
+  url: "https://nareru.jp",
+  description:
+    "NARERUは、技術と身体を磨いてきたトップアスリートが、本番で本来の力を出し切るためのスポーツメンタルコーチングです。",
+  concept:
+    "結果に相応しい自分になれる。若い力で、スポーツ界の常識を超えていく。",
+} as const;
+
+export const coach = {
+  name: "押田海斗",
+  role: "スポーツメンタルコーチ",
+  story:
+    "1番を一番逃した経験を起点に、勝負の場で実力を発揮できない理由を心技体の因果関係から解きほぐす。",
+} as const;
+
+export const navigationItems = [
+  { label: "課題", href: "/#problem" },
+  { label: "ロジック", href: "/#logic" },
+  { label: "心技体", href: "/#cycle" },
+  { label: "コラム", href: "/columns/" },
+  { label: "プロフィール", href: "/profile/" },
+  { label: "体験", href: "/#coaching" },
+] as const;
+
+export const coachAchievements = [
+  {
+    stage: "国体",
+    event: "国体 個人",
+    result: "4位",
+  },
+  {
+    stage: "高校",
+    event: "インターハイ 個人",
+    result: "ベスト16",
+  },
+  {
+    stage: "大学",
+    event: "全日本学生 団体",
+    result: "ベスト8",
+  },
+  {
+    stage: "関東",
+    event: "関東選手権",
+    result: "2位",
+  },
+] as const;
+
+export const homePageSections = [
+  {
+    "@type": "WebPageElement",
+    "@id": `${site.url}/#logic`,
+    name: "なぜ、あなたは本番で力を発揮できないのか？",
+    description:
+      "本番で力を出せない最大の理由は、過去の経験から作られた思い込みが無意識のブレーキになっているからです。",
+  },
+  {
+    "@type": "WebPageElement",
+    "@id": `${site.url}/#cycle`,
+    name: "心技体の正負サイクル",
+    description:
+      "心・技・体が重なると中央に強い核が生まれ、ワクワク、集中、実力発揮、結果の正のサイクルが回り始めます。",
+  },
+  {
+    "@type": "WebPageElement",
+    "@id": `${site.url}/#story`,
+    name: "押田海斗のストーリーと強み",
+    description:
+      "国体個人4位、関東選手権2位など、あと一歩で頂点を逃し続けた経験をもとに、勝ちきれない選手の最後の壁に伴走します。",
+  },
+  {
+    "@type": "WebPageElement",
+    "@id": `${site.url}/#coaching`,
+    name: "NARERUのサービス紹介・価格",
+    description:
+      "体験コーチングは11,000円、50分、対面・オンライン対応。心技体を統合させる専門的な介入です。",
+  },
+  {
+    "@type": "WebPageElement",
+    "@id": `${site.url}/#flow`,
+    name: "申し込み導線",
+    description:
+      "無料メールセミナー、体験コーチング、継続セッションの3ステップで変化を確認しながら進みます。",
+  },
+] as const;
+
+export const services = [
+  {
+    name: "体験コーチング",
+    price: "11,000円",
+    description:
+      "試合で実力を出し切れない原因を、思い込み・行動・結果の因果関係から整理する50分の初回セッション。",
+    duration: "50分",
+    delivery: "対面・オンライン",
+  },
+  {
+    name: "継続プログラム",
+    price: "個別設計",
+    description:
+      "競技特性、目標、大会日程に合わせて、心技体の正のサイクルを定着させる伴走プログラム。",
+  },
+] as const;
+
+export const servicePrograms = [
+  {
+    level: "BASIC",
+    name: "アスリートプログラム",
+    description:
+      "試合で実力を出し切るための思考整理と行動改善を、競技生活に合わせて整える基本プログラム。",
+    recommendedFor: "本番の緊張や自信の揺らぎを整えたい選手へ",
+  },
+  {
+    level: "ADVANCED",
+    name: "トップアスリートプログラム",
+    description:
+      "代表・全国上位レベルの選手が、勝負所で力を発揮するための心技体の再設計。",
+    recommendedFor: "日本一、代表選考、全国上位を狙う選手へ",
+  },
+  {
+    level: "PRO",
+    name: "プロフェッショナルプログラム",
+    description:
+      "競技結果だけでなく、プロとしての振る舞い、自己理解、長期的な競技人生まで扱う伴走型支援。",
+    recommendedFor: "競技を仕事として高め続けたい選手へ",
+  },
+  {
+    level: "CUSTOM",
+    name: "オーダーメイド",
+    description:
+      "大会日程、競技特性、チーム状況、個人課題に合わせ、必要な支援内容を個別に設計。",
+    recommendedFor: "既存プログラムに収まらない課題を持つ選手へ",
+  },
+] as const;
+
+export const conversionSteps = [
+  {
+    title: "無料メールセミナー登録",
+    description:
+      "「あなたはメンタルが弱くない」動画セミナーで、本番で力を出せない理由を先に理解します。公式LINEまたはリザーブストックから登録できます。",
+    cta: "無料セミナーを見る",
+    href: "#flow",
+  },
+  {
+    title: "体験コーチング予約",
+    description:
+      "11,000円の体験コーチングで、あなたの思い込み、行動、結果の因果関係を整理し、変化の入口を体感します。",
+    cta: "体験コーチングへ",
+    href: "#coaching",
+  },
+  {
+    title: "継続セッション",
+    description:
+      "理想の結果に相応しい自分へ向けて、心技体の正のサイクルが競技現場で回るまで伴走します。",
+    cta: "継続の流れを相談",
+    href: "#faq",
+  },
+] as const;
+
+export const faqs = [
+  {
+    question: "NARERUはどんなアスリート向けですか？",
+    answer:
+      "技術や練習量はあるのに、本番の緊張やプレッシャーで力を出し切れないトップアスリート向けです。",
+  },
+  {
+    question: "メンタルコーチングでは何を扱いますか？",
+    answer:
+      "試合前後の思考、感情、思い込み、行動パターンを整理し、結果につながる心の土台を整えます。",
+  },
+] as const;
+
+export const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${site.url}/#webpage`,
+      url: site.url,
+      name: `${site.name} | スポーツメンタルコーチング`,
+      inLanguage: "ja",
+      description: site.description,
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: `${site.url}/images/oshida-hero.jpg`,
+        caption:
+          "NARERUのスポーツメンタルコーチ押田海斗が、トップアスリートの本番発揮を支える姿を示すメインビジュアル。",
+      },
+      about: [
+        "スポーツメンタルコーチング",
+        "トップアスリートの本番発揮",
+        "思い込みのブレーキ",
+        "心技体の正負サイクル",
+      ],
+      hasPart: homePageSections,
+    },
+    {
+      "@type": "Person",
+      "@id": `${site.url}/profile/#person`,
+      name: coach.name,
+      jobTitle: coach.role,
+      description: coach.story,
+      url: `${site.url}/profile/`,
+      image: `${site.url}/images/S__3153971_0.jpg`,
+      worksFor: {
+        "@type": "Organization",
+        name: site.name,
+        url: site.url,
+      },
+      knowsAbout: [
+        "スポーツメンタルコーチング",
+        "トップアスリートの本番発揮",
+        "心技体",
+        "競技プレッシャー",
+      ],
+      award: coachAchievements.map(
+        (achievement) =>
+          `${achievement.event} ${achievement.result}（${achievement.stage}）`,
+      ),
+    },
+    {
+      "@type": "Service",
+      "@id": `${site.url}/#service`,
+      name: `${site.name} スポーツメンタルコーチング`,
+      serviceType: "Sports mental coaching",
+      provider: {
+        "@id": `${site.url}/profile/#person`,
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Japan",
+      },
+      audience: {
+        "@type": "Audience",
+        audienceType: "トップアスリート",
+      },
+      image: `${site.url}/images/oshida-hero.jpg`,
+      description: site.description,
+      offers: {
+        "@type": "Offer",
+        "@id": `${site.url}/#trial-offer`,
+        name: `${services[0].name} ${services[0].duration}`,
+        price: "11000",
+        priceCurrency: "JPY",
+        availability: "https://schema.org/InStock",
+        description: `${services[0].description} ${services[0].delivery}に対応。`,
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "NARERU コーチングプログラム",
+        itemListElement: servicePrograms.map((program) => ({
+          "@type": "Offer",
+          name: program.name,
+          description: program.description,
+        })),
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${site.url}/#faq`,
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ],
+} as const;
