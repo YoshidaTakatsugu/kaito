@@ -61,37 +61,40 @@ export default async function ColumnDetailPage({ params }: ColumnPageProps) {
       ];
 
   return (
-    <article className="bg-white px-5 py-24 text-[#001f3f] sm:px-8">
+    <article className="bg-[#041225] px-5 py-24 text-white sm:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
       <div className="mx-auto grid w-full max-w-5xl gap-12">
         <header>
-          <p className="text-xs font-semibold tracking-[0.28em] text-[#0b5f8f]">
+          <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
             {article.category}
           </p>
           <h1 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
             {article.title}
           </h1>
-          <p className="mt-8 font-serif text-2xl leading-[1.85] text-[#001f3f] sm:text-3xl">
+          <p className="mt-8 font-serif text-2xl leading-[1.85] text-cyan-50 sm:text-3xl">
             {article.answerFirst}
           </p>
         </header>
 
-        <div className="grid gap-7 text-lg leading-9 text-slate-700">
+        <div className="grid gap-7 text-lg leading-9 text-slate-300">
           {article.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
 
-        <section className="border-t border-[#001f3f]/15 pt-10">
+        <section className="border-t border-cyan-100/15 pt-10">
           <h2 className="text-2xl font-semibold">この記事のFAQ</h2>
           <dl className="mt-6 grid gap-5">
             {displayFaqs.map((faq) => (
-              <div key={faq.question} className="border-t border-[#001f3f]/10 pt-5">
-                <dt className="font-semibold text-[#001f3f]">{faq.question}</dt>
-                <dd className="mt-3 leading-8 text-slate-700">{faq.answer}</dd>
+              <div
+                key={faq.question}
+                className="border-t border-cyan-100/10 pt-5"
+              >
+                <dt className="font-semibold text-white">{faq.question}</dt>
+                <dd className="mt-3 leading-8 text-slate-300">{faq.answer}</dd>
               </div>
             ))}
           </dl>
@@ -99,7 +102,7 @@ export default async function ColumnDetailPage({ params }: ColumnPageProps) {
 
         <Link
           href="/columns/"
-          className="inline-flex w-fit min-h-11 items-center justify-center rounded-full border border-[#001f3f]/20 px-5 text-sm font-semibold tracking-[0.16em] text-[#001f3f] transition-colors duration-200 hover:bg-[#001f3f] hover:text-white"
+          className="inline-flex min-h-11 w-fit items-center justify-center rounded-full border border-cyan-100/30 px-5 text-sm font-semibold tracking-[0.16em] text-cyan-50 transition-colors duration-200 hover:border-cyan-100/70 hover:bg-white/10"
         >
           コラム一覧へ
         </Link>

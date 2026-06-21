@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { navigationItems, site } from "@/lib/brand";
 
 export function Navigation() {
@@ -9,8 +10,14 @@ export function Navigation() {
         className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8"
       >
         <Link href="/#hero" className="group inline-flex items-center gap-3">
-          <span className="grid size-9 place-items-center rounded-full border border-cyan-200/30 bg-white/[0.08] text-[0.62rem] font-semibold tracking-[0.28em] text-cyan-100">
-            NR
+          <span className="grid h-11 w-28 place-items-center rounded-sm border border-white/15 bg-white/95 px-2 shadow-[0_14px_40px_rgba(0,0,0,0.22)]">
+            <Image
+              src="/images/Logo1.png"
+              alt="NARERU 結果に相応しい自分になれるスポーツメンタルコーチングのロゴ"
+              width={120}
+              height={63}
+              className="h-auto w-full"
+            />
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-sm font-semibold tracking-[0.34em] text-white">

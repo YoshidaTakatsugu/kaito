@@ -200,7 +200,7 @@ export const structuredData = {
       jobTitle: coach.role,
       description: coach.story,
       url: `${site.url}/profile/`,
-      image: `${site.url}/images/S__3153971_0.jpg`,
+      image: `${site.url}/images/S__3153967_0.jpg`,
       worksFor: {
         "@type": "Organization",
         name: site.name,

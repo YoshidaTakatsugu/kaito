@@ -5,7 +5,7 @@ const programVisuals = [
     number: "01",
     outcome: "本番の緊張を整える",
     promise: "まず、力を出せない理由を言語化する。",
-    card: "border-[#001f3f] bg-[#001f3f] text-white shadow-[0_28px_80px_rgba(0,31,63,0.22)]",
+    card: "border-cyan-100/25 bg-[#08203f] text-white shadow-[0_28px_80px_rgba(0,0,0,0.24)]",
     bar: "bg-cyan-100",
     label: "text-cyan-100",
     heading: "text-white",
@@ -18,40 +18,40 @@ const programVisuals = [
     number: "02",
     outcome: "勝負所で出し切る",
     promise: "代表・全国上位のプレッシャーに合わせて再設計する。",
-    card: "border-[#0b5f8f]/30 bg-white text-[#001f3f] shadow-[0_22px_60px_rgba(0,31,63,0.08)]",
+    card: "border-cyan-100/15 bg-white/[0.055] text-white shadow-[0_22px_60px_rgba(0,0,0,0.16)]",
     bar: "bg-[#0b5f8f]",
-    label: "text-[#0b5f8f]",
-    heading: "text-[#001f3f]",
-    body: "text-slate-700",
-    footer: "border-[#001f3f]/10 text-[#0b5f8f]",
-    numberTone: "text-[#001f3f]/10",
-    badge: "border-[#0b5f8f]/20 bg-[#0b5f8f]/10 text-[#0b5f8f]",
+    label: "text-cyan-100",
+    heading: "text-white",
+    body: "text-slate-300",
+    footer: "border-cyan-100/15 text-slate-200",
+    numberTone: "text-white/10",
+    badge: "border-cyan-100/20 bg-white/10 text-cyan-50",
   },
   {
     number: "03",
     outcome: "競技人生を設計する",
     promise: "結果だけでなく、プロとしての在り方まで扱う。",
-    card: "border-[#001f3f]/20 bg-white text-[#001f3f]",
-    bar: "bg-[#001f3f]",
-    label: "text-[#0b5f8f]",
-    heading: "text-[#001f3f]",
-    body: "text-slate-700",
-    footer: "border-[#001f3f]/10 text-slate-600",
-    numberTone: "text-[#001f3f]/10",
-    badge: "border-[#001f3f]/15 bg-slate-50 text-[#001f3f]",
+    card: "border-cyan-100/15 bg-white/[0.045] text-white",
+    bar: "bg-cyan-100/70",
+    label: "text-cyan-100",
+    heading: "text-white",
+    body: "text-slate-300",
+    footer: "border-cyan-100/15 text-slate-300",
+    numberTone: "text-white/10",
+    badge: "border-cyan-100/15 bg-white/[0.08] text-cyan-50",
   },
   {
     number: "04",
     outcome: "課題から逆算する",
     promise: "競技特性、大会日程、個人課題に合わせて組む。",
-    card: "border-[#001f3f]/20 bg-white text-[#001f3f]",
-    bar: "bg-[#00a86b]",
-    label: "text-[#0b5f8f]",
-    heading: "text-[#001f3f]",
-    body: "text-slate-700",
-    footer: "border-[#001f3f]/10 text-slate-600",
-    numberTone: "text-[#00a86b]/15",
-    badge: "border-[#00a86b]/25 bg-[#00a86b]/10 text-[#006b44]",
+    card: "border-cyan-100/15 bg-white/[0.045] text-white",
+    bar: "bg-[#2f6fa8]",
+    label: "text-cyan-100",
+    heading: "text-white",
+    body: "text-slate-300",
+    footer: "border-cyan-100/15 text-slate-300",
+    numberTone: "text-white/10",
+    badge: "border-cyan-100/15 bg-white/[0.08] text-cyan-50",
   },
 ] as const;
 
@@ -59,12 +59,12 @@ export function ServicesSection() {
   return (
     <section
       id="coaching"
-      className="bg-slate-50 px-5 py-24 text-[#001f3f] sm:px-8"
+      className="bg-[#061a33] px-5 py-24 text-white sm:px-8"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr]">
           <div>
-            <p className="text-xs font-semibold tracking-[0.28em] text-[#0b5f8f]">
+            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
               SERVICE
             </p>
             <h2 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.01em] sm:text-5xl">
@@ -72,17 +72,17 @@ export function ServicesSection() {
             </h2>
           </div>
           <div>
-            <p className="font-serif text-2xl leading-[1.85] text-[#001f3f] sm:text-3xl">
+            <p className="font-serif text-2xl leading-[1.85] text-cyan-50 sm:text-3xl">
               NARERUのコーチングは、単なる励ましではなく、脳科学と心理学に基づき「心技体」を統合させる専門的な介入です。
             </p>
-            <div className="mt-8 border-y border-[#001f3f]/15 py-6">
-              <p className="text-xs font-semibold tracking-[0.24em] text-[#0b5f8f]">
+            <div className="mt-8 border-y border-cyan-100/15 py-6">
+              <p className="text-xs font-semibold tracking-[0.24em] text-cyan-100">
                 TRIAL COACHING
               </p>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <h3 className="text-2xl font-semibold">{services[0].name}</h3>
-                  <p className="mt-3 text-slate-600">
+                  <p className="mt-3 text-slate-300">
                     50分 / 対面・オンライン
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export function ServicesSection() {
                   {services[0].price}
                 </p>
               </div>
-              <p className="mt-5 max-w-3xl leading-8 text-slate-700">
+              <p className="mt-5 max-w-3xl leading-8 text-slate-300">
                 {services[0].description}
               </p>
             </div>
