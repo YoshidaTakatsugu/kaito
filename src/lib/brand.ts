@@ -84,6 +84,13 @@ export const homePageSections = [
   },
   {
     "@type": "WebPageElement",
+    "@id": `${site.url}/#media`,
+    name: "活動実績・トピックス",
+    description:
+      "日本スポーツメンタルコーチ協会による特別インタビュー動画と、押田海斗のルーツに迫るWeb記事を第三者評価として掲載します。",
+  },
+  {
+    "@type": "WebPageElement",
     "@id": `${site.url}/#coaching`,
     name: "NARERUのサービス紹介・価格",
     description:
