@@ -1,13 +1,6 @@
 import Image from "next/image";
 
-import { coach, services } from "@/lib/brand";
 import { HeroCopyMotion } from "./HeroCopyMotion";
-
-const signals = [
-  "練習ではできるのに、本番だけ感覚が変わる",
-  "勝ちたいほど身体が硬くなり、判断が遅れる",
-  "大事な場面で、自分への疑いが先に立つ",
-] as const;
 
 const heroImageAlt =
   "本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート";
@@ -48,59 +41,16 @@ export function HeroSection() {
               href="#coaching"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-cyan-100 px-6 text-sm font-semibold tracking-[0.16em] text-[#031226] transition-colors duration-200 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
             >
-              体験コーチングへ
+              体験コーチングに申し込む
             </a>
             <a
-              href="#logic"
+              href="#flow"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 bg-white/[0.03] px-6 text-sm font-semibold tracking-[0.16em] text-white transition-colors duration-200 hover:border-white/55 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
             >
-              本番で力を出せない理由
+              無料動画を受け取る
             </a>
           </div>
-
-          <div
-            id="problem"
-            className="mx-auto mt-9 grid max-w-2xl gap-2 border-y border-cyan-100/15 py-5 text-left lg:mx-0"
-          >
-            {signals.map((signal) => (
-              <p
-                key={signal}
-                className="border-l border-cyan-100/45 bg-white/[0.04] px-4 py-3 text-sm leading-7 text-slate-200"
-              >
-                {signal}
-              </p>
-            ))}
-          </div>
         </div>
-
-        <aside
-          id="philosophy"
-          aria-label="NARERUの思想"
-          className="mt-10 border-t border-white/15 pt-6 lg:col-span-2 lg:mt-0 lg:grid lg:grid-cols-[1fr_0.62fr] lg:gap-8 lg:border-y lg:py-7"
-        >
-          <div>
-            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-              ANSWER FIRST
-            </p>
-            <p className="mt-4 max-w-3xl text-lg font-semibold leading-9 text-slate-200">
-              結果を変える入口は、メンタルを根性論で強くすることではありません。思い込みが行動を狭め、行動が結果を固定する。その因果関係をほどき、心技体を正のサイクルへ戻します。
-            </p>
-          </div>
-          <div className="mt-6 rounded-sm border border-cyan-100/20 bg-cyan-100/[0.08] p-5 lg:mt-0">
-            <p className="text-xs font-semibold tracking-[0.24em] text-cyan-100">
-              FIRST SESSION
-            </p>
-            <p className="mt-3 text-3xl font-semibold text-white">
-              {services[0].price}
-            </p>
-            <p className="mt-3 text-sm leading-7 text-slate-300">
-              {services[0].description}
-            </p>
-            <p className="mt-5 text-sm leading-7 text-slate-400">
-              Coach: {coach.name} / {coach.role}
-            </p>
-          </div>
-        </aside>
       </div>
     </section>
   );
