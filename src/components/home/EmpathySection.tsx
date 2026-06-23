@@ -2,10 +2,12 @@ import Image from "next/image";
 import { SectionReveal } from "./SectionReveal";
 
 const worries = [
-  "練習ではできるのに、試合本番になると体が動かない",
-  "大事な場面ほど、勝ちたい気持ちが力みや迷いに変わる",
-  "周囲の期待やライバルとの比較で、競技を楽しめなくなっている",
-  "「メンタルが弱い」という言葉に、密かに傷ついている",
+  "練習ではできるのに試合になるとできない",
+  "プレッシャーを感じて試合が怖くなる",
+  "能力を発揮できず、思うような結果につながらない",
+  "大事な場面になるほど力が発揮できない",
+  "負けることばかり考えてしまう",
+  "楽しんで競技をすることができなくなっている",
 ] as const;
 
 export function EmpathySection() {
@@ -20,22 +22,22 @@ export function EmpathySection() {
             EMPATHY
           </p>
           <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
-            こんな想いを抱えていませんか？
+            こんな悩みを抱えていませんか？
           </h2>
           <p className="mt-8 text-lg leading-9 text-slate-300">
-            本番で力を出せないのは、能力が足りないからとは限りません。高めてきた能力を守ろうとするほど、心が無意識にブレーキをかけることがあります。
+            もし一つでも当てはまるなら、
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-start">
           <div className="grid gap-3">
-            {worries.map((worry, index) => (
+            {worries.map((worry) => (
               <article
                 key={worry}
                 className="grid gap-4 border border-cyan-100/15 bg-white/[0.045] p-5 sm:grid-cols-[3.5rem_1fr] sm:items-center"
               >
                 <p className="font-serif text-4xl font-semibold text-cyan-100/50">
-                  0{index + 1}
+                  ☑
                 </p>
                 <p className="text-base font-semibold leading-8 text-slate-100">
                   {worry}
@@ -58,7 +60,8 @@ export function EmpathySection() {
         </div>
 
         <p className="border-l border-cyan-100/40 pl-5 font-serif text-2xl leading-[1.75] text-cyan-50 lg:col-span-2">
-          次のステージへ進む鍵は、心技体の「心」にあるのかもしれません。
+          次のステージへ進む鍵は、
+          <span className="block">心技体の「心」にあるのかもしれません。</span>
         </p>
       </SectionReveal>
     </section>
