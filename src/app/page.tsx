@@ -7,6 +7,7 @@ import { LogicSection } from "@/components/home/LogicSection";
 import { ConceptSection } from "@/components/home/ConceptSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { UspSection } from "@/components/home/UspSection";
+import { VoiceSection } from "@/components/home/VoiceSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ConceptSection />
       <CoachStorySection />
       <UspSection />
+      <VoiceSection />
       <ServicesSection />
       <ConversionFlowSection />
     </>

@@ -77,6 +77,13 @@ export const homePageSections = [
   },
   {
     "@type": "WebPageElement",
+    "@id": `${site.url}/#voice`,
+    name: "お客様の声・実績",
+    description:
+      "日本代表経験のある空手選手、高校生テニス選手、プロ格闘家の変化をAnswer-First形式で紹介するダミー事例セクションです。",
+  },
+  {
+    "@type": "WebPageElement",
     "@id": `${site.url}/#coaching`,
     name: "NARERUのサービス紹介・価格",
     description:
