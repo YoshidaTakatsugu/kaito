@@ -27,6 +27,10 @@ export function EmpathySection() {
           <p className="mt-8 text-lg leading-9 text-slate-300">
             もし一つでも当てはまるなら、
           </p>
+          <p className="mt-5 border-l border-cyan-100/40 pl-5 font-serif text-2xl leading-[1.75] text-cyan-50">
+            次のステージへ進む鍵は、
+            <span className="block">心技体の「心」にあるのかもしれません。</span>
+          </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-start">
@@ -59,9 +63,9 @@ export function EmpathySection() {
           </figure>
         </div>
 
-        <p className="border-l border-cyan-100/40 pl-5 font-serif text-2xl leading-[1.75] text-cyan-50 lg:col-span-2">
-          次のステージへ進む鍵は、
-          <span className="block">心技体の「心」にあるのかもしれません。</span>
+        <p className="border-l border-cyan-100/40 pl-5 text-lg font-semibold leading-9 text-slate-200 lg:col-span-2">
+          ここから、なぜ本番で力を発揮できなくなるのかを
+          <span className="block">「思い込み」と「心技体」の関係から整理していきます。</span>
         </p>
       </SectionReveal>
     </section>
