@@ -1,36 +1,28 @@
+import { BrakeShiftDiagram } from "./BrakeShiftDiagram";
 import { SectionReveal } from "./SectionReveal";
 
-const logicPoints = [
+const loopSteps = [
   {
-    label: "過去の経験",
-    text: "負けた試合、届かなかった一歩、周囲の評価が、無意識の基準を作ります。",
+    label: "セルフイメージ",
+    text: "自分は大事な場面でミスをする",
   },
   {
-    label: "思い込み",
-    text: "「大事な場面では失敗する」という解釈が、勝負の前から行動を狭めます。",
+    label: "信念・価値観",
+    text: "ミスをしてはいけない",
   },
   {
-    label: "ブレーキ",
-    text: "身体は動けるのに、判断・呼吸・踏み込みが小さくなり、本来の力が出ません。",
-  },
-] as const;
-
-const shingitaiParts = [
-  {
-    label: "心",
-    text: "思い込みをゆるめ、試合で使える集中と自己信頼を作る。",
+    label: "行動",
+    text: "ミスを避けようとする",
   },
   {
-    label: "技",
-    text: "積み上げた技術を、本番でも再現できる状態に整える。",
+    label: "プレー",
+    text: "大胆な選択ができない",
   },
   {
-    label: "体",
-    text: "動ける身体を、勝負どころで迷わず使い切れるようにする。",
+    label: "結果",
+    text: "本来の力を出し切れない",
   },
 ] as const;
-
-const shiftSteps = ["思い込みをゆるめる", "行動が変わる", "結果につながる"] as const;
 
 export function LogicSection() {
   return (
@@ -38,116 +30,75 @@ export function LogicSection() {
       id="logic"
       className="bg-[#041225] px-5 py-24 text-white sm:px-8"
     >
-      <SectionReveal className="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-            LOGIC
-          </p>
-          <h2 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.01em] sm:text-5xl">
-            なぜ、あなたは本番で力を発揮できないのか？
-          </h2>
-        </div>
-
-        <div className="space-y-10">
-          <p className="font-serif text-2xl leading-[1.85] text-cyan-50 sm:text-3xl">
-            本番で力を出せない最大の理由は、過去の経験から作られた
-            「思い込み」が、無意識のうちにブレーキになっているからです。
-          </p>
-          <p className="max-w-3xl text-lg leading-9 text-slate-300">
-            NARERUは、この思い込みを緩めることで、あなたが本来持つ力を自然に発揮できる状態へ導きます。
-            問題は性格の弱さではなく、心が行動と結果に与えている因果関係です。
-          </p>
-
-          <div className="grid gap-4 md:grid-cols-3">
-            {logicPoints.map((point, index) => (
-              <article
-                key={point.label}
-                className="border-t border-cyan-100/20 bg-white/[0.035] px-5 py-6"
-              >
-                <p className="text-sm font-semibold tracking-[0.2em] text-cyan-100">
-                  0{index + 1}
-                </p>
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  {point.label}
-                </h3>
-                <p className="mt-4 leading-8 text-slate-300">{point.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </SectionReveal>
-
-      <SectionReveal className="mx-auto mt-14 grid w-full max-w-7xl gap-10 border border-cyan-100/15 bg-white/[0.045] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.2)] sm:p-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
-        <div id="cycle" className="scroll-mt-24">
-          <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-            SHINGITAI MODEL
-          </p>
-          <h3 className="mt-5 font-serif text-3xl leading-tight text-white sm:text-5xl">
-            最後は心のピースを一緒に埋めよう。
-          </h3>
-          <p className="mt-6 text-lg leading-9 text-slate-300">
-            心・技・体がつながると、練習で高めてきた能力は「本番で使える力」に変わります。
-            NARERUは、欠けていた心の土台を整え、負のサイクルを正のサイクルへ切り替えます。
-          </p>
-
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            {shiftSteps.map((step, index) => (
-              <div
-                key={step}
-                className="border-l border-cyan-100/35 bg-[#061a33] px-4 py-4"
-              >
-                <p className="text-xs font-semibold tracking-[0.18em] text-cyan-100">
-                  STEP {index + 1}
-                </p>
-                <p className="mt-2 font-semibold text-white">{step}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <div
-            className="relative mx-auto aspect-square w-full max-w-[22rem]"
-            aria-label="NARERUが提唱する心技体の統合モデル図"
-          >
-            <div className="absolute left-[8%] top-[16%] grid h-[46%] w-[46%] place-items-center rounded-full border border-cyan-100/35 bg-cyan-100/10 text-center shadow-[0_0_70px_rgba(178,245,255,0.08)]">
-              <span className="font-serif text-3xl font-semibold text-cyan-50">
-                心
-              </span>
-            </div>
-            <div className="absolute right-[8%] top-[16%] grid h-[46%] w-[46%] place-items-center rounded-full border border-blue-300/35 bg-blue-300/10 text-center shadow-[0_0_70px_rgba(93,173,226,0.08)]">
-              <span className="font-serif text-3xl font-semibold text-blue-50">
-                技
-              </span>
-            </div>
-            <div className="absolute bottom-[8%] left-1/2 grid h-[46%] w-[46%] -translate-x-1/2 place-items-center rounded-full border border-slate-100/35 bg-slate-100/10 text-center shadow-[0_0_70px_rgba(255,255,255,0.07)]">
-              <span className="font-serif text-3xl font-semibold text-slate-50">
-                体
-              </span>
-            </div>
-            <div className="absolute left-1/2 top-1/2 grid h-[36%] w-[36%] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#4ade80] p-4 text-center text-[#041225] shadow-[0_0_80px_rgba(74,222,128,0.35)]">
-              <span className="text-sm font-bold leading-6 sm:text-base">
-                実力
-                <br />
-                発揮
-              </span>
-            </div>
+      <div className="mx-auto w-full max-w-7xl">
+        <SectionReveal className="grid gap-12 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
+              LOGIC
+            </p>
+            <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
+              結果にふさわしいメンタルを、先に手に入れる。
+            </h2>
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            {shingitaiParts.map((part) => (
-              <article key={part.label} className="bg-[#061a33] px-4 py-5">
-                <h4 className="font-serif text-2xl font-semibold text-cyan-50">
-                  {part.label}
-                </h4>
-                <p className="mt-3 text-sm leading-7 text-slate-300">
-                  {part.text}
-                </p>
-              </article>
-            ))}
+          <div className="space-y-6">
+            <p className="font-serif text-2xl leading-[1.85] text-cyan-50 sm:text-3xl">
+              結果を変えるには、先に「結果にふさわしいメンタル」を手に入れる必要があります。
+            </p>
+            <p className="text-lg leading-9 text-slate-300">
+              技術や練習量というアクセルを踏んでも、過去の経験から作られた思い込みというブレーキが残っている限り、本番では力を出し切れません。押田海斗が手伝いたいのは、もっと頑張らせることだけではなく、あなたを止めているブレーキを一緒に外すことです。
+            </p>
           </div>
-        </div>
-      </SectionReveal>
+        </SectionReveal>
+
+        <SectionReveal className="mt-14">
+          <BrakeShiftDiagram />
+        </SectionReveal>
+
+        <SectionReveal className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div id="cycle" className="scroll-mt-24">
+            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
+              SELF IMAGE LOOP
+            </p>
+            <h3 className="mt-5 font-serif text-3xl leading-tight text-white sm:text-5xl">
+              今の思い込みが、今の結果を作っている。
+            </h3>
+            <p className="mt-6 text-lg leading-9 text-slate-300">
+              たとえば「無になってプレーできない」選手は、集中力がないのではなく、ミスを避けようとする思い込みに行動を支配されていることがあります。だから、結果だけを変えようとしても、根っこのセルフイメージが変わらない限り同じパターンに戻ってしまいます。
+            </p>
+          </div>
+
+          <div className="relative overflow-hidden border border-cyan-100/15 bg-white/[0.045] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.2)] sm:p-8">
+            <div className="absolute right-0 top-0 h-40 w-40 translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4ade80]/15 blur-3xl" />
+            <div className="relative grid gap-3">
+              {loopSteps.map((step, index) => (
+                <article
+                  key={step.label}
+                  className="grid gap-4 border border-cyan-100/12 bg-[#061a33]/85 p-4 sm:grid-cols-[7.5rem_1fr] sm:items-center"
+                >
+                  <div>
+                    <p className="text-xs font-semibold tracking-[0.18em] text-[#4ade80]">
+                      LAYER {index + 1}
+                    </p>
+                    <h4 className="mt-2 font-semibold text-cyan-50">
+                      {step.label}
+                    </h4>
+                  </div>
+                  <p className="text-base font-semibold leading-8 text-white">
+                    {step.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-6 border-l border-[#4ade80]/70 pl-5">
+              <p className="text-sm font-semibold leading-7 text-slate-200">
+                NARERUが止めたいのは、この負のループです。気合いで押し切るのではなく、セルフイメージから行動と結果を整え直します。
+              </p>
+            </div>
+          </div>
+        </SectionReveal>
+      </div>
     </section>
   );
 }
