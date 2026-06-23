@@ -12,7 +12,7 @@ export function Navigation() {
         <Link href="/#hero" className="group inline-flex items-center gap-2.5">
           <span className="grid h-9 w-24 shrink-0 place-items-center overflow-hidden rounded-sm border border-white/15 bg-white/95 px-2 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
             <Image
-              src="/images/Logo1.png"
+              src="/images/logo2.png"
               alt="NARERU 結果に相応しい自分になれるスポーツメンタルコーチングのロゴ"
               width={120}
               height={63}
