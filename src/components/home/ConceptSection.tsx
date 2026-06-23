@@ -27,7 +27,7 @@ export function ConceptSection() {
         <figure className="order-2 border border-cyan-100/15 bg-white/[0.045] p-3 shadow-[0_28px_90px_rgba(0,0,0,0.22)] lg:order-1">
           <div className="relative aspect-[4/3] overflow-hidden bg-[#001f3f] sm:aspect-[5/4]">
             <Image
-              src="/images/S__3153970_0.jpg"
+              src="/images/Top.jpg"
               alt="メンタルと行動と結果の因果関係を対話で整えるスポーツメンタルコーチ押田海斗の写真"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"

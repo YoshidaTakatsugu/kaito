@@ -30,9 +30,6 @@ export function HeroCopyMotion() {
         animate={animate}
         transition={transition}
       >
-        <p className="mb-5 text-balance text-sm font-semibold leading-7 tracking-[0.12em] text-cyan-100 sm:text-base">
-          あなたが悩んでいる理由は、本気で自分の能力を高めてきたから。
-        </p>
         <h1 className="mx-auto max-w-5xl text-balance font-serif text-[clamp(2.15rem,11vw,4.6rem)] font-semibold leading-[1.14] tracking-[-0.015em] text-white lg:mx-0 lg:text-[clamp(4rem,6.4vw,6.9rem)]">
           本番で力を発揮し、
           <span className="block font-sans text-[0.68em] font-semibold leading-[1.32] tracking-[0.01em] text-cyan-100 sm:text-[0.72em]">

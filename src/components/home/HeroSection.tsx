@@ -26,6 +26,9 @@ export function HeroSection() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,31,63,0.1)_0%,rgba(0,31,63,0.36)_48%,rgba(0,14,30,0.9)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,31,63,0.64)_0%,transparent_42%,rgba(0,31,63,0.18)_100%)] mix-blend-multiply" />
+          <p className="absolute left-5 right-5 top-5 max-w-[20rem] text-balance text-xs font-semibold leading-6 tracking-[0.08em] text-cyan-50/90 drop-shadow-[0_3px_18px_rgba(0,0,0,0.55)] sm:left-7 sm:right-7 sm:top-7 sm:text-sm lg:max-w-[24rem]">
+            あなたが悩んでいる理由は、本気で自分の能力を高めてきたから。
+          </p>
           <p className="absolute bottom-5 left-5 text-[0.62rem] font-semibold tracking-[0.32em] text-cyan-50/80 sm:left-7">
             KAITO OSHIDA
           </p>

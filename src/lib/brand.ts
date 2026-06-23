@@ -64,9 +64,16 @@ export const homePageSections = [
   {
     "@type": "WebPageElement",
     "@id": `${site.url}/#story`,
-    name: "押田海斗のストーリーと強み",
+    name: "押田海斗の想いとストーリー",
     description:
-      "国体個人4位、関東選手権2位など、あと一歩で頂点を逃し続けた経験をもとに、勝ちきれない選手の最後の壁に伴走します。",
+      "1番を一番逃した経験をもとに、勝ちきれない選手の痛みと可能性に伴走します。",
+  },
+  {
+    "@type": "WebPageElement",
+    "@id": `${site.url}/#usp`,
+    name: "NARERUが選ばれる理由",
+    description:
+      "20代の現役感覚、思い込みとセルフイメージへの着目、心技体を結果の因果関係で見る設計がNARERUの特徴です。",
   },
   {
     "@type": "WebPageElement",
