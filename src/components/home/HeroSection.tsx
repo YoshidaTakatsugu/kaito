@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative isolate min-h-[calc(92svh-4rem)] overflow-hidden bg-[#031226] text-white sm:min-h-[calc(100svh-4rem)]"
+      className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-[#031226] text-white"
     >
       <Image
         src="/images/Top.jpg"
@@ -30,11 +30,11 @@ export function HeroSection() {
         </span>
       </p>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(92svh-4rem)] w-full max-w-7xl items-center px-5 pb-10 pt-28 sm:min-h-[calc(100svh-4rem)] sm:px-8 sm:pb-12 sm:pt-28 lg:pb-20 lg:pt-20">
-        <div className="w-full max-w-[25rem] sm:max-w-[34rem] lg:max-w-[48rem]">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl items-end px-5 pb-8 pt-36 sm:px-8 sm:pb-12 sm:pt-36 lg:items-center lg:pb-20 lg:pt-20">
+        <div className="w-full max-w-[24rem] sm:max-w-[34rem] lg:max-w-[48rem]">
           <HeroCopyMotion />
 
-          <div className="mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex max-w-xl flex-col gap-3 sm:flex-row">
             <a
               href="#coaching"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-cyan-100 px-6 text-sm font-semibold tracking-[0.16em] text-[#031226] shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
