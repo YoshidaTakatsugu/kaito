@@ -15,8 +15,8 @@ function hasPublicImage(src: string) {
 
 export function getHeroImage(): SiteImage {
   const preferred = {
-    src: "/images/oshida-hero.jpg",
-    alt: "本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート",
+    src: "/images/Top.jpg",
+    alt: "本番で力を発揮し高めてきた能力を結果につなげるスポーツメンタルコーチ押田海斗のトップビジュアル",
   };
 
   if (hasPublicImage(preferred.src)) {
@@ -24,8 +24,8 @@ export function getHeroImage(): SiteImage {
   }
 
   return {
-    src: "/images/S__3153971_0.jpg",
-    alt: "本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート",
+    src: "/images/oshida-hero.jpg",
+    alt: "本番で力を発揮し高めてきた能力を結果につなげるスポーツメンタルコーチ押田海斗のポートレート",
   };
 }
 

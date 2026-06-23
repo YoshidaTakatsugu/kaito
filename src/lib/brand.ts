@@ -188,9 +188,9 @@ export const structuredData = {
       description: site.description,
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: `${site.url}/images/oshida-hero.jpg`,
+        url: `${site.url}/images/Top.jpg`,
         caption:
-          "NARERUのスポーツメンタルコーチ押田海斗が、トップアスリートの本番発揮を支える姿を示すメインビジュアル。",
+          "NARERUのスポーツメンタルコーチ押田海斗が、本番で力を発揮し高めてきた能力を結果につなげる姿を示すトップビジュアル。",
       },
       about: [
         "スポーツメンタルコーチング",
@@ -240,7 +240,7 @@ export const structuredData = {
         "@type": "Audience",
         audienceType: "トップアスリート",
       },
-      image: `${site.url}/images/oshida-hero.jpg`,
+      image: `${site.url}/images/Top.jpg`,
       description: site.description,
       offers: {
         "@type": "Offer",

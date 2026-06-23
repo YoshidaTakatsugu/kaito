@@ -30,14 +30,14 @@ export function HeroCopyMotion() {
         animate={animate}
         transition={transition}
       >
-        <h1 className="mx-auto max-w-5xl text-balance font-serif text-[clamp(2.15rem,11vw,4.6rem)] font-semibold leading-[1.14] tracking-[-0.015em] text-white lg:mx-0 lg:text-[clamp(4rem,6.4vw,6.9rem)]">
+        <h1 className="max-w-5xl text-balance font-serif text-[clamp(2.4rem,12vw,5rem)] font-semibold leading-[1.08] tracking-[-0.015em] text-white drop-shadow-[0_5px_26px_rgba(0,0,0,0.42)] lg:text-[clamp(4.3rem,6.6vw,7rem)]">
           本番で力を発揮し、
           <span className="block font-sans text-[0.68em] font-semibold leading-[1.32] tracking-[0.01em] text-cyan-100 sm:text-[0.72em]">
             高めてきた能力を
           </span>
           <span className="block">結果につなげる。</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-balance text-sm font-semibold leading-8 tracking-[0.08em] text-slate-200 sm:text-base lg:mx-0">
+        <p className="mt-6 max-w-2xl text-balance text-sm font-semibold leading-8 tracking-[0.08em] text-slate-100 drop-shadow-[0_3px_18px_rgba(0,0,0,0.36)] sm:text-base">
           結果に相応しいメンタルを育むスポーツメンタルコーチング
         </p>
       </m.div>
