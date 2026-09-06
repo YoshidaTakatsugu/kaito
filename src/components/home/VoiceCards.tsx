@@ -3,9 +3,9 @@
 import Image from "next/image";
 import {
   LazyMotion,
+  MotionConfig,
   domAnimation,
   m,
-  useReducedMotion,
   type Variants,
 } from "framer-motion";
 
@@ -35,11 +35,9 @@ const listVariants: Variants = {
 
 const cardVariants: Variants = {
   hidden: {
-    opacity: 0,
-    y: 34,
+    y: 24,
   },
   visible: {
-    opacity: 1,
     y: 0,
     transition: {
       duration: 0.58,
@@ -49,17 +47,16 @@ const cardVariants: Variants = {
 };
 
 export function VoiceCards({ cases }: VoiceCardsProps) {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        className="grid gap-5 lg:grid-cols-3"
-        initial={reduceMotion ? false : "hidden"}
-        whileInView={reduceMotion ? undefined : "visible"}
-        viewport={{ once: true, amount: 0.18 }}
-        variants={listVariants}
-      >
+    <MotionConfig reducedMotion="user">
+      <LazyMotion features={domAnimation}>
+        <m.div
+          className="grid gap-5 lg:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
+          variants={listVariants}
+        >
         {cases.map((voiceCase) => (
           <m.figure
             key={voiceCase.id}
@@ -103,7 +100,8 @@ export function VoiceCards({ cases }: VoiceCardsProps) {
             </figcaption>
           </m.figure>
         ))}
-      </m.div>
-    </LazyMotion>
+        </m.div>
+      </LazyMotion>
+    </MotionConfig>
   );
 }

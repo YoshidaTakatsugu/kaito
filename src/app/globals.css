@@ -5,12 +5,15 @@
   --foreground: #f8fbff;
   --font-site-sans: "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo",
     system-ui, sans-serif;
+  --font-site-serif: Arial, "Hiragino Mincho ProN", "Yu Mincho", "YuMincho",
+    serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-site-sans);
+  --font-serif: var(--font-site-serif);
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 

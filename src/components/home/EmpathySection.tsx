@@ -1,71 +1,53 @@
 import Image from "next/image";
-import { SectionReveal } from "./SectionReveal";
 
-const worries = [
-  "練習ではできるのに試合になるとできない",
-  "プレッシャーを感じて試合が怖くなる",
-  "能力を発揮できず、思うような結果につながらない",
-  "大事な場面になるほど力が発揮できない",
-  "負けることばかり考えてしまう",
-  "楽しんで競技をすることができなくなっている",
-] as const;
+import { empathyContent } from "@/lib/brand";
+import { SectionReveal } from "./SectionReveal";
 
 export function EmpathySection() {
   return (
-    <section
-      id="problem"
-      className="bg-[#041225] px-5 py-24 text-white sm:px-8"
-    >
-      <SectionReveal className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-            EMPATHY
+    <section id="problem" className="bg-[#041225] px-5 py-24 text-white sm:px-8">
+      <SectionReveal className="mx-auto w-full max-w-7xl">
+        <header className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">EMPATHY</p>
+            <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
+              {empathyContent.title}
+            </h2>
+          </div>
+          <p className="font-serif text-2xl leading-[1.75] text-cyan-50 sm:text-3xl">
+            あなたの努力が足りないのではありません。
           </p>
-          <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
-            こんな悩みを抱えていませんか？
-          </h2>
-          <p className="mt-8 text-lg leading-9 text-slate-300">
-            もし一つでも当てはまるなら、
-          </p>
-          <p className="mt-5 border-l border-cyan-100/40 pl-5 font-serif text-2xl leading-[1.75] text-cyan-50">
-            次のステージへ進む鍵は、
-            <span className="block">心技体の「心」にあるのかもしれません。</span>
-          </p>
-        </div>
+        </header>
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-start">
+        <div className="mt-14 grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="grid gap-3">
-            {worries.map((worry) => (
+            {empathyContent.worries.map((worry) => (
               <article
                 key={worry}
-                className="grid gap-4 border border-cyan-100/15 bg-white/[0.045] p-5 sm:grid-cols-[3.5rem_1fr] sm:items-center"
+                className="grid grid-cols-[2.5rem_1fr] items-start gap-3 border border-cyan-100/15 bg-white/[0.045] p-5 sm:grid-cols-[3.25rem_1fr] sm:items-center"
               >
-                <p className="font-serif text-4xl font-semibold text-cyan-100/50">
-                  ☑
-                </p>
-                <p className="text-base font-semibold leading-8 text-slate-100">
-                  {worry}
-                </p>
+                <span aria-hidden="true" className="font-serif text-3xl text-cyan-100/70">☑</span>
+                <p className="font-semibold leading-8 text-slate-100">{worry}</p>
               </article>
             ))}
           </div>
 
           <figure className="border border-cyan-100/15 bg-white/[0.04] p-3">
-            <div className="relative aspect-[4/5] overflow-hidden bg-[#001f3f]">
+            <div className="relative min-h-[28rem] overflow-hidden bg-[#001f3f]">
               <Image
                 src="/images/S__3153966_0.jpg"
-                alt="競技で本番の力を出せず悩む選手に寄り添うNARERUスポーツメンタルコーチ押田海斗の写真"
+                alt="本番で実力を発揮できない悩みに寄り添うスポーツメンタルコーチ押田海斗"
                 fill
-                sizes="(max-width: 1024px) 100vw, 28vw"
+                sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover object-[58%_center]"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#041225]/70 via-transparent to-transparent" />
             </div>
           </figure>
         </div>
 
-        <p className="border-l border-cyan-100/40 pl-5 text-lg font-semibold leading-9 text-slate-200 lg:col-span-2">
-          ここから、なぜ本番で力を発揮できなくなるのかを
-          <span className="block">「思い込み」と「心技体」の関係から整理していきます。</span>
+        <p className="mt-10 border-l-2 border-[#d6ae64] bg-white/[0.04] px-5 py-6 font-serif text-xl leading-[1.9] text-cyan-50 sm:px-8 sm:text-2xl">
+          {empathyContent.closing}
         </p>
       </SectionReveal>
     </section>

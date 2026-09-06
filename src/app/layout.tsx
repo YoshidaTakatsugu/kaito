@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "ja_JP",
     type: "website",
+    images: [
+      {
+        url: "/images/Top.jpg",
+        width: 1045,
+        height: 697,
+        alt: "本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート",
+      },
+    ],
   },
 };
 
@@ -28,7 +36,7 @@ export default function RootLayout({
   const jsonLd = JSON.stringify(structuredData).replace(/</g, "\\u003c");
 
   return (
-    <html lang="ja" className="h-full">
+    <html lang="ja" className="h-full" data-scroll-behavior="smooth">
       <body className="min-h-full">
         <script
           type="application/ld+json"

@@ -3,9 +3,9 @@
 import Image from "next/image";
 import {
   LazyMotion,
+  MotionConfig,
   domAnimation,
   m,
-  useReducedMotion,
   type Variants,
 } from "framer-motion";
 
@@ -36,11 +36,9 @@ const listVariants: Variants = {
 
 const cardVariants: Variants = {
   hidden: {
-    opacity: 0,
-    y: 32,
+    y: 24,
   },
   visible: {
-    opacity: 1,
     y: 0,
     transition: {
       duration: 0.56,
@@ -58,17 +56,16 @@ function getThumbnailAlt(item: MediaActivityItem) {
 }
 
 export function MediaActivityCards({ items }: MediaActivityCardsProps) {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
-        initial={reduceMotion ? false : "hidden"}
-        whileInView={reduceMotion ? undefined : "visible"}
-        viewport={{ once: true, amount: 0.2 }}
-        variants={listVariants}
-      >
+    <MotionConfig reducedMotion="user">
+      <LazyMotion features={domAnimation}>
+        <m.div
+          className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
+          variants={listVariants}
+        >
         {items.map((item) => (
           <m.article
             key={item.id}
@@ -122,7 +119,8 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
             </a>
           </m.article>
         ))}
-      </m.div>
-    </LazyMotion>
+        </m.div>
+      </LazyMotion>
+    </MotionConfig>
   );
 }

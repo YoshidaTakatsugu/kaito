@@ -1,45 +1,34 @@
 "use client";
 
-import {
-  LazyMotion,
-  domAnimation,
-  m,
-  useReducedMotion,
-  type Transition,
-} from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
+
+import { heroContent } from "@/lib/brand";
 
 export function HeroCopyMotion() {
-  const reduceMotion = useReducedMotion();
-  const initial = reduceMotion ? false : { opacity: 0, y: 24 };
-  const animate = reduceMotion ? {} : { opacity: 1, y: 0 };
-  const transition: Transition = {
-    duration: reduceMotion ? 0 : 0.72,
-    ease: [0.22, 1, 0.36, 1],
-  };
-
   return (
     <LazyMotion features={domAnimation}>
-      <noscript>
-        <style>
-          {"[data-hero-copy]{opacity:1!important;transform:none!important}"}
-        </style>
-      </noscript>
-      <m.div
-        data-hero-copy
-        initial={initial}
-        animate={animate}
-        transition={transition}
-      >
-        <h1 className="max-w-4xl text-balance font-serif text-[clamp(1.75rem,8vw,3.15rem)] font-semibold leading-[1.18] tracking-[-0.01em] text-white drop-shadow-[0_5px_26px_rgba(0,0,0,0.42)] lg:text-[clamp(3.4rem,5.2vw,5.4rem)]">
-          <span className="block">本気で力を発揮し</span>
-          <span className="block pl-[1.1em] font-sans text-[0.82em] font-semibold leading-[1.36] tracking-[0.01em] text-cyan-100 sm:text-[0.86em]">
-            高めてきた能力を
-          </span>
-          <span className="block pl-[2.2em]">結果につなげる</span>
+      <m.div initial={false}>
+        <h1
+          aria-label={heroContent.title}
+          className="max-w-3xl font-serif text-[clamp(1.72rem,7vw,3.1rem)] font-semibold leading-[1.34] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.46)] lg:text-[clamp(2.5rem,3.4vw,3.6rem)]"
+        >
+          {heroContent.titleLines.map((line, index) => (
+            <m.span
+              key={line}
+              aria-hidden="true"
+              className={`block ${
+                index === 1 || index === 2 ? "text-[#d6ae64]" : "text-white"
+              } ${index === 1 ? "pl-[0.35em]" : ""} ${
+                index === 2 ? "pl-[0.85em]" : ""
+              } ${index === 3 ? "pl-[0.3em]" : ""}`}
+            >
+              {line}
+            </m.span>
+          ))}
         </h1>
-        <p className="mt-5 max-w-2xl text-balance text-xs font-semibold leading-7 tracking-[0.08em] text-slate-100 drop-shadow-[0_3px_18px_rgba(0,0,0,0.36)] sm:text-sm">
-          結果に相応しいメンタルを育むスポーツメンタルコーチング
-        </p>
+        <m.p className="mt-6 max-w-xl border-l border-[#d6ae64]/70 pl-4 text-sm font-semibold leading-7 tracking-[0.06em] text-slate-100 drop-shadow-[0_3px_16px_rgba(0,0,0,0.4)] sm:text-base">
+          {heroContent.subcopy}
+        </m.p>
       </m.div>
     </LazyMotion>
   );
