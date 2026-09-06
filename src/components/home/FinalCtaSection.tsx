@@ -12,7 +12,7 @@ export function FinalCtaSection() {
         alt="体験コーチングへの最初の一歩を後押しするスポーツメンタルコーチ押田海斗"
         fill
         sizes="100vw"
-        className="-z-20 object-cover object-[68%_center] opacity-35"
+        className="-z-20 object-cover object-right opacity-35 sm:object-[68%_center]"
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,18,38,0.98),rgba(3,18,38,0.72),rgba(3,18,38,0.45))]" />
       <SectionReveal className="mx-auto w-full max-w-7xl">

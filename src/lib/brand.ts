@@ -290,14 +290,6 @@ export const voiceCases = [
   },
 ] as const;
 
-export const servicePrograms = [
-  "体験コーチング",
-  "アスリートプログラム",
-  "トップアスリートプログラム",
-  "プロフェッショナルプログラム",
-  "オーダーメイド",
-] as const;
-
 export const trialContent = {
   title:
     "『自分は、まだまだこんなもんじゃない。』なりたい自分へ変わっていく、最初の一歩を。",
@@ -391,7 +383,7 @@ export const homePageSections = [
     uspStrengths[0].detail,
   ],
   ["#voice", "お客様の声・実績", featuredAthleteVoice.title],
-  ["#services", "サービス紹介", servicePrograms.join("、")],
+  ["#services", "サービス紹介", "体験コーチング"],
   ["#trial", trialContent.title, trialContent.overview],
 ] as const;
 
@@ -452,19 +444,11 @@ export const structuredData = {
       description: site.description,
       offers: {
         "@type": "Offer",
-        name: servicePrograms[0],
+        name: "体験コーチング",
         price: "5500",
         priceCurrency: "JPY",
         availability: "https://schema.org/InStock",
         description: `${trialContent.details[0].value}。${trialContent.details[1].value}。`,
-      },
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "NARERU コーチングプログラム",
-        itemListElement: servicePrograms.map((name) => ({
-          "@type": "Offer",
-          name,
-        })),
       },
       review: [
         {
