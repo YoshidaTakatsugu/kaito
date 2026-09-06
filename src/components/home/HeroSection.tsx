@@ -15,7 +15,7 @@ export function HeroSection() {
         fill
         loading="eager"
         sizes="100vw"
-        className="object-cover object-[64%_center] sm:object-[61%_center] lg:object-[70%_center]"
+        className="object-cover object-[64%_center] sm:object-[61%_center] lg:object-[70%_8%]"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,18,38,0.08)_0%,rgba(3,18,38,0.3)_38%,rgba(3,18,38,0.94)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,18,38,0.96)_0%,rgba(3,18,38,0.74)_42%,rgba(3,18,38,0.12)_78%)]" />
