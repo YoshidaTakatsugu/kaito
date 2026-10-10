@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-[#031226] text-white"
+      className="home-hero relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-[#031226] text-white"
     >
       <Image
         src="/images/Top.jpg"
@@ -15,13 +15,18 @@ export function HeroSection() {
         fill
         loading="eager"
         sizes="100vw"
-        className="object-cover object-[64%_center] sm:object-[61%_center] lg:object-[70%_8%]"
+        className="hero-photo object-cover object-[64%_center] sm:object-[61%_center] lg:object-[70%_8%]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,18,38,0.08)_0%,rgba(3,18,38,0.3)_38%,rgba(3,18,38,0.94)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,18,38,0.96)_0%,rgba(3,18,38,0.74)_42%,rgba(3,18,38,0.12)_78%)]" />
+      <div className="hero-shade-vertical absolute inset-0 bg-[linear-gradient(180deg,rgba(3,18,38,0.08)_0%,rgba(3,18,38,0.3)_38%,rgba(3,18,38,0.94)_100%)]" />
+      <div className="hero-shade-horizontal absolute inset-0 bg-[linear-gradient(90deg,rgba(3,18,38,0.96)_0%,rgba(3,18,38,0.74)_42%,rgba(3,18,38,0.12)_78%)]" />
 
-      <p className="absolute left-5 right-5 top-7 z-10 max-w-[25rem] text-xs font-semibold leading-6 tracking-[0.08em] text-cyan-50/90 drop-shadow-[0_3px_16px_rgba(0,0,0,0.5)] sm:left-8 sm:top-10 sm:text-sm lg:left-[max(2rem,calc((100vw-80rem)/2+2rem))]">
-        {heroContent.eyebrow}
+      <p className="hero-eyebrow absolute left-5 right-5 top-7 z-10 max-w-[25rem] text-xs font-semibold leading-6 tracking-[0.08em] text-cyan-50/90 drop-shadow-[0_3px_16px_rgba(0,0,0,0.5)] sm:left-8 sm:top-10 sm:text-sm lg:left-[max(2rem,calc((100vw-80rem)/2+2rem))]">
+        <span className="hidden sm:inline">{heroContent.eyebrow}</span>
+        <span className="sm:hidden">
+          <span className="block">あなたが悩んでいる理由は、</span>
+          <span className="block">本気で自分の能力を</span>
+          <span className="block">高めてきたから。</span>
+        </span>
       </p>
 
       <div className="pointer-events-none absolute bottom-20 right-[3%] z-[1] hidden size-[24rem] opacity-75 lg:block xl:size-[29rem]">
@@ -34,10 +39,10 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl items-end px-5 pb-7 pt-32 sm:px-8 sm:pb-12 lg:items-center lg:pb-16 lg:pt-28">
+      <div className="hero-content relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl items-end px-5 pb-7 pt-32 sm:px-8 sm:pb-12 lg:items-center lg:pb-16 lg:pt-28">
         <div className="w-full max-w-[35rem] lg:max-w-[47rem]">
           <HeroCopyMotion />
-          <div className="mt-7 grid max-w-xl gap-3 sm:grid-cols-2">
+          <div className="hero-actions mt-7 grid max-w-xl gap-3 sm:grid-cols-2">
             <a
               href={heroContent.primaryCta.href}
               className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-5 text-center text-sm font-semibold tracking-[0.08em] text-[#031226] transition-colors duration-200 hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"

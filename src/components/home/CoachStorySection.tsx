@@ -5,7 +5,7 @@ import { SectionReveal } from "./SectionReveal";
 
 export function CoachStorySection() {
   return (
-    <section id="story" className="bg-[#041225] px-5 py-24 text-white sm:px-8">
+    <section id="story" className="bg-[#041225] px-5 py-20 text-white sm:px-8 sm:py-24">
       <div className="mx-auto w-full max-w-7xl">
         <SectionReveal className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
@@ -13,7 +13,7 @@ export function CoachStorySection() {
             <p className="mt-5 text-sm font-semibold tracking-[0.1em] text-[#d6ae64]">
               {storyContent.subtitle}
             </p>
-            <h2 className="mt-6 font-serif text-4xl leading-[1.35] sm:text-6xl">
+            <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
               {storyContent.title}
             </h2>
             <figure className="mt-9 border border-cyan-100/15 bg-white/[0.04] p-3">
@@ -34,7 +34,7 @@ export function CoachStorySection() {
           </div>
 
           <div>
-            <div className="space-y-8 text-lg leading-10 text-slate-300">
+            <div className="space-y-6 text-pretty text-[15px] leading-8 text-slate-300 sm:text-base">
               {storyContent.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -53,7 +53,7 @@ export function CoachStorySection() {
               ))}
             </div>
 
-            <blockquote className="mt-12 space-y-8 border-l-2 border-[#d6ae64] bg-white/[0.04] px-5 py-7 text-lg leading-10 text-slate-200 sm:px-8">
+            <blockquote className="mt-12 space-y-6 border-l-2 border-[#d6ae64] bg-white/[0.04] px-5 py-7 text-pretty text-[15px] leading-8 text-slate-200 sm:px-8 sm:text-base">
               {storyContent.closingParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

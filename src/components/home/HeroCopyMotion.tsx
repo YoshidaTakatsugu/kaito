@@ -10,7 +10,7 @@ export function HeroCopyMotion() {
       <m.div initial={false}>
         <h1
           aria-label={heroContent.title}
-          className="max-w-3xl font-serif text-[clamp(1.72rem,7vw,3.1rem)] font-semibold leading-[1.34] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.46)] lg:text-[clamp(2.5rem,3.4vw,3.6rem)]"
+          className="hero-title max-w-3xl font-serif text-[clamp(1.38rem,5.7vw,2.75rem)] font-semibold leading-[1.4] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.46)] lg:text-[clamp(2.5rem,3.4vw,3.6rem)] lg:leading-[1.34]"
         >
           {heroContent.titleLines.map((line, index) => (
             <m.span
@@ -22,7 +22,12 @@ export function HeroCopyMotion() {
                 index === 2 ? "pl-[0.85em]" : ""
               } ${index === 3 ? "pl-[0.3em]" : ""}`}
             >
-              {line}
+              {index === 3 ? (
+                <>
+                  <span className="block sm:inline">自分の力を</span>
+                  <span className="block sm:inline">結果につなげよう。</span>
+                </>
+              ) : line}
             </m.span>
           ))}
         </h1>

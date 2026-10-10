@@ -8,6 +8,7 @@ import { FutureSection } from "@/components/home/FutureSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LogicSection } from "@/components/home/LogicSection";
 import { MediaActivitySection } from "@/components/home/MediaActivitySection";
+import { MailSeminarSection } from "@/components/home/MailSeminarSection";
 import { ProfessionalPartnershipSection } from "@/components/home/ProfessionalPartnershipSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { UspSection } from "@/components/home/UspSection";
@@ -27,6 +28,7 @@ export default function Home() {
       <MediaActivitySection />
       <ServicesSection />
       <ConversionFlowSection />
+      <MailSeminarSection />
       <FaqSection />
       <FinalCtaSection />
       <ProfessionalPartnershipSection />

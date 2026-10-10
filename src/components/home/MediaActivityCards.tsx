@@ -104,15 +104,15 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <div className="flex items-center justify-between gap-4 text-xs font-semibold tracking-[0.16em] text-slate-400">
                   <time dateTime={item.dateTime}>{item.publishedLabel}</time>
                   <span>{item.type === "YouTube" ? "MOVIE" : "ARTICLE"}</span>
                 </div>
-                <h3 className="mt-5 text-2xl font-semibold leading-snug text-white">
+                <h3 className="mt-4 text-balance text-xl font-semibold leading-[1.55] text-white">
                   {item.title}
                 </h3>
-                <p className="mt-5 leading-8 text-slate-300">
+                <p className="mt-4 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
                   {item.description}
                 </p>
               </div>

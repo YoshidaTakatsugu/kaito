@@ -85,10 +85,10 @@ export function VoiceCards({ cases }: VoiceCardsProps) {
                 CHANGE RESULT
               </p>
               <blockquote className="mt-4 flex flex-1 flex-col">
-                <p className="text-xl font-semibold leading-8 text-white">
+                <p className="text-lg font-semibold leading-7 text-white">
                   {voiceCase.conclusion}
                 </p>
-                <p className="mt-5 leading-8 text-slate-300">
+                <p className="mt-4 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
                   {voiceCase.body}
                 </p>
               </blockquote>

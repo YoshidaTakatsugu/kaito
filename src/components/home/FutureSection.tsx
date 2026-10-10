@@ -5,14 +5,14 @@ import { SectionReveal } from "./SectionReveal";
 
 export function FutureSection() {
   return (
-    <section id="future" className="bg-[#061a33] px-5 py-24 text-white sm:px-8">
+    <section id="future" className="bg-[#061a33] px-5 py-20 text-white sm:px-8 sm:py-24">
       <SectionReveal className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div>
           <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">FUTURE</p>
-          <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
+          <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
             {futureContent.title}
           </h2>
-          <p className="mt-8 text-lg leading-9 text-slate-300">
+          <p className="mt-7 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
             {futureContent.introduction}
           </p>
           <ol className="mt-9 grid gap-3">
@@ -24,11 +24,11 @@ export function FutureSection() {
                 <span className="text-xs font-semibold tracking-[0.15em] text-[#d6ae64]">
                   0{index + 1}
                 </span>
-                <span className="font-semibold leading-8 text-slate-100">{benefit}</span>
+                <span className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">{benefit}</span>
               </li>
             ))}
           </ol>
-          <p className="mt-8 font-serif text-2xl text-cyan-50">{futureContent.closing}</p>
+          <p className="mt-8 font-serif text-xl leading-[1.7] text-cyan-50 sm:text-2xl">{futureContent.closing}</p>
         </div>
 
         <figure className="border border-cyan-100/15 bg-white/[0.045] p-3 shadow-[0_28px_90px_rgba(0,0,0,0.22)]">

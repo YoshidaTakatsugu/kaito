@@ -1,3 +1,5 @@
+import { seminarContent, seminarHref } from "./seminar";
+
 export const site = {
   name: "NARERU",
   url: "https://nareru.jp",
@@ -50,8 +52,8 @@ export const heroContent = {
   subcopy: "結果に相応しいメンタルを育むスポーツメンタルコーチング",
   primaryCta: { label: "体験コーチングに申し込む", href: "#trial" },
   secondaryCta: {
-    label: "無料メールセミナーを受け取る",
-    href: "#seminar",
+    label: seminarContent.ctaLabel,
+    href: seminarHref,
   },
 } as const;
 

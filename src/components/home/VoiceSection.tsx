@@ -4,18 +4,18 @@ import { SectionReveal } from "./SectionReveal";
 
 export function VoiceSection() {
   return (
-    <section id="voice" className="bg-[#041225] px-5 py-24 text-white sm:px-8">
+    <section id="voice" className="bg-[#041225] px-5 py-20 text-white sm:px-8 sm:py-24">
       <div className="mx-auto w-full max-w-7xl">
         <header className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
               VOICE / RESULTS
             </p>
-            <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
+            <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
               お客様の声・実績
             </h2>
           </div>
-          <p className="font-serif text-2xl leading-[1.8] text-cyan-50 sm:text-3xl">
+          <p className="font-serif text-xl leading-[1.7] text-cyan-50 sm:text-2xl">
             <span className="block">高めてきた能力が、</span>
             <span className="block">本番の結果へつながり始めた変化。</span>
           </p>
@@ -33,7 +33,7 @@ export function VoiceSection() {
                 </p>
                 <h3
                   id="featured-athlete-voice-title"
-                  className="mt-6 max-w-3xl font-serif text-3xl leading-[1.55] text-white sm:text-4xl lg:text-5xl"
+                  className="mt-6 max-w-3xl text-balance font-serif text-2xl leading-[1.55] text-white sm:text-3xl lg:text-4xl"
                 >
                   {featuredAthleteVoice.title}
                 </h3>
@@ -64,7 +64,7 @@ export function VoiceSection() {
                   open={index === 0}
                   className="group border-b border-cyan-100/15 last:border-b-0"
                 >
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-7 text-left font-semibold leading-7 text-white transition-colors hover:text-cyan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-5 py-6 text-left text-[15px] font-semibold leading-7 text-white transition-colors hover:text-cyan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 sm:text-base [&::-webkit-details-marker]:hidden">
                     <span>{item.question}</span>
                     <span
                       aria-hidden="true"
@@ -73,9 +73,9 @@ export function VoiceSection() {
                       +
                     </span>
                   </summary>
-                  <div className="max-w-4xl pb-8 pr-2 text-[15px] leading-8 text-slate-300 sm:text-base sm:leading-9">
+                  <div className="max-w-[68rem] pb-7 pr-2 text-pretty text-sm leading-7 text-slate-300 sm:text-[15px] sm:leading-8">
                     {item.answers.map((answer) => (
-                      <p key={answer} className="mt-4 first:mt-0">
+                      <p key={answer} className="mt-3 first:mt-0">
                         {answer}
                       </p>
                     ))}
@@ -92,13 +92,13 @@ export function VoiceSection() {
               <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
                 {featuredAthleteVoice.parentVoice.label}
               </p>
-              <h3 className="mt-5 font-serif text-2xl leading-[1.7] text-white sm:text-3xl">
+              <h3 className="mt-5 text-balance font-serif text-xl leading-[1.65] text-white sm:text-2xl">
                 {featuredAthleteVoice.parentVoice.title}
               </h3>
             </figcaption>
 
             <blockquote className="border-l border-cyan-100/20 pl-6 sm:pl-8">
-              <div className="space-y-5 text-[15px] leading-8 text-slate-300 sm:text-base sm:leading-9">
+              <div className="space-y-4 text-pretty text-sm leading-7 text-slate-300 sm:text-[15px] sm:leading-8">
                 {featuredAthleteVoice.parentVoice.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
