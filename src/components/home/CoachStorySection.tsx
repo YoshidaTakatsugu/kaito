@@ -4,6 +4,8 @@ import { coach, coachAchievements, storyContent } from "@/lib/brand";
 import { SectionReveal } from "./SectionReveal";
 
 export function CoachStorySection() {
+  const achievementStages = [...new Set(coachAchievements.map(({ stage }) => stage))];
+
   return (
     <section id="story" className="bg-[#041225] px-5 py-20 text-white sm:px-8 sm:py-24">
       <div className="mx-auto w-full max-w-7xl">
@@ -40,7 +42,40 @@ export function CoachStorySection() {
               ))}
             </div>
 
-            <div className="mt-12 border-y border-cyan-100/15">
+            <table className="mt-9 w-full table-fixed border-y border-cyan-100/15 text-sm leading-6 sm:hidden">
+              <caption className="sr-only">押田海斗の競技実績：時期・大会・結果</caption>
+              <colgroup>
+                <col className="w-[4rem]" />
+                <col />
+                <col className="w-[4.5rem]" />
+              </colgroup>
+              {achievementStages.map((stage) => {
+                const achievements = coachAchievements.filter((item) => item.stage === stage);
+                const stageLabel = stage === "小学" ? "小学校" : stage === "中学" ? "中学校" : stage;
+
+                return (
+                  <tbody key={stage} className="border-b border-cyan-100/10 last:border-b-0">
+                    {achievements.map((achievement, index) => (
+                      <tr key={achievement.event}>
+                        {index === 0 ? (
+                          <th
+                            scope="rowgroup"
+                            rowSpan={achievements.length}
+                            className="py-3 pr-2 text-left align-top text-xs font-semibold text-[#d6ae64]"
+                          >
+                            {stageLabel}
+                          </th>
+                        ) : null}
+                        <td className="py-3 pr-2 align-top font-semibold text-white">{achievement.event}</td>
+                        <td className="py-3 text-right align-top font-semibold text-cyan-100">{achievement.result}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                );
+              })}
+            </table>
+
+            <div className="mt-12 hidden border-y border-cyan-100/15 sm:block">
               {coachAchievements.map((achievement) => (
                 <div
                   key={`${achievement.stage}-${achievement.event}`}
