@@ -91,6 +91,18 @@ body {
 }
 
 @media (max-width: 639px) {
+  .home-page > section:not(#hero) {
+    padding-top: 56px;
+    padding-bottom: 40px;
+  }
+
+  main > section,
+  main > article > section,
+  .mental-coaching-page > section:not(#concept),
+  .mental-coaching-page > section#concept {
+    padding-bottom: 40px;
+  }
+
   #story .story-portrait {
     display: flex;
     align-items: center;
@@ -188,6 +200,11 @@ body {
     background: transparent;
     backdrop-filter: none;
   }
+}
+
+.media-card-scroller {
+  scrollbar-color: #d6ae64 #142c44;
+  scrollbar-width: thin;
 }
 
 @media (max-width: 359px) {

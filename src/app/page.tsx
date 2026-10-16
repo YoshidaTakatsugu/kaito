@@ -12,7 +12,7 @@ import { UspSection } from "@/components/home/UspSection";
 
 export default function Home() {
   return (
-    <>
+    <div className="home-page">
       <HeroSection />
       <EmpathySection />
       <FutureSection />
@@ -24,6 +24,6 @@ export default function Home() {
       <FaqSection />
       <FinalCtaSection />
       <ProfessionalPartnershipSection />
-    </>
+    </div>
   );
 }

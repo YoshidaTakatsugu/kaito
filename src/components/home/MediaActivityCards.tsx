@@ -15,7 +15,7 @@ export type MediaActivityItem = {
   source: string;
   title: string;
   url: string;
-  description: string;
+  description?: string;
   thumbnailSrc: string;
   publishedLabel: string;
   dateTime?: string;
@@ -49,7 +49,7 @@ const cardVariants: Variants = {
 
 function getThumbnailAlt(item: MediaActivityItem) {
   if (item.type === "YouTube") {
-    return `スポーツメンタルコーチ押田海斗のインタビュー動画サムネイル：${item.title}`;
+    return `動画サムネイル：${item.title}`;
   }
 
   return `スポーツメンタルコーチ押田海斗のインタビュー記事アイキャッチ画像：${item.title}`;
@@ -60,7 +60,10 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation}>
         <m.div
-          className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
+          className="media-card-scroller grid auto-cols-[86%] grid-flow-col snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 md:auto-cols-auto md:grid-flow-row md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 xl:grid-cols-3"
+          role="region"
+          aria-label="活動実績・トピックス一覧"
+          tabIndex={0}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.05 }}
@@ -69,7 +72,7 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
         {items.map((item) => (
           <m.article
             key={item.id}
-            className="group overflow-hidden border border-cyan-100/15 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,0,0,0.2)]"
+            className="group min-w-0 snap-start overflow-hidden border border-cyan-100/15 bg-white/[0.045] md:shadow-[0_24px_80px_rgba(0,0,0,0.2)]"
             variants={cardVariants}
           >
             <a
@@ -84,7 +87,7 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
                   src={item.thumbnailSrc}
                   alt={getThumbnailAlt(item)}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 31vw"
+                  sizes="(max-width: 767px) 86vw, (max-width: 1279px) 50vw, 31vw"
                   className="object-cover object-center opacity-[0.86] transition-transform duration-500 group-hover:scale-[1.035]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#041225]/88 via-[#041225]/24 to-transparent" />
@@ -109,12 +112,12 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
                   <time dateTime={item.dateTime}>{item.publishedLabel}</time>
                   <span>{item.type === "YouTube" ? "MOVIE" : "ARTICLE"}</span>
                 </div>
-                <h3 className="mt-4 text-balance text-xl font-semibold leading-[1.55] text-white">
+                <h3 className="mt-4 text-balance text-base font-semibold leading-[1.55] text-white sm:text-xl">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
+                {item.description && <p className="mt-4 hidden text-pretty text-[15px] leading-7 text-slate-300 md:block md:text-base md:leading-8">
                   {item.description}
-                </p>
+                </p>}
               </div>
             </a>
           </m.article>
