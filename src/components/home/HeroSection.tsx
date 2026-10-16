@@ -35,7 +35,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="hero-content relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl items-end px-5 pb-7 pt-32 sm:px-8 sm:pb-12 lg:items-center lg:pb-16 lg:pt-28">
+      <div className="hero-content relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl items-end px-5 pb-7 pt-32 sm:px-8 sm:pb-12 lg:pb-24 lg:pt-28">
         <div className="w-full max-w-[35rem] lg:max-w-[47rem]">
           <HeroCopyMotion />
           <div className="hero-actions mt-7 grid max-w-xl gap-3 sm:grid-cols-2">
