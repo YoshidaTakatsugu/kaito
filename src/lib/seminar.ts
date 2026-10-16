@@ -10,8 +10,8 @@ type SeminarContent = {
 
 export const seminarContent: SeminarContent = {
   id: "seminar",
-  name: "無料ステップメール",
-  ctaLabel: "無料ステップメールを受け取る",
+  name: "無料メールセミナー",
+  ctaLabel: "無料メールセミナーを受け取る",
   heading: ["「ネガティブ思考」から抜け出し、", "試合で実力を発揮する", "6つの方法"],
   introduction:
     "本気で競技に向き合うあなたへ。試合で実力を発揮するための6つの方法を、スポーツメンタルコーチ押田海斗がメールでお届けします。",

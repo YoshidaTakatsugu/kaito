@@ -40,12 +40,11 @@ export const mobileNavigationItems = [
 ] as const;
 
 export const heroContent = {
-  eyebrow: "あなたが悩んでいる理由は、本気で自分の能力を高めてきたから。",
   title:
-    "あなたが苦しんでいるのは 本気で挑戦している証拠。 あとは、メンタルだけ。 自分の力を結果につなげよう。",
+    "あなたが苦しんでいるのは 本気で挑戦している証拠 あとは、メンタルだけ。 自分の力を結果につなげよう。",
   titleLines: [
     "あなたが苦しんでいるのは",
-    "本気で挑戦している証拠。",
+    "本気で挑戦している証拠",
     "あとは、メンタルだけ。",
     "自分の力を結果につなげよう。",
   ],
@@ -376,14 +375,12 @@ export const faqs = [
 export const homePageSections = [
   ["#problem", empathyContent.title, empathyContent.closing],
   ["#future", futureContent.title, futureContent.introduction],
-  ["#logic", logicContent.title, logicContent.description],
-  ["#concept", conceptContent.title, conceptContent.body],
-  ["#story", storyContent.title, storyContent.closingParagraphs[1]],
   [
     "#usp",
     "スポーツメンタルコーチ押田海斗 4つの強み",
     uspStrengths[0].detail,
   ],
+  ["#story", storyContent.title, storyContent.closingParagraphs[1]],
   ["#voice", "お客様の声・実績", featuredAthleteVoice.title],
   ["#services", "サービス紹介", "体験コーチング"],
   ["#trial", trialContent.title, trialContent.overview],

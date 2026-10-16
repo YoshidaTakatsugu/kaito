@@ -68,7 +68,7 @@ export function MailSeminarSection() {
           <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
             <Image
               src="/images/oshida-hero.jpg"
-              alt="無料ステップメールをお届けするスポーツメンタルコーチ押田海斗"
+              alt="無料メールセミナーをお届けするスポーツメンタルコーチ押田海斗"
               width={64}
               height={64}
               sizes="64px"

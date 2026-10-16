@@ -18,20 +18,22 @@ export function CoachStorySection() {
             <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
               {storyContent.title}
             </h2>
-            <figure className="mt-9 border border-cyan-100/15 bg-white/[0.04] p-3">
-              <div className="relative aspect-[4/5] overflow-hidden bg-[#001f3f]">
+            <figure className="story-portrait relative mt-9 border border-cyan-100/15 bg-white/[0.04] p-3">
+              <div className="story-photo relative aspect-[4/5] overflow-hidden bg-[#001f3f]">
                 <Image
                   src="/images/S__3153967_0.jpg"
                   alt="日本一を逃し続けた経験をコーチングの原点とするスポーツメンタルコーチ押田海斗"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 36vw"
+                  sizes="(max-width: 639px) 72px, (max-width: 1024px) 100vw, 36vw"
                   className="object-cover object-[57%_center]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#041225]/65 via-transparent to-transparent" />
-                <figcaption className="absolute inset-x-5 bottom-5 text-sm font-semibold leading-7 text-white">
-                  {coach.name} / {coach.role}
-                </figcaption>
+                <div className="hidden absolute inset-0 bg-gradient-to-t from-[#041225]/65 via-transparent to-transparent sm:block" />
               </div>
+              <figcaption className="story-caption absolute inset-x-8 bottom-8 text-sm font-semibold leading-7 text-white">
+                <span className="block sm:inline">{coach.name}</span>
+                <span className="hidden sm:inline"> / </span>
+                <span className="block sm:inline">{coach.role}</span>
+              </figcaption>
             </figure>
           </div>
 

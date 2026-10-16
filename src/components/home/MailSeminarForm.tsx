@@ -77,7 +77,7 @@ export function MailSeminarForm({ api, registrationUrl }: MailSeminarFormProps) 
           </p>
         </div>
       ) : (
-        <form action={registrationUrl} method="post" onSubmit={handleSubmit} aria-label="無料ステップメール登録" aria-describedby="seminar-data-notice" aria-busy={status === "submitting"}>
+        <form action={registrationUrl} method="post" onSubmit={handleSubmit} aria-label="無料メールセミナー登録" aria-describedby="seminar-data-notice" aria-busy={status === "submitting"}>
           <fieldset disabled={!api || !hydrated || status === "submitting"}>
             <legend className="sr-only">お名前とメールアドレス</legend>
             <div className="grid grid-cols-2 gap-3">

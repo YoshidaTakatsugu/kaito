@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/lib/brand";
+import { ConceptSection } from "@/components/home/ConceptSection";
+import { LogicSection } from "@/components/home/LogicSection";
+import { conceptContent, logicContent, site } from "@/lib/brand";
 import { mentalCoachingPage as content } from "@/lib/mental-coaching";
 
 export const metadata: Metadata = {
@@ -32,7 +34,7 @@ type ParagraphsProps = {
 
 function Paragraphs({ items, className = "" }: ParagraphsProps) {
   return (
-    <div className={`space-y-6 text-base leading-9 text-slate-300 sm:text-lg ${className}`}>
+    <div className={`mental-coaching-prose space-y-4 text-base leading-[1.8] text-slate-300 ${className}`}>
       {items.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
@@ -53,6 +55,10 @@ export default function MentalCoachingPage() {
         description: content.definition,
         inLanguage: "ja",
         about: { "@id": `${site.url}/#service` },
+        hasPart: [
+          { "@type": "WebPageElement", "@id": `${pageUrl}#logic`, name: logicContent.title, description: logicContent.description },
+          { "@type": "WebPageElement", "@id": `${pageUrl}#concept`, name: conceptContent.title, description: conceptContent.body },
+        ],
       },
       {
         "@type": "BreadcrumbList",
@@ -77,7 +83,7 @@ export default function MentalCoachingPage() {
   const jsonLd = JSON.stringify(pageJsonLd).replace(/</g, "\\u003c");
 
   return (
-    <article className="bg-[#041225] text-white">
+    <article className="mental-coaching-page bg-[#041225] text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
@@ -103,14 +109,17 @@ export default function MentalCoachingPage() {
             <span className="block">スポーツメンタル</span>
             <span className="block">コーチングとは？</span>
           </h1>
-          <p className="mt-8 max-w-4xl border-l-2 border-[#d6ae64] pl-5 font-serif text-xl leading-[1.9] text-cyan-50 sm:pl-7 sm:text-3xl">
+          <p className="mt-6 max-w-4xl border-l-2 border-[#d6ae64] pl-5 font-serif text-xl leading-[1.65] text-cyan-50 sm:pl-7 sm:text-3xl">
             {content.definition}
           </p>
-          <p className="mt-6 max-w-3xl text-sm leading-8 text-slate-300 sm:text-base">
+          <p className="mt-5 max-w-3xl text-sm leading-[1.8] text-slate-300 sm:text-base">
             {content.introduction}
           </p>
         </div>
       </header>
+
+      <LogicSection />
+      <ConceptSection />
 
       <section className="px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.38fr_1fr] lg:gap-20">
@@ -195,7 +204,7 @@ export default function MentalCoachingPage() {
                 items={content.sportsMentalDifference.brake.beforeExamples}
                 className="mt-7"
               />
-              <blockquote className="my-8 border-l-2 border-[#b76767] bg-[#4c2029]/35 px-5 py-5 font-serif text-lg leading-9 text-rose-50">
+              <blockquote className="my-6 border-l-2 border-[#b76767] bg-[#4c2029]/35 px-5 py-5 font-serif text-lg leading-[1.8] text-rose-50">
                 {content.sportsMentalDifference.brake.examples}
               </blockquote>
               <Paragraphs
@@ -231,7 +240,7 @@ export default function MentalCoachingPage() {
                   <span className="font-serif text-2xl text-[#67d5ae]">
                     0{index + 1}
                   </span>
-                  <span className="text-lg font-semibold leading-8 text-cyan-50 sm:text-xl">
+                  <span className="text-base font-semibold leading-[1.8] text-cyan-50 sm:text-lg">
                     {example}
                   </span>
                 </li>
@@ -283,19 +292,19 @@ export default function MentalCoachingPage() {
                   <dt className="text-lg font-semibold text-cyan-50">
                     {level.name}
                   </dt>
-                  <dd className="mt-3 leading-8 text-slate-300">
+                  <dd className="mt-2 leading-[1.8] text-slate-300">
                     {level.description}
                   </dd>
                 </div>
               ))}
             </dl>
 
-            <div className="space-y-6 text-base leading-9 text-slate-300 sm:text-lg">
+            <div className="mental-coaching-prose space-y-4 text-base leading-[1.8] text-slate-300">
               {content.visibleResults.explanation.map((paragraph, index) =>
                 index === 3 || index === 6 ? (
                   <blockquote
                     key={paragraph}
-                    className="border-l-2 border-[#d6ae64] bg-white/[0.045] px-5 py-4 font-serif text-xl leading-9 text-white"
+                    className="border-l-2 border-[#d6ae64] bg-white/[0.045] px-5 py-4 font-serif text-lg leading-[1.8] text-white"
                   >
                     {paragraph}
                   </blockquote>

@@ -43,7 +43,68 @@ body {
   color: #041225;
 }
 
+.home-hero .hero-title-intro {
+  font-size: 0.72em;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.home-hero .hero-title-emphasis {
+  font-weight: 600;
+}
+
+.home-hero .hero-title-intro + .hero-title-emphasis {
+  margin-top: 18px;
+}
+
+.mental-coaching-page > section:not(#concept) {
+  padding-block: 64px;
+}
+
+.mental-coaching-page .mental-coaching-prose {
+  max-width: 46rem;
+}
+
+.mental-coaching-page #logic p:not(:first-child),
+.mental-coaching-page #concept .concept-copy > p:last-of-type {
+  line-height: 1.8;
+}
+
+@media (min-width: 1024px) {
+  .mental-coaching-page > section:not(#concept) {
+    padding-block: 80px;
+  }
+}
+
 @media (max-width: 639px) {
+  #story .story-portrait {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  #story .story-photo {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  #story .story-photo img {
+    object-position: 57% 20%;
+  }
+
+  #story .story-caption {
+    position: static;
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
   #concept {
     padding: 0 0 80px;
   }
@@ -83,14 +144,6 @@ body {
 
   .home-hero .hero-shade-horizontal {
     background: linear-gradient(90deg, rgba(3, 18, 38, 0.75) 0%, rgba(3, 18, 38, 0.3) 42%, transparent 78%);
-  }
-
-  .home-hero .hero-eyebrow {
-    top: 36px;
-    font-size: 14px;
-    line-height: 1.8;
-    letter-spacing: 0;
-    color: #ffffff;
   }
 
   .home-hero .hero-content {
