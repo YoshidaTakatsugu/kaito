@@ -57,16 +57,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-10 hidden border-t border-white/10 bg-[#031226]/78 backdrop-blur-sm lg:block">
-        <div className="mx-auto grid max-w-7xl grid-cols-[16rem_1fr] items-center gap-8 px-8 py-5">
-          <p className="text-sm font-semibold tracking-[0.18em] text-[#d6ae64]">
-            NARERUの信念
-          </p>
-          <p className="text-lg text-slate-100">
-            人には、まだ発揮されていない可能性がある。
-          </p>
-        </div>
-      </div>
     </section>
   );
 }

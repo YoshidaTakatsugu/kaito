@@ -298,7 +298,7 @@ export const trialContent = {
   overview:
     "本気で目標を叶えたい。もっと自分の力を発揮したい。でも、どうすれば今の自分から変わっていけるのか分からない。体験コーチングでは、メンタルの知識を一方的に教えるのではなく、選手自身の気持ちや目標と向き合いながら、理想の結果へ向かうための最初の一歩を一緒に見つけていきます。",
   details: [
-    { label: "料金", value: "60分 ｜ 5,500円（税込）" },
+    { label: "料金", value: "60分 ｜ 11,000円（税込）" },
     {
       label: "実施方法",
       value:
@@ -443,7 +443,7 @@ export const structuredData = {
       offers: {
         "@type": "Offer",
         name: "体験コーチング",
-        price: "5500",
+        price: "11000",
         priceCurrency: "JPY",
         availability: "https://schema.org/InStock",
         description: `${trialContent.details[0].value}。${trialContent.details[1].value}。`,

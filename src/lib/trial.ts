@@ -9,7 +9,7 @@ export const trialPageContent = {
     "でも、どうすれば今の自分から変わっていけるのか分からない。",
     "体験コーチングでは、メンタルの知識を一方的に教えるのではなく、選手自身の気持ちや目標と向き合いながら、理想の結果へ向かうための最初の一歩を一緒に見つけていきます。",
   ],
-  price: "60分｜5,500円（税込）",
+  price: "60分｜11,000円（税込）",
   application: {
     label: "体験コーチングを申し込む",
     href: "/trial/apply/",
@@ -76,7 +76,7 @@ export const trialPageContent = {
     items: [
       {
         label: "料金",
-        values: ["60分｜5,500円（税込）"],
+        values: ["60分｜11,000円（税込）"],
       },
       {
         label: "実施方法",

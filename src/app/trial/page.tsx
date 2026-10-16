@@ -72,7 +72,7 @@ export default function TrialPage() {
         },
         offers: {
           "@type": "Offer",
-          price: "5500",
+          price: "11000",
           priceCurrency: "JPY",
           availability: "https://schema.org/InStock",
           url: pageUrl,
