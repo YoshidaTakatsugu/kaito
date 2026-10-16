@@ -134,6 +134,69 @@ body {
   .mental-section-heading h2 { font-size: 21px; }
 }
 
+.story-page-hero {
+  display: flex;
+  align-items: end;
+  min-height: 320px;
+  padding-block: 44px;
+}
+.story-hero-photo { left: 35%; mask-image: linear-gradient(90deg, transparent, #000 35%); }
+.story-page-hero img { object-position: center top; }
+.story-page-hero h1 { font-size: 36px; line-height: 1.4; }
+.story-hero-shade {
+  background: linear-gradient(90deg, rgba(4,18,37,.94), rgba(4,18,37,.65) 48%, rgba(4,18,37,.15)), linear-gradient(0deg, rgba(4,18,37,.8), transparent 75%);
+}
+.story-chapter-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  column-gap: 20px;
+  padding-block: 24px;
+}
+.story-chapter-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  border-bottom: 1px solid #c7f3ff25;
+  font-size: 13px;
+}
+.story-chapter-nav a span { color: #d6ae64; font-size: 11px; }
+.story-page a:hover { color: #e8c980; }
+.story-page a[href="/trial/"]:hover { color: #031226; }
+.story-page a:focus-visible { outline: 2px solid #d6ae64; outline-offset: 4px; }
+.story-chapter { padding-block: 40px; border-bottom: 1px solid #c7f3ff25; scroll-margin-top: 12px; }
+.story-chapter header { margin-bottom: 24px; }
+.story-chapter h2 { margin-top: 12px; font-family: var(--font-site-serif); font-size: 28px; font-weight: 400; line-height: 1.5; }
+.story-chapter h2 span { display: inline-block; overflow-wrap: normal; word-break: keep-all; }
+.story-prose { color: #cbd5e1; font-size: 15px; line-height: 1.85; }
+.story-prose > * + * { margin-top: 16px; }
+.story-prose blockquote { padding-left: 18px; border-left: 2px solid #d6ae64; font-family: var(--font-site-serif); font-size: 18px; line-height: 1.75; color: #f8fbff; }
+.story-prose blockquote p + p { margin-top: 12px; }
+.story-emphasis { font-weight: 600; color: #ecfeff; }
+.story-achievements { border-top: 1px solid #c7f3ff25; }
+.story-achievements tbody { border-bottom: 1px solid #c7f3ff25; }
+.story-achievements th, .story-achievements td { padding-block: 10px; }
+.story-closing { margin-bottom: 24px; border-bottom: 0; }
+@media (max-width: 639px) {
+  .story-page-hero { min-height: 260px; padding-block: 28px; }
+  .story-hero-photo { left: 0; mask-image: none; }
+  .story-page-hero img { object-position: 65% 30%; }
+  .story-page-hero h1 { font-size: 26px; }
+  .story-chapter-nav { column-gap: 12px; padding-block: 16px; }
+  .story-chapter-nav a { gap: 6px; font-size: 12px; }
+  .story-chapter { padding-block: 28px; }
+  .story-chapter header { margin-bottom: 20px; }
+  .story-chapter h2 { font-size: 24px; }
+  .story-chapter h2 span { display: block; }
+  .story-prose { font-size: 14px; }
+  .story-prose > * + * { margin-top: 12px; }
+  .story-prose blockquote { padding-left: 14px; font-size: 16px; }
+}
+@media (max-width: 359px) {
+  .story-page-hero h1 { font-size: 24px; }
+  .story-chapter h2 { font-size: 22px; }
+}
+
 @media (max-width: 639px) {
   .home-page > section:not(#hero) {
     padding-top: 56px;
@@ -143,34 +206,6 @@ body {
   main > section,
   main > article > section {
     padding-bottom: 40px;
-  }
-
-  #story .story-portrait {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 24px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-  }
-
-  #story .story-photo {
-    width: 72px;
-    height: 72px;
-    flex-shrink: 0;
-    border-radius: 50%;
-  }
-
-  #story .story-photo img {
-    object-position: 57% 20%;
-  }
-
-  #story .story-caption {
-    position: static;
-    min-width: 0;
-    font-size: 13px;
-    line-height: 1.8;
   }
 
   .home-hero .hero-photo {

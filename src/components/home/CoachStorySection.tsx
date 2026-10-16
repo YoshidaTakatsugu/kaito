@@ -1,102 +1,83 @@
-import Image from "next/image";
+import Link from "next/link";
 
-import { coach, coachAchievements, storyContent } from "@/lib/brand";
-import { SectionReveal } from "./SectionReveal";
+import { coachAchievements, storyContent } from "@/lib/brand";
 
 export function CoachStorySection() {
-  const achievementStages = [...new Set(coachAchievements.map(({ stage }) => stage))];
+  const achievementStages = [
+    ...new Set(coachAchievements.map(({ stage }) => stage)),
+  ];
 
   return (
-    <section id="story" className="bg-[#041225] px-5 py-20 text-white sm:px-8 sm:py-24">
-      <div className="mx-auto w-full max-w-7xl">
-        <SectionReveal className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-          <div className="lg:sticky lg:top-28">
-            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">STORY</p>
-            <p className="mt-5 text-sm font-semibold tracking-[0.1em] text-[#d6ae64]">
-              {storyContent.subtitle}
-            </p>
-            <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
-              {storyContent.title}
-            </h2>
-            <figure className="story-portrait relative mt-9 border border-cyan-100/15 bg-white/[0.04] p-3">
-              <div className="story-photo relative aspect-[4/5] overflow-hidden bg-[#001f3f]">
-                <Image
-                  src="/images/S__3153967_0.jpg"
-                  alt="日本一を逃し続けた経験をコーチングの原点とするスポーツメンタルコーチ押田海斗"
-                  fill
-                  sizes="(max-width: 639px) 72px, (max-width: 1024px) 100vw, 36vw"
-                  className="object-cover object-[57%_center]"
-                />
-                <div className="hidden absolute inset-0 bg-gradient-to-t from-[#041225]/65 via-transparent to-transparent sm:block" />
-              </div>
-              <figcaption className="story-caption absolute inset-x-8 bottom-8 text-sm font-semibold leading-7 text-white">
-                <span className="block sm:inline">{coach.name}</span>
-                <span className="hidden sm:inline"> / </span>
-                <span className="block sm:inline">{coach.role}</span>
-              </figcaption>
-            </figure>
-          </div>
+    <section id="story" className="story-chapter story-closing">
+      <header>
+        <p className="text-[11px] font-semibold tracking-[0.16em] text-[#8ed9e7]">
+          06 / RECORD & MESSAGE
+        </p>
+        <h2>
+          <span>競技実績と、</span>
+          <span>選手への想い</span>
+        </h2>
+      </header>
 
-          <div>
-            <div className="space-y-6 text-pretty text-[15px] leading-8 text-slate-300 sm:text-base">
-              {storyContent.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+      <table className="story-achievements w-full table-fixed text-sm leading-[1.7]">
+        <caption className="sr-only">
+          押田海斗の競技実績：時期・大会・結果
+        </caption>
+        <colgroup>
+          <col className="w-[3.5rem] sm:w-20" />
+          <col />
+          <col className="w-[4.5rem] sm:w-24" />
+        </colgroup>
+        {achievementStages.map((stage) => {
+          const achievements = coachAchievements.filter(
+            (item) => item.stage === stage,
+          );
+          const stageLabel =
+            stage === "小学" ? "小学校" : stage === "中学" ? "中学校" : stage;
+          return (
+            <tbody key={stage}>
+              {achievements.map((achievement, index) => (
+                <tr key={achievement.event}>
+                  {index === 0 && (
+                    <th
+                      scope="rowgroup"
+                      rowSpan={achievements.length}
+                      className="pr-2 text-left align-top text-xs font-semibold text-[#d6ae64]"
+                    >
+                      {stageLabel}
+                    </th>
+                  )}
+                  <td className="pr-2 align-top text-slate-200">
+                    {achievement.event}
+                  </td>
+                  <td className="text-right align-top font-semibold text-cyan-100">
+                    {achievement.result}
+                  </td>
+                </tr>
               ))}
-            </div>
+            </tbody>
+          );
+        })}
+      </table>
 
-            <table className="mt-9 w-full table-fixed border-y border-cyan-100/15 text-sm leading-6 sm:hidden">
-              <caption className="sr-only">押田海斗の競技実績：時期・大会・結果</caption>
-              <colgroup>
-                <col className="w-[4rem]" />
-                <col />
-                <col className="w-[4.5rem]" />
-              </colgroup>
-              {achievementStages.map((stage) => {
-                const achievements = coachAchievements.filter((item) => item.stage === stage);
-                const stageLabel = stage === "小学" ? "小学校" : stage === "中学" ? "中学校" : stage;
-
-                return (
-                  <tbody key={stage} className="border-b border-cyan-100/10 last:border-b-0">
-                    {achievements.map((achievement, index) => (
-                      <tr key={achievement.event}>
-                        {index === 0 ? (
-                          <th
-                            scope="rowgroup"
-                            rowSpan={achievements.length}
-                            className="py-3 pr-2 text-left align-top text-xs font-semibold text-[#d6ae64]"
-                          >
-                            {stageLabel}
-                          </th>
-                        ) : null}
-                        <td className="py-3 pr-2 align-top font-semibold text-white">{achievement.event}</td>
-                        <td className="py-3 text-right align-top font-semibold text-cyan-100">{achievement.result}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                );
-              })}
-            </table>
-
-            <div className="mt-12 hidden border-y border-cyan-100/15 sm:block">
-              {coachAchievements.map((achievement) => (
-                <div
-                  key={`${achievement.stage}-${achievement.event}`}
-                  className="grid gap-2 border-b border-cyan-100/10 py-4 last:border-b-0 sm:grid-cols-[5rem_1fr_auto] sm:items-center"
-                >
-                  <p className="text-xs font-semibold tracking-[0.15em] text-[#d6ae64]">{achievement.stage}</p>
-                  <p className="font-semibold text-white">{achievement.event}</p>
-                  <p className="font-semibold text-cyan-100">{achievement.result}</p>
-                </div>
-              ))}
-            </div>
-
-            <blockquote className="mt-12 space-y-6 border-l-2 border-[#d6ae64] bg-white/[0.04] px-5 py-7 text-pretty text-[15px] leading-8 text-slate-200 sm:px-8 sm:text-base">
-              {storyContent.closingParagraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </blockquote>
-          </div>
-        </SectionReveal>
+      <div className="story-prose mt-6">
+        {storyContent.closingParagraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <Link
+          href="/trial/"
+          className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-4 py-3 text-center text-sm font-semibold text-[#031226] hover:bg-[#e8c980]"
+        >
+          体験コーチングを見る
+        </Link>
+        <Link
+          href="/profile/"
+          className="inline-flex min-h-12 items-center justify-center border border-cyan-100/30 px-4 py-3 text-center text-sm font-semibold hover:bg-white/5"
+        >
+          経歴・プロフィールを見る
+        </Link>
       </div>
     </section>
   );
