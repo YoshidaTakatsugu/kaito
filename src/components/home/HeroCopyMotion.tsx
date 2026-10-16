@@ -17,7 +17,7 @@ export function HeroCopyMotion() {
               key={line}
               aria-hidden="true"
               className={`block whitespace-nowrap hero-title-emphasis ${
-                index === 0 ? "text-[#d6ae64]" : "hero-title-result text-white"
+                index === 0 ? "hero-title-lead text-[#d6ae64]" : "hero-title-result text-white"
               }`}
             >
               {line}

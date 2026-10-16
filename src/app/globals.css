@@ -47,6 +47,10 @@ body {
   font-weight: 600;
 }
 
+.home-hero .hero-title-lead {
+  font-size: 1.2em;
+}
+
 .home-hero .hero-title-result {
   font-size: 20px;
 }
