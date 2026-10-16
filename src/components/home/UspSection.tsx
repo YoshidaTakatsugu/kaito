@@ -28,7 +28,7 @@ export function UspSection() {
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-[#d6ae64]">STRENGTH 0{index + 1}</p>
               <h3 className="mt-6 max-w-xl text-balance text-xl font-semibold leading-[1.55] text-white">{strength.title}</h3>
-              <p className="mt-5 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">{strength.detail}</p>
+              <p className="mt-5 whitespace-pre-line text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">{strength.detail}</p>
             </article>
           ))}
         </div>
