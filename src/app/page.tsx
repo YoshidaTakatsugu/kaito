@@ -1,4 +1,3 @@
-import { ConversionFlowSection } from "@/components/home/ConversionFlowSection";
 import { EmpathySection } from "@/components/home/EmpathySection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
@@ -19,7 +18,6 @@ export default function Home() {
       <UspSection />
       <MediaActivitySection />
       <ServicesSection />
-      <ConversionFlowSection />
       <MailSeminarSection />
       <FaqSection />
       <FinalCtaSection />

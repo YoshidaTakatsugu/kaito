@@ -382,7 +382,6 @@ export const homePageSections = [
     uspStrengths[0].detail,
   ],
   ["#services", "サービス紹介", "体験コーチング"],
-  ["#trial", trialContent.title, trialContent.overview],
 ] as const;
 
 export const structuredData = {

@@ -20,7 +20,7 @@ export function HeroSection() {
       <div className="hero-shade-vertical absolute inset-0 bg-[linear-gradient(180deg,rgba(3,18,38,0.08)_0%,rgba(3,18,38,0.3)_38%,rgba(3,18,38,0.94)_100%)]" />
       <div className="hero-shade-horizontal absolute inset-0 bg-[linear-gradient(90deg,rgba(3,18,38,0.96)_0%,rgba(3,18,38,0.74)_42%,rgba(3,18,38,0.12)_78%)]" />
 
-      <p aria-hidden="true" className="hero-opening absolute left-5 top-8 z-10 text-xs font-semibold leading-[1.9] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] sm:left-8 sm:top-10 sm:text-base lg:left-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:text-lg">
+      <p aria-hidden="true" className="hero-opening absolute left-5 top-8 z-10 text-sm font-semibold leading-[1.9] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] sm:left-8 sm:top-10 sm:text-lg lg:left-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:text-xl">
         <span className="block">{heroContent.titleLines[0]}</span>
         <span className="block">{heroContent.titleLines[1]}</span>
       </p>
