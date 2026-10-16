@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  icons: {
+    icon: "/images/nareru-logo.png",
+    apple: "/images/nareru-logo.png",
+  },
   openGraph: {
     title: `${site.name} | スポーツメンタルコーチング`,
     description: site.description,

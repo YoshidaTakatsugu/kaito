@@ -18,15 +18,15 @@ export function Navigation() {
         <Link
           href="/#hero"
           aria-label="NARERU ホームへ"
-          className="relative block h-12 w-28 shrink-0 overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-100"
+          className="relative block h-14 w-20 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-100"
         >
           <Image
-            src="/images/logo2.png"
+            src="/images/nareru-logo.png"
             alt="NARERUのロゴ"
             fill
-            sizes="112px"
+            sizes="80px"
             loading="eager"
-            className="scale-[2] object-contain brightness-0 invert"
+            className="object-contain"
           />
         </Link>
 

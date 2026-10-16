@@ -25,13 +25,13 @@ export function HeroSection() {
         <span className="block">{heroContent.titleLines[1]}</span>
       </p>
 
-      <div className="pointer-events-none absolute bottom-20 right-[3%] z-[1] hidden size-[24rem] opacity-75 lg:block xl:size-[29rem]">
+      <div className="pointer-events-none absolute bottom-24 right-[5%] z-[1] hidden h-48 w-56 opacity-75 lg:block xl:h-56 xl:w-64">
         <Image
-          src="/images/logo2.png"
+          src="/images/nareru-logo.png"
           alt="NARERU 結果に相応しい自分になれるスポーツメンタルコーチングのロゴ"
           fill
-          sizes="29rem"
-          className="object-contain brightness-0 invert"
+          sizes="(min-width: 1280px) 256px, 224px"
+          className="object-contain"
         />
       </div>
 
