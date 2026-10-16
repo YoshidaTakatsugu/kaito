@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { VoiceSection } from "@/components/home/VoiceSection";
 import { featuredAthleteVoice, site } from "@/lib/brand";
 
-const description = "スポーツメンタルコーチングを受けたアスリートと保護者の声。高めてきた能力が本番の結果につながり始めた変化をご紹介します。";
+const description =
+  "スポーツメンタルコーチングを受けたアスリートと保護者の声。高めてきた能力が本番の結果につながり始めた変化をご紹介します。";
 
 export const metadata: Metadata = {
   title: "アスリートの声",
@@ -34,12 +35,27 @@ export default function AthleteVoicesPage() {
           "@id": `${pageUrl}#voice`,
           name: featuredAthleteVoice.title,
         },
+        mainEntity: {
+          "@type": "Article",
+          articleSection: "選手インタビュー",
+          headline: featuredAthleteVoice.title,
+          inLanguage: "ja",
+          about: { "@id": `${site.url}/#service` },
+          articleBody: featuredAthleteVoice.questions
+            .map((item) => [item.question, ...item.answers].join("\n"))
+            .join("\n\n"),
+        },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "ホーム", item: site.url },
-          { "@type": "ListItem", position: 2, name: "アスリートの声", item: pageUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "アスリートの声",
+            item: pageUrl,
+          },
         ],
       },
     ],
@@ -47,7 +63,10 @@ export default function AthleteVoicesPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd }}
+      />
       <VoiceSection />
     </>
   );
