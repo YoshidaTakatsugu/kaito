@@ -43,18 +43,8 @@ body {
   color: #041225;
 }
 
-.home-hero .hero-title-intro {
-  font-size: 0.72em;
-  line-height: 1.65;
-  font-weight: 500;
-}
-
 .home-hero .hero-title-emphasis {
   font-weight: 600;
-}
-
-.home-hero .hero-title-intro + .hero-title-emphasis {
-  margin-top: 18px;
 }
 
 .mental-coaching-page > section:not(#concept) {

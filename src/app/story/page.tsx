@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+import { CoachStorySection } from "@/components/home/CoachStorySection";
 import { SectionReveal } from "@/components/home/SectionReveal";
-import { site } from "@/lib/brand";
+import { site, storyContent } from "@/lib/brand";
 import {
   storyPageContent as content,
   type StoryBlock,
@@ -79,11 +80,16 @@ export default function StoryPage() {
           "空手選手として勝ち切れなかった経験から、スポーツメンタルコーチになるまでの押田海斗のストーリー。",
         inLanguage: "ja",
         about: { "@id": `${site.url}/#person` },
-        hasPart: content.chapters.map((chapter) => ({
+        hasPart: [...content.chapters.map((chapter) => ({
           "@type": "WebPageElement",
           name: chapter.title,
           description: chapter.blocks.map((block) => block.text).join(""),
-        })),
+        })), {
+          "@type": "WebPageElement",
+          "@id": `${pageUrl}#story`,
+          name: storyContent.title,
+          description: storyContent.closingParagraphs[1],
+        }],
       },
       {
         "@type": "BreadcrumbList",
@@ -216,6 +222,7 @@ export default function StoryPage() {
           </div>
         </SectionReveal>
       </section>
+      <CoachStorySection />
     </article>
   );
 }

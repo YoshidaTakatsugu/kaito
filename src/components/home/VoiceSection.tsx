@@ -9,11 +9,11 @@ export function VoiceSection() {
         <header className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-              VOICE / RESULTS
+              ATHLETE VOICES
             </p>
-            <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
-              お客様の声・実績
-            </h2>
+            <h1 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
+              アスリートの声
+            </h1>
           </div>
           <p className="font-serif text-xl leading-[1.7] text-cyan-50 sm:text-2xl">
             <span className="block">高めてきた能力が、</span>
@@ -31,12 +31,12 @@ export function VoiceSection() {
                 <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
                   {featuredAthleteVoice.label}
                 </p>
-                <h3
+                <h2
                   id="featured-athlete-voice-title"
                   className="mt-6 max-w-3xl text-balance font-serif text-2xl leading-[1.55] text-white sm:text-3xl lg:text-4xl"
                 >
                   {featuredAthleteVoice.title}
-                </h3>
+                </h2>
                 <p className="mt-8 border-l-2 border-[#67d5ae] pl-5 text-sm font-semibold leading-7 text-cyan-50 sm:text-base">
                   {featuredAthleteVoice.profile}
                 </p>
@@ -92,9 +92,9 @@ export function VoiceSection() {
               <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
                 {featuredAthleteVoice.parentVoice.label}
               </p>
-              <h3 className="mt-5 text-balance font-serif text-xl leading-[1.65] text-white sm:text-2xl">
+              <h2 className="mt-5 text-balance font-serif text-xl leading-[1.65] text-white sm:text-2xl">
                 {featuredAthleteVoice.parentVoice.title}
-              </h3>
+              </h2>
             </figcaption>
 
             <blockquote className="border-l border-cyan-100/20 pl-6 sm:pl-8">

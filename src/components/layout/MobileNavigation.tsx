@@ -39,7 +39,7 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
       <div
         id="mobile-global-navigation"
         hidden={!isOpen}
-        className="fixed inset-x-0 top-16 border-y border-cyan-100/15 bg-[#031226] px-5 py-5 shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:px-8"
+        className="fixed inset-x-0 top-16 max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-y border-cyan-100/15 bg-[#031226] px-5 py-5 shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:px-8"
       >
         <div className="mx-auto grid w-full max-w-7xl">
           {items.map((item, index) => (

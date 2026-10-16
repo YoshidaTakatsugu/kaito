@@ -335,10 +335,10 @@ export default function MentalCoachingPage() {
               体験コーチングについて見る
             </Link>
             <Link
-              href="/#voice"
+              href="/athlete-voices/"
               className="inline-flex min-h-14 items-center justify-center border border-cyan-100/25 px-7 text-sm font-semibold tracking-[0.08em] text-white transition-colors hover:border-cyan-100/60 hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-100"
             >
-              お客様の声を見る
+              アスリートの声を見る
             </Link>
           </div>
 

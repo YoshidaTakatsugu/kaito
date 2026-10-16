@@ -23,6 +23,7 @@ export const navigationItems = [
     href: "/mental-coaching/",
   },
   { label: "ストーリー", href: "/story/" },
+  { label: "アスリートの声", href: "/athlete-voices/" },
   { label: "コラム", href: "/columns/" },
   { label: "よくある質問", href: "/faq/" },
   { label: "お問い合わせ", href: "/contact/" },
@@ -41,9 +42,9 @@ export const mobileNavigationItems = [
 
 export const heroContent = {
   title:
-    "あなたが苦しんでいるのは 本気で挑戦している証拠 あとは、メンタルだけ。 自分の力を結果につなげよう。",
+    "あなたが苦しんでいるのは、 本気で挑戦している証拠 あとは、メンタルだけ。 自分の力を結果につなげよう。",
   titleLines: [
-    "あなたが苦しんでいるのは",
+    "あなたが苦しんでいるのは、",
     "本気で挑戦している証拠",
     "あとは、メンタルだけ。",
     "自分の力を結果につなげよう。",
@@ -380,8 +381,6 @@ export const homePageSections = [
     "スポーツメンタルコーチ押田海斗 4つの強み",
     uspStrengths[0].detail,
   ],
-  ["#story", storyContent.title, storyContent.closingParagraphs[1]],
-  ["#voice", "お客様の声・実績", featuredAthleteVoice.title],
   ["#services", "サービス紹介", "体験コーチング"],
   ["#trial", trialContent.title, trialContent.overview],
 ] as const;
