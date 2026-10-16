@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { SectionReveal } from "@/components/home/SectionReveal";
 import { site } from "@/lib/brand";
 import { trialPageContent as content } from "@/lib/trial";
 
@@ -18,9 +17,9 @@ export const metadata: Metadata = {
     url: `${site.url}/trial/`,
     images: [
       {
-        url: "/images/S__3153969_0.jpg",
-        width: 1030,
-        height: 687,
+        url: "/images/S__3153967_0.jpg",
+        width: 1045,
+        height: 697,
         alt: "体験コーチングでアスリートの可能性に寄り添うスポーツメンタルコーチ押田海斗",
       },
     ],
@@ -96,323 +95,164 @@ export default function TrialPage() {
   const jsonLd = JSON.stringify(pageJsonLd).replace(/</g, "\\u003c");
 
   return (
-    <article className="bg-[#041225] text-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLd }}
-      />
+    <article className="trial-page bg-[#041225] text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
 
-      <header className="relative isolate flex min-h-[calc(100svh-4rem)] items-end overflow-hidden px-5 py-12 sm:px-8 sm:py-20 lg:py-24">
-        <Image
-          src="/images/S__3153969_0.jpg"
-          alt="体験コーチングでアスリートの可能性に寄り添うスポーツメンタルコーチ押田海斗"
-          fill
-          sizes="100vw"
-          loading="eager"
-          className="-z-30 object-cover object-[62%_center] sm:object-center"
-        />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(3,13,29,0.98)_0%,rgba(3,13,29,0.91)_43%,rgba(3,13,29,0.3)_100%)]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(3,13,29,0.98)_0%,rgba(3,13,29,0.16)_72%)]" />
+      <header>
+        <div className="relative isolate flex min-h-60 items-end overflow-hidden bg-[#031226] px-5 py-7 sm:min-h-72 sm:px-8 sm:py-10 lg:min-h-[22rem]">
+          <div className="absolute inset-0 -z-20 lg:left-[30%]">
+            <Image
+              src="/images/S__3153967_0.jpg"
+              alt="ノートを手にアスリートとの対話に向き合うスポーツメンタルコーチ押田海斗"
+              fill
+              sizes="(min-width: 1024px) 70vw, 100vw"
+              loading="eager"
+              className="object-cover object-[60%_12%] lg:object-[60%_4%]"
+            />
+            <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,#031226,transparent_40%)] lg:block" />
+          </div>
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,13,29,0.9),rgba(3,13,29,0.15)_75%)]" />
+          <div className="mx-auto w-full max-w-6xl">
+            <p className="text-xs font-semibold tracking-[0.2em] text-[#91e2c6]">{content.eyebrow}</p>
+            <h1 className="mt-3 font-serif text-[28px] leading-relaxed sm:text-4xl">{content.title}</h1>
+          </div>
+        </div>
 
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold tracking-[0.28em] text-[#67d5ae]">
-              {content.eyebrow}
-            </p>
-            <h1 className="mt-5 font-serif text-4xl leading-tight sm:text-6xl">
-              {content.title}
-            </h1>
-            <p className="mt-7 font-serif text-xl leading-[1.8] text-cyan-50 sm:text-3xl">
-              {content.statement}
-            </p>
-            <p className="mt-2 max-w-2xl font-serif text-3xl leading-[1.45] text-white sm:text-5xl">
-              {content.headline}
-            </p>
-            <div className="mt-8 max-w-2xl space-y-1 text-sm leading-7 text-slate-200 sm:text-base">
-              {content.introduction.slice(0, 3).map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-              <p className="pt-3 leading-8 text-slate-300">
-                {content.introduction[3]}
-              </p>
-            </div>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <p className="font-serif text-2xl font-semibold text-white sm:text-3xl">
-                {content.price}
-              </p>
-              <Link
-                href={content.application.href}
-                className="inline-flex min-h-14 items-center justify-center bg-[#d6ae64] px-7 text-sm font-semibold tracking-[0.08em] text-[#031226] transition-colors hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              >
-                {content.application.label}
-                <span aria-hidden="true" className="ml-3">
-                  →
-                </span>
+            <p className="text-sm leading-6 text-[#e8c980]">{content.statement}</p>
+            <p className="mt-2 font-serif text-xl leading-[1.6] sm:text-2xl">{content.headline}</p>
+            <p className="mt-4 text-sm leading-[1.8] text-slate-300 sm:text-base">{content.introduction[3]}</p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+              <p className="text-xl font-semibold text-white">{content.price}</p>
+              <Link href={content.application.href} className="inline-flex min-h-12 items-center justify-center rounded bg-[#d6ae64] px-5 py-3 text-center text-sm font-semibold text-[#031226] hover:bg-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                {content.application.label}<span aria-hidden="true" className="ml-3">→</span>
               </Link>
             </div>
           </div>
+          <nav aria-label="体験コーチングのページ内メニュー" className="mt-5 flex gap-5 overflow-x-auto border-t border-white/10 text-xs text-slate-300">
+            {[
+              ["#trial-benefits", "3つのメリット"],
+              ["#trial-overview", "料金・概要"],
+              ["#trial-flow", "当日の流れ"],
+              ["#faq", "よくある質問"],
+            ].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6ae64]">{label}</a>)}
+          </nav>
         </div>
       </header>
 
-      <section className="border-y border-cyan-100/10 bg-[#071a32] px-5 py-20 sm:px-8 lg:py-28">
-        <SectionReveal className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.42fr_1fr] lg:gap-20">
+      <section id="trial-audience" className="border-y border-white/10 bg-[#071a32] px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[0.4fr_1fr] lg:gap-12">
           <header>
-            <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
-              FOR ATHLETES
-            </p>
-            <h2 className="mt-5 font-serif text-4xl leading-[1.4] sm:text-5xl">
-              {content.audience.title}
-            </h2>
+            <p className="text-xs font-semibold tracking-[0.2em] text-[#91e2c6]">FOR ATHLETES</p>
+            <h2 className="mt-3 font-serif text-2xl leading-[1.5] sm:text-3xl">{content.audience.title}</h2>
           </header>
-
           <div>
-            <ul className="grid gap-px border border-cyan-100/15 bg-cyan-100/15 sm:grid-cols-2">
-              {content.audience.items.map((item) => (
-                <li
-                  key={item}
-                  className="flex min-h-28 gap-4 bg-[#071a32] p-6 text-base font-semibold leading-8 text-cyan-50"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mt-1 grid size-7 shrink-0 place-items-center border border-[#67d5ae]/60 text-sm text-[#67d5ae]"
-                  >
-                    ✓
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
+            <p className="text-sm leading-[1.8] text-slate-300">{content.introduction.slice(0, 3).join("")}</p>
+            <ul className="mt-4 border-t border-white/15">
+              {content.audience.items.map(item => <li key={item} className="border-b border-white/10 py-3 text-sm font-semibold leading-[1.8] text-cyan-50">{item}</li>)}
             </ul>
-            <div className="mt-8 border-l-2 border-[#d6ae64] pl-6 sm:pl-8">
-              <p className="font-serif text-2xl leading-[1.7] text-white sm:text-3xl">
-                {content.audience.statement}
-              </p>
-              <p className="mt-3 max-w-3xl leading-8 text-slate-300">
-                {content.audience.closing}
-              </p>
-            </div>
-          </div>
-        </SectionReveal>
-      </section>
-
-      <section className="px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto w-full max-w-7xl">
-          <SectionReveal>
-            <p className="text-xs font-semibold tracking-[0.24em] text-[#d6ae64]">
-              THREE BENEFITS
-            </p>
-            <h2 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.4] sm:text-5xl">
-              {content.benefits.title}
-            </h2>
-          </SectionReveal>
-
-          <div className="mt-12 space-y-5">
-            {content.benefits.items.map((benefit, index) => (
-              <SectionReveal key={benefit.title}>
-                <article className="grid gap-7 border border-cyan-100/15 bg-white/[0.035] px-6 py-8 sm:px-9 sm:py-10 lg:grid-cols-[8rem_0.72fr_1fr] lg:gap-10">
-                  <p className="font-serif text-5xl text-[#67d5ae]" aria-hidden="true">
-                    0{index + 1}
-                  </p>
-                  <h3 className="text-2xl font-semibold leading-[1.6] text-white sm:text-3xl">
-                    {benefit.title}
-                  </h3>
-                  <div className="space-y-5 leading-8 text-slate-300">
-                    {"examples" in benefit ? (
-                      <blockquote className="space-y-1 border-l-2 border-[#d6ae64] pl-5 font-serif text-lg leading-8 text-cyan-50">
-                        {benefit.examples.map((example) => (
-                          <p key={example}>{example}</p>
-                        ))}
-                      </blockquote>
-                    ) : null}
-                    {benefit.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                    {"closing" in benefit ? <p>{benefit.closing}</p> : null}
-                  </div>
-                </article>
-              </SectionReveal>
-            ))}
+            <p className="mt-4 text-sm leading-[1.8] text-slate-300">{content.audience.closing}</p>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-cyan-100/10 bg-[#06172d] px-5 py-20 sm:px-8 lg:py-24">
-        <SectionReveal className="mx-auto w-full max-w-7xl">
-          <div className="grid gap-8 border border-dashed border-cyan-100/25 px-6 py-10 sm:px-10 lg:grid-cols-[0.48fr_1fr] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
-                ATHLETE VOICE
-              </p>
-              <h2 className="mt-5 font-serif text-3xl leading-[1.45] sm:text-4xl">
-                {content.athleteChanges.title}
-              </h2>
-            </div>
-            <p className="border-l border-cyan-100/20 pl-6 leading-8 text-slate-300">
-              {content.athleteChanges.note}
-            </p>
+      <section id="trial-benefits" className="px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#e8c980]">THREE BENEFITS</p>
+          <h2 className="mt-3 font-serif text-[22px] leading-[1.5] sm:text-3xl">{content.benefits.title.replace("3つのこと", "")}<span className="block sm:inline">3つのこと</span></h2>
+          <div role="region" aria-label="体験コーチングの3つのメリット" tabIndex={0} className="trial-benefits-scroller mt-6 grid auto-cols-[90%] grid-flow-col snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64] md:auto-cols-auto md:grid-flow-row md:grid-cols-3 md:overflow-visible md:pb-0">
+            {content.benefits.items.map((benefit, index) => {
+              const examples = "examples" in benefit ? <blockquote className="space-y-1 border-l-2 border-[#d6ae64]/60 pl-3 text-cyan-50">{benefit.examples.map(example => <p key={example}>{example}</p>)}</blockquote> : null;
+              return (
+                <article key={benefit.title} className="min-w-0 snap-start border border-white/15 bg-white/[0.035] p-5 sm:p-6">
+                  <p className="text-sm font-semibold text-[#91e2c6]" aria-hidden="true">0{index + 1}</p>
+                  <h3 className="mt-3 text-lg font-semibold leading-[1.6]">{benefit.title}</h3>
+                  <p className="mt-4 text-sm leading-[1.8] text-slate-300">{benefit.paragraphs[0]}</p>
+                  <details className="group mt-4 border-t border-white/15">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center py-3 text-sm font-semibold text-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6ae64] [&::-webkit-details-marker]:hidden">
+                      <span className="group-open:hidden">詳しく見る</span><span className="hidden group-open:inline">説明を閉じる</span>
+                    </summary>
+                    <div className="space-y-3 pb-1 text-sm leading-[1.8] text-slate-300">
+                      {index === 1 ? examples : null}
+                      {benefit.paragraphs.slice(1).map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+                      {index !== 1 ? examples : null}
+                      {"closing" in benefit ? <p>{benefit.closing}</p> : null}
+                    </div>
+                  </details>
+                </article>
+              );
+            })}
           </div>
-        </SectionReveal>
+        </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:py-28">
-        <SectionReveal className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.38fr_1fr] lg:gap-20">
+      <section id="trial-overview" className="border-y border-white/10 bg-[#071a32] px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[0.4fr_1fr] lg:gap-12">
           <header>
-            <p className="text-xs font-semibold tracking-[0.24em] text-[#d6ae64]">
-              SESSION DETAILS
-            </p>
-            <h2 className="mt-5 font-serif text-4xl leading-[1.4] sm:text-5xl">
-              {content.overview.title}
-            </h2>
+            <p className="text-xs font-semibold tracking-[0.2em] text-[#e8c980]">SESSION DETAILS</p>
+            <h2 className="mt-3 font-serif text-2xl leading-[1.5] sm:text-3xl">{content.overview.title}</h2>
           </header>
-
-          <dl className="border-y border-cyan-100/20">
-            {content.overview.items.map((item) => (
-              <div
-                key={item.label}
-                className="grid gap-3 border-b border-cyan-100/10 py-6 last:border-b-0 sm:grid-cols-[10rem_1fr] sm:gap-8"
-              >
-                <dt className="text-xs font-semibold tracking-[0.16em] text-[#67d5ae]">
-                  {item.label}
-                </dt>
-                <dd className="space-y-2 font-semibold leading-8 text-white">
-                  {item.values.map((value) => (
-                    <p key={value}>{value}</p>
-                  ))}
+          <dl className="border-t border-white/15">
+            {content.overview.items.map(item => (
+              <div key={item.label} className="grid gap-2 border-b border-white/10 py-4 sm:grid-cols-[6rem_1fr] sm:gap-5">
+                <dt className="text-xs font-semibold leading-6 text-[#91e2c6]">{item.label}</dt>
+                <dd>
+                  {item.values.map(value => <p key={value} className="text-sm font-semibold leading-[1.8]">{value}</p>)}
+                  {"note" in item ? <p className="mt-2 text-xs font-normal leading-[1.8] text-slate-400">{item.note}</p> : null}
                 </dd>
               </div>
             ))}
           </dl>
-        </SectionReveal>
-      </section>
-
-      <section className="border-y border-cyan-100/10 bg-[#071a32] px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto w-full max-w-7xl">
-          <SectionReveal className="grid gap-12 lg:grid-cols-[0.38fr_1fr] lg:gap-20">
-            <header>
-              <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
-                SESSION FLOW
-              </p>
-              <h2 className="mt-5 font-serif text-4xl leading-[1.4] sm:text-5xl">
-                {content.flow.title}
-              </h2>
-            </header>
-
-            <ol className="border-t border-cyan-100/20">
-              {content.flow.steps.map((step, index) => (
-                <li
-                  key={step.title}
-                  className="grid gap-5 border-b border-cyan-100/15 py-7 sm:grid-cols-[4rem_1fr] sm:py-9"
-                >
-                  <span className="font-serif text-3xl text-[#d6ae64]" aria-hidden="true">
-                    0{index + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-semibold leading-8 text-white sm:text-2xl">
-                      {step.title}
-                    </h3>
-                    <div className="mt-4 space-y-3 leading-8 text-slate-300">
-                      {step.paragraphs.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </SectionReveal>
-
-          <SectionReveal className="mt-12 flex flex-col gap-5 border border-[#d6ae64]/30 bg-[#031226] px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-9">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.22em] text-[#d6ae64]">
-                FIRST STEP
-              </p>
-              <p className="mt-3 font-serif text-2xl leading-[1.55] text-white">
-                {content.headline}
-              </p>
-            </div>
-            <Link
-              href={content.application.href}
-              className="inline-flex min-h-14 shrink-0 items-center justify-center bg-[#d6ae64] px-7 text-center text-sm font-semibold tracking-[0.08em] text-[#031226] transition-colors hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            >
-              {content.application.label}
-              <span aria-hidden="true" className="ml-3">
-                →
-              </span>
-            </Link>
-          </SectionReveal>
         </div>
       </section>
 
-      <section id="faq" className="px-5 py-20 sm:px-8 lg:py-28">
-        <SectionReveal className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.38fr_1fr] lg:gap-20">
+      <section id="trial-flow" className="px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[0.4fr_1fr] lg:gap-12">
           <header>
-            <p className="text-xs font-semibold tracking-[0.24em] text-[#67d5ae]">
-              FAQ
-            </p>
-            <h2 className="mt-5 font-serif text-4xl leading-[1.4] sm:text-5xl">
-              {content.faq.title}
-            </h2>
+            <p className="text-xs font-semibold tracking-[0.2em] text-[#91e2c6]">SESSION FLOW</p>
+            <h2 className="mt-3 font-serif text-2xl leading-[1.5] sm:text-3xl">{content.flow.title}</h2>
           </header>
+          <ol className="border-t border-white/15">
+            {content.flow.steps.map(step => (
+              <li key={step.title} className="border-b border-white/10 py-4">
+                <h3 className="text-[15px] font-semibold leading-[1.6] text-[#e8c980]">{step.title}</h3>
+                <div className="mt-2 space-y-2 text-sm leading-[1.8] text-slate-300">{step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-          <div className="border-t border-cyan-100/20">
+      <section id="faq" className="border-y border-white/10 bg-[#071a32] px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[0.4fr_1fr] lg:gap-12">
+          <header>
+            <p className="text-xs font-semibold tracking-[0.2em] text-[#91e2c6]">FAQ</p>
+            <h2 className="mt-3 font-serif text-2xl leading-[1.5] sm:text-3xl">{content.faq.title}</h2>
+          </header>
+          <div className="border-t border-white/15">
             {content.faq.items.map((item, index) => (
-              <details
-                key={item.question}
-                className="group border-b border-cyan-100/15 py-2"
-                open={index === 0}
-              >
-                <summary className="flex min-h-20 cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-semibold leading-8 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-100 [&::-webkit-details-marker]:hidden">
-                  <span>
-                    <span className="mr-3 font-serif text-2xl text-[#67d5ae]">Q.</span>
-                    {item.question}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="grid size-8 shrink-0 place-items-center border border-cyan-100/25 text-xl font-light text-[#67d5ae] transition-transform duration-200 group-open:rotate-45"
-                  >
-                    +
-                  </span>
+              <details key={item.question} className="group border-b border-white/10" open={index === 0}>
+                <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold leading-[1.8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6ae64] [&::-webkit-details-marker]:hidden">
+                  <span>{item.question}</span><span aria-hidden="true" className="text-xl font-normal text-[#91e2c6] group-open:rotate-45">+</span>
                 </summary>
-                <div className="pb-7 pl-0 leading-8 text-slate-300 sm:pl-12">
-                  {item.answers.map((answer) => (
-                    <p key={answer} className="mt-3 first:mt-0">
-                      {answer}
-                    </p>
-                  ))}
-                </div>
+                <div className="space-y-2 pb-4 text-sm leading-[1.8] text-slate-300">{item.answers.map(answer => <p key={answer}>{answer}</p>)}</div>
               </details>
             ))}
           </div>
-        </SectionReveal>
+        </div>
       </section>
 
-      <section className="relative isolate overflow-hidden border-t border-cyan-100/10 px-5 py-24 sm:px-8 lg:py-32">
-        <Image
-          src="/images/S__3153968_0.jpg"
-          alt="目標に向かう最初の一歩を応援するスポーツメンタルコーチ押田海斗"
-          fill
-          sizes="100vw"
-          className="-z-20 object-cover object-center opacity-35"
-        />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,13,29,0.98),rgba(3,13,29,0.72))]" />
-        <SectionReveal className="mx-auto w-full max-w-7xl">
-          <p className="text-xs font-semibold tracking-[0.24em] text-[#d6ae64]">
-            START HERE
-          </p>
-          <h2 className="mt-6 max-w-4xl font-serif text-4xl leading-[1.45] sm:text-6xl">
-            {content.statement}
-            <span className="mt-2 block">{content.headline}</span>
-          </h2>
-          <p className="mt-7 font-serif text-2xl text-white">{content.price}</p>
-          <Link
-            href={content.application.href}
-            className="mt-9 inline-flex min-h-14 w-full items-center justify-center bg-[#d6ae64] px-7 text-sm font-semibold tracking-[0.08em] text-[#031226] transition-colors hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto"
-          >
-            {content.application.label}
-            <span aria-hidden="true" className="ml-3">
-              →
-            </span>
+      <section id="trial-booking" className="px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto flex max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="font-serif text-2xl leading-[1.5] sm:text-3xl">体験コーチングのお申し込み</h2>
+            <p className="mt-2 text-sm leading-7 text-slate-300">ご希望の形式・日程をお知らせください。</p>
+          </div>
+          <Link href={content.application.href} className="inline-flex min-h-12 shrink-0 items-center justify-center rounded bg-[#d6ae64] px-5 py-3 text-center text-sm font-semibold text-[#031226] hover:bg-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+            {content.application.label}<span aria-hidden="true" className="ml-3">→</span>
           </Link>
-        </SectionReveal>
+        </div>
       </section>
     </article>
   );

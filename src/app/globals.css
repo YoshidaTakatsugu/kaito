@@ -202,7 +202,8 @@ body {
   }
 }
 
-.media-card-scroller {
+.media-card-scroller,
+.trial-benefits-scroller {
   scrollbar-color: #d6ae64 #142c44;
   scrollbar-width: thin;
 }
