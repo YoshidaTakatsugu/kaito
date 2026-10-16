@@ -71,23 +71,67 @@ body {
   .home-hero .hero-title-result { font-size: 44px; }
 }
 
-.mental-coaching-page > section:not(#concept) {
-  padding-block: 64px;
+.mental-page-hero { min-height: 360px; padding-block: 48px; }
+.mental-hero-shade { background: linear-gradient(90deg, rgba(4,18,37,.95), rgba(4,18,37,.65) 48%, rgba(4,18,37,.15)), linear-gradient(0deg, rgba(4,18,37,.8), transparent 70%); }
+.mental-page-title { font-size: 40px; line-height: 1.45; }
+.mental-page-intro { padding-block: 40px; }
+.mental-reading-layout { display: grid; grid-template-columns: 240px minmax(0,1fr); gap: 64px; align-items: start; padding-bottom: 64px; }
+.mental-contents { position: sticky; top: 96px; scroll-margin-top: 16px; }
+.mental-contents-caption { font-size: 11px; letter-spacing: .2em; color: #8ed9e7; }
+.mental-contents h2 { margin-top: 8px; font-size: 16px; font-weight: 600; }
+.mental-contents ol { margin-top: 20px; border-top: 1px solid #c7f3ff25; }
+.mental-contents a { display: flex; gap: 12px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #c7f3ff20; font-size: 13px; line-height: 1.7; }
+.mental-contents a span { color: #d6ae64; font-size: 11px; font-variant-numeric: tabular-nums; }
+.mental-contents a:hover, .mental-section-meta a:hover { color: #d6ae64; }
+.mental-coaching-page a:focus-visible { outline: 2px solid #d6ae64; outline-offset: 4px; }
+.mental-reading-content { min-width: 0; }
+.mental-reading-section { padding-block: 40px; border-top: 1px solid #c7f3ff25; scroll-margin-top: 16px; }
+.mental-reading-section:first-child { padding-top: 0; border-top: 0; }
+.mental-section-heading { margin-bottom: 24px; }
+.mental-section-meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.mental-section-meta p { font-size: 11px; letter-spacing: .16em; color: #8ed9e7; font-weight: 600; }
+.mental-section-meta a { flex-shrink: 0; font-size: 11px; color: #a7bacb; padding: 8px 0 8px 8px; }
+.mental-section-heading h2 { margin-top: 12px; font-family: var(--font-site-serif); font-size: 32px; line-height: 1.5; font-weight: 400; }
+.mental-section-heading h2 span { display: block; overflow-wrap: normal; word-break: keep-all; }
+.mental-coaching-page .mental-coaching-prose { max-width: 46rem; font-size: 15px; line-height: 1.85; }
+.mental-reading-section .grid .mental-section-heading { margin-bottom: 0; }
+.mental-reading-section h3 { font-size: 20px; line-height: 1.7; }
+.mental-logic-conclusion { margin-bottom: 20px; font-family: var(--font-site-serif); }
+.mental-concept-image { margin-bottom: 24px; }
+.mental-concept-image img { width: 100%; height: auto; }
+.mental-result-cycle { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: 24px; border-block: 1px solid #c7f3ff25; }
+.mental-result-cycle li { padding: 18px 8px; text-align: center; font-size: 17px; }
+.mental-result-cycle li + li { border-left: 1px solid #c7f3ff25; }
+.mental-result-cycle span { display: block; color: #d6ae64; font-size: 11px; margin-bottom: 6px; }
+.mental-role-title span { display: inline-block; overflow-wrap: normal; word-break: keep-all; }
+@media (max-width: 1023px) {
+  .mental-reading-layout { grid-template-columns: minmax(0,1fr); gap: 36px; }
+  .mental-contents { position: static; }
+  .mental-contents ol { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 24px; margin-top: 16px; }
+  .mental-contents li { display: flex; }
+  .mental-contents a { width: 100%; }
 }
-
-.mental-coaching-page .mental-coaching-prose {
-  max-width: 46rem;
+@media (max-width: 639px) {
+  .mental-page-hero { min-height: 272px; padding-block: 32px; }
+  .mental-page-hero img { object-position: 58% center; }
+  .mental-page-title { font-size: 28px; }
+  .mental-page-hero > div:last-child > p { font-size: 10px; letter-spacing: .18em; }
+  .mental-page-intro { padding-block: 28px; }
+  .mental-reading-layout { padding-bottom: 32px; }
+  .mental-contents ol { column-gap: 16px; }
+  .mental-contents a { min-height: 48px; font-size: 13px; gap: 7px; padding-block: 12px; }
+  .mental-section-heading h2 { font-size: 24px; }
+  .mental-section-heading { margin-bottom: 20px; }
+  .mental-section-meta p { font-size: 10px; letter-spacing: .1em; }
+  .mental-coaching-page .mental-coaching-prose { font-size: 14px; line-height: 1.85; }
+  .mental-reading-section { padding-block: 32px; }
+  .mental-reading-section h3 { font-size: 18px; }
+  .mental-reading-section blockquote { font-size: 16px; }
+  .mental-role-title span { display: block; }
 }
-
-.mental-coaching-page #logic p:not(:first-child),
-.mental-coaching-page #concept .concept-copy > p:last-of-type {
-  line-height: 1.8;
-}
-
-@media (min-width: 1024px) {
-  .mental-coaching-page > section:not(#concept) {
-    padding-block: 80px;
-  }
+@media (max-width: 359px) {
+  .mental-page-title { font-size: 25px; }
+  .mental-section-heading h2 { font-size: 21px; }
 }
 
 @media (max-width: 639px) {
@@ -97,9 +141,7 @@ body {
   }
 
   main > section,
-  main > article > section,
-  .mental-coaching-page > section:not(#concept),
-  .mental-coaching-page > section#concept {
+  main > article > section {
     padding-bottom: 40px;
   }
 
@@ -129,35 +171,6 @@ body {
     min-width: 0;
     font-size: 13px;
     line-height: 1.8;
-  }
-
-  #concept {
-    padding: 0 0 80px;
-  }
-
-  #concept .concept-layout {
-    gap: 0;
-  }
-
-  #concept .concept-portrait {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: #061a33;
-  }
-
-  #concept .concept-photo-fade {
-    position: absolute;
-    inset: auto 0 0;
-    height: 42%;
-    background: linear-gradient(180deg, transparent, rgba(6, 26, 51, 0.85) 65%, #061a33);
-    pointer-events: none;
-  }
-
-  #concept .concept-copy {
-    position: relative;
-    margin-top: -48px;
-    padding: 0 24px;
   }
 
   .home-hero .hero-photo {
