@@ -12,7 +12,7 @@ export const trialPageContent = {
   price: "60分｜5,500円（税込）",
   application: {
     label: "体験コーチングを申し込む",
-    href: "/contact/",
+    href: "/trial/apply/",
   },
   audience: {
     title: "こんな選手に向けて",

@@ -20,7 +20,7 @@ export function FinalCtaSection() {
           <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">自分の力を結果につなげよう。</h2>
           <p className="mt-6 text-pretty text-[15px] leading-7 text-slate-200 sm:text-base sm:leading-8">{heroContent.subcopy}</p>
           <div className="mt-9 grid max-w-2xl gap-3 sm:grid-cols-2">
-            <a href="#trial" className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-5 text-center text-sm font-semibold tracking-[0.08em] text-[#031226]">
+            <a href={heroContent.primaryCta.href} className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-5 text-center text-sm font-semibold tracking-[0.08em] text-[#031226]">
               {heroContent.primaryCta.label} <span aria-hidden="true" className="ml-3">→</span>
             </a>
             <a href={heroContent.secondaryCta.href} className="inline-flex min-h-12 items-center justify-center border border-white/35 bg-[#031226]/50 px-5 text-center text-sm font-semibold tracking-[0.06em] text-white">

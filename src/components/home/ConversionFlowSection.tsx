@@ -58,7 +58,7 @@ export function ConversionFlowSection() {
             <p className="text-xs font-semibold tracking-[0.22em] text-[#d6ae64]">FIRST STEP</p>
             <p className="mt-4 text-balance font-serif text-xl leading-[1.65] text-white sm:text-2xl">なりたい自分へ変わっていく、最初の一歩を。</p>
           </div>
-          <a href="#final-cta" className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-6 text-sm font-semibold tracking-[0.1em] text-[#031226]">
+          <a href="/trial/apply/" className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-6 text-sm font-semibold tracking-[0.1em] text-[#031226]">
             体験コーチングに申し込む <span aria-hidden="true" className="ml-3">→</span>
           </a>
         </SectionReveal>

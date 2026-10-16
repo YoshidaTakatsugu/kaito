@@ -50,7 +50,7 @@ export const heroContent = {
     "自分の力を結果につなげよう。",
   ],
   subcopy: "結果に相応しいメンタルを育むスポーツメンタルコーチング",
-  primaryCta: { label: "体験コーチングに申し込む", href: "#trial" },
+  primaryCta: { label: "体験コーチングに申し込む", href: "/trial/apply/" },
   secondaryCta: {
     label: seminarContent.ctaLabel,
     href: seminarHref,
