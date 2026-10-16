@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { ColumnCard } from "@/components/columns/ColumnCard";
+import Image from "next/image";
+import { ColumnSearch } from "@/components/columns/ColumnSearch";
 import { getColumns } from "@/lib/columns";
 import { site } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "コラム",
   description:
-    "NARERUのコラムは、トップアスリートが本番で力を出すための疑問にAnswer-Firstで答える1問1答型コンテンツです。",
+    "アスリートの声とNARERUからのお知らせ。タイトルや本文のキーワードから記事を検索できます。",
+  alternates: { canonical: "/columns/" },
   openGraph: {
     title: `コラム | ${site.name}`,
     description:
-      "トップアスリートの本番発揮、プレッシャー、心技体を1問1答で解説します。",
+      "アスリートの声とNARERUからのお知らせを掲載しています。",
     url: `${site.url}/columns/`,
+    images: [{ url: "/images/columns-stadium.webp", width: 1920, height: 1089, alt: "照明に照らされたスタジアム" }],
   },
 };
 
@@ -19,28 +22,19 @@ export default async function ColumnsPage() {
   const columns = await getColumns();
 
   return (
-    <section className="bg-[#041225] px-5 py-24 text-white sm:px-8">
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.42fr_1fr]">
-          <div>
-            <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-              COLUMNS
-            </p>
-            <h1 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl">
-              1問1答で、心のブレーキをほどく。
-            </h1>
-          </div>
-          <p className="font-serif text-2xl leading-[1.85] text-cyan-50 sm:text-3xl">
-            NARERUのコラムは、質問をタイトルにし、冒頭で結論を示すAnswer-First構造です。AI検索にも人にも、答えが迷子にならない形で本番発揮の知識を整理します。
-          </p>
+    <div className="bg-[#041225] text-white">
+      <header className="relative isolate flex min-h-72 items-end overflow-hidden px-5 py-10 sm:min-h-80 sm:px-8 sm:py-14">
+        <Image src="/images/columns-stadium.webp" alt="照明に照らされたスタジアム" fill loading="eager" sizes="100vw" className="-z-20 object-cover object-[50%_60%] opacity-70" />
+        <div className="absolute inset-0 -z-10 bg-[#031226]/45" />
+        <div className="mx-auto w-full max-w-5xl">
+          <p className="text-xs font-semibold tracking-[0.2em] text-cyan-100">COLUMNS</p>
+          <h1 className="mt-4 font-serif text-[28px] leading-relaxed sm:text-4xl">コラム</h1>
+          <p className="mt-4 max-w-xl text-sm leading-7 text-slate-100 sm:text-base">アスリートの声と、NARERUの取り組みをお届けします。</p>
         </div>
-
-        <div className="mt-16">
-          {columns.map((article) => (
-            <ColumnCard key={article.slug} article={article} />
-          ))}
-        </div>
-      </div>
-    </section>
+      </header>
+      <section aria-label="コラム一覧と検索" className="px-5 py-10 sm:px-8 sm:py-14">
+        <div className="mx-auto max-w-5xl"><ColumnSearch articles={columns} /></div>
+      </section>
+    </div>
   );
 }
