@@ -62,7 +62,7 @@ export function ServicesSection() {
               href="/trial/"
               className="mt-6 inline-flex min-h-14 w-full items-center justify-center border border-[#d6ae64] px-4 py-3 text-center text-sm font-semibold leading-[1.6] text-[#d6ae64] transition-colors hover:bg-[#d6ae64] hover:text-[#031226] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto"
             >
-              <span><span className="block sm:inline">体験コーチングの詳細・</span><span className="block sm:inline">お申し込み</span></span>
+              <span><span className="block sm:inline">体験コーチング</span><span className="block sm:inline">詳細・お申込み</span></span>
               <span aria-hidden="true" className="ml-3 shrink-0">
                 →
               </span>

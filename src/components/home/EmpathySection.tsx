@@ -16,16 +16,18 @@ export function EmpathySection() {
 
         <div className="mt-10 max-w-5xl sm:mt-14">
           <div className="grid gap-3">
-            {empathyContent.worries.map((worry) => (
+            {empathyContent.worries.map((worry, index) => (
               <article
                 key={worry}
-                className="grid grid-cols-[1.5rem_1fr] items-start gap-3 border border-cyan-100/15 bg-white/[0.045] p-5 sm:items-center sm:gap-4"
+                className="grid grid-cols-[1.5rem_1fr] items-center gap-3 border border-cyan-100/15 bg-white/[0.045] p-5 sm:gap-4"
               >
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 size-6 text-[#d6ae64] sm:mt-0">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" className="size-6 text-[#d6ae64]">
                   <path d="M20 13v7H4V4h11" />
                   <path d="m7 11 4 4L21 5" />
                 </svg>
-                <p className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">{worry}</p>
+                <p className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">
+                  {index === 0 ? <><span className="block sm:inline">練習ではできるのに</span><span className="block sm:inline">試合になるとできない</span></> : worry}
+                </p>
               </article>
             ))}
           </div>
