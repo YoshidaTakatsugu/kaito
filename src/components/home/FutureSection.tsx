@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { futureContent } from "@/lib/brand";
 import { SectionReveal } from "./SectionReveal";
 
@@ -31,6 +32,10 @@ export function FutureSection() {
             <span className="block">そんな自分へ、</span>
             <span className="block">少しずつ近づいていきます。</span>
           </p>
+          <Link href="/mental-coaching/" className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-[#d6ae64] px-3 py-3 text-center text-sm font-semibold leading-6 text-[#e8c980] transition-colors hover:bg-[#d6ae64] hover:text-[#031226] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto sm:px-6">
+            <span>スポーツメンタルコーチングとは</span>
+            <span aria-hidden="true" className="shrink-0">→</span>
+          </Link>
         </div>
 
       </SectionReveal>
