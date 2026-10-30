@@ -19,9 +19,12 @@ export function EmpathySection() {
             {empathyContent.worries.map((worry) => (
               <article
                 key={worry}
-                className="grid grid-cols-[2.5rem_1fr] items-start gap-3 border border-cyan-100/15 bg-white/[0.045] p-5 sm:grid-cols-[3.25rem_1fr] sm:items-center"
+                className="grid grid-cols-[1.5rem_1fr] items-start gap-3 border border-cyan-100/15 bg-white/[0.045] p-5 sm:items-center sm:gap-4"
               >
-                <span aria-hidden="true" className="font-serif text-3xl text-cyan-100/70">☑</span>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 size-6 text-[#d6ae64] sm:mt-0">
+                  <path d="M20 13v7H4V4h11" />
+                  <path d="m7 11 4 4L21 5" />
+                </svg>
                 <p className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">{worry}</p>
               </article>
             ))}

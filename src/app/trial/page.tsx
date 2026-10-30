@@ -168,12 +168,12 @@ export default function TrialPage() {
                 <article key={benefit.title} className="min-w-0 snap-start border border-white/15 bg-white/[0.035] p-5 sm:p-6">
                   <p className="text-sm font-semibold text-[#91e2c6]" aria-hidden="true">0{index + 1}</p>
                   <h3 className="mt-3 text-lg font-semibold leading-[1.6]">{benefit.title}</h3>
-                  <p className="mt-4 text-sm leading-[1.8] text-slate-300">{benefit.paragraphs[0]}</p>
                   <details className="group mt-4 border-t border-white/15">
                     <summary className="flex min-h-11 cursor-pointer list-none items-center py-3 text-sm font-semibold text-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6ae64] [&::-webkit-details-marker]:hidden">
                       <span className="group-open:hidden">詳しく見る</span><span className="hidden group-open:inline">説明を閉じる</span>
                     </summary>
                     <div className="space-y-3 pb-1 text-sm leading-[1.8] text-slate-300">
+                      <p>{benefit.paragraphs[0]}</p>
                       {index === 1 ? examples : null}
                       {benefit.paragraphs.slice(1).map(paragraph => <p key={paragraph}>{paragraph}</p>)}
                       {index !== 1 ? examples : null}

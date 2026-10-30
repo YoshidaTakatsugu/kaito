@@ -90,6 +90,9 @@ export function InquiryForm({ trial = false }: { trial?: boolean }) {
         <label className={fieldClass}>{trial ? "どんなことを期待していますか？" : "お問い合わせ内容"}<Requirement required={!trial} />
           <textarea name={trial ? "期待すること" : "お問い合わせ内容"} required={!trial} rows={trial ? 4 : 6} maxLength={5000} className={`${inputClass} resize-y`} />
         </label>
+        {trial && <label className={fieldClass}>クーポンコード<Requirement />
+          <input id="trial-coupon-code" name="クーポンコード" type="text" autoComplete="off" autoCapitalize="none" spellCheck={false} maxLength={100} className={inputClass} />
+        </label>}
         <p id="inquiry-privacy" className="mt-6 text-xs leading-6 text-slate-300">入力内容は、お問い合わせへの回答・日程調整のために使用します。送信処理には外部サービスのFormSubmitを使用し、入力内容が同サービス経由で担当者へ送信されます。</p>
         <label className="mt-3 flex min-h-11 items-start gap-3 py-2 text-sm leading-6"><input type="checkbox" name="個人情報の取り扱いへの同意" value="同意する" required aria-describedby="inquiry-privacy" className="mt-0.5 size-5 shrink-0 accent-[#d6ae64]" />上記の個人情報の取り扱いに同意する</label>
         {trial && <p className="mt-3 text-xs leading-6 text-slate-300">送信時点では予約は確定しません。希望日程を確認のうえ、メールでご連絡します。「それ以外」の時間帯は、期待することの欄にご記入ください。</p>}
