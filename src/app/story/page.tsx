@@ -141,9 +141,9 @@ export default function StoryPage() {
             src="/images/oshida-story.webp"
             alt="ソファで笑顔を見せるスポーツメンタルコーチ押田海斗"
             fill
-            sizes="(max-width: 639px) 100vw, (max-width: 1440px) 50vw, 720px"
+            sizes="(max-width: 387px) 55vw, 214px"
             loading="eager"
-            className="-z-20 object-cover"
+            className="-z-20 object-contain"
           />
         </div>
         <div className="story-hero-shade absolute inset-0 -z-10" />

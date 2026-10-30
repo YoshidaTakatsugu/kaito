@@ -51,14 +51,14 @@ export default function ProfilePage() {
       />
       <div className="mx-auto grid w-full max-w-7xl gap-16">
         <header className="grid items-center gap-6 sm:grid-cols-[220px_minmax(0,1fr)] sm:gap-10">
-          <figure className="relative mx-auto aspect-[4/5] w-48 overflow-hidden sm:w-full">
+          <figure className="relative mx-auto aspect-[1400/934] w-60 max-w-full sm:w-full">
             <Image
               src="/images/oshida-portrait.webp"
               alt="ジャケット姿で笑顔を見せるスポーツメンタルコーチ押田海斗"
               fill
-              sizes="(max-width: 639px) 192px, 220px"
+              sizes="(max-width: 639px) 240px, 220px"
               loading="eager"
-              className="origin-[50%_25%] scale-[1.2] object-cover object-center"
+              className="object-contain"
             />
           </figure>
           <div>

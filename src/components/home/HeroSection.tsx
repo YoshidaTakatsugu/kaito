@@ -9,18 +9,24 @@ export function HeroSection() {
       id="hero"
       className="home-hero relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-[#031226] text-white"
     >
-      <Image
-        src="/images/Top.jpg"
-        alt="本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート"
-        fill
-        loading="eager"
-        sizes="100vw"
-        className="hero-photo object-cover object-[64%_center] sm:object-[61%_center] lg:object-[70%_8%]"
-      />
+      <picture className="hero-photo-frame absolute inset-0">
+        <source media="(max-width: 639px)" srcSet="/images/oshida-story.webp" />
+        <Image
+          src="/images/oshida-portrait.webp"
+          alt="笑顔のスポーツメンタルコーチ押田海斗"
+          fill
+          loading="eager"
+          sizes="100vw"
+          className="hero-photo"
+        />
+      </picture>
       <div className="hero-shade-vertical absolute inset-0 bg-[linear-gradient(180deg,rgba(3,18,38,0.08)_0%,rgba(3,18,38,0.3)_38%,rgba(3,18,38,0.94)_100%)]" />
       <div className="hero-shade-horizontal absolute inset-0 bg-[linear-gradient(90deg,rgba(3,18,38,0.96)_0%,rgba(3,18,38,0.74)_42%,rgba(3,18,38,0.12)_78%)]" />
 
-      <p aria-hidden="true" className="hero-opening absolute left-5 top-8 z-10 text-sm font-semibold leading-[1.9] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] sm:left-8 sm:top-10 sm:text-lg lg:left-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:text-xl">
+      <p
+        aria-hidden="true"
+        className="hero-opening absolute left-5 top-8 z-10 text-sm font-semibold leading-[1.9] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] sm:left-8 sm:top-10 sm:text-lg lg:left-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:text-xl"
+      >
         <span className="block">{heroContent.titleLines[0]}</span>
         <span className="block">{heroContent.titleLines[1]}</span>
       </p>
@@ -44,19 +50,22 @@ export function HeroSection() {
               className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-5 text-center text-sm font-semibold tracking-[0.08em] text-[#031226] transition-colors duration-200 hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               {heroContent.primaryCta.label}
-              <span aria-hidden="true" className="ml-3">→</span>
+              <span aria-hidden="true" className="ml-3">
+                →
+              </span>
             </a>
             <a
               href={heroContent.secondaryCta.href}
               className="inline-flex min-h-12 items-center justify-center border border-white/40 bg-[#031226]/45 px-5 text-center text-sm font-semibold tracking-[0.06em] text-white backdrop-blur-sm transition-colors duration-200 hover:border-white/75 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               {heroContent.secondaryCta.label}
-              <span aria-hidden="true" className="ml-3">→</span>
+              <span aria-hidden="true" className="ml-3">
+                →
+              </span>
             </a>
           </div>
         </div>
       </div>
-
     </section>
   );
 }

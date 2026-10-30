@@ -107,7 +107,7 @@ export default function TrialPage() {
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               loading="eager"
-              className="object-cover object-[35%_top] lg:object-[35%_top]"
+              className="object-contain object-right"
             />
             <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,#031226,transparent_40%)] lg:block" />
           </div>

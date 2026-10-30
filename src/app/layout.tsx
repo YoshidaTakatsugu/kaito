@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/Top.jpg",
-        width: 1045,
-        height: 697,
+        url: "/images/oshida-portrait.webp",
+        width: 1400,
+        height: 934,
         alt: "本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート",
       },
     ],
