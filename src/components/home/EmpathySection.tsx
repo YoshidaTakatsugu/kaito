@@ -35,9 +35,6 @@ export function EmpathySection() {
 
         </div>
 
-        <p className="mt-7 max-w-5xl text-pretty border-l-2 border-[#d6ae64] bg-white/[0.04] px-5 py-5 font-serif text-base leading-[1.8] text-cyan-50 sm:px-8 sm:text-xl">
-          {empathyContent.closing}
-        </p>
       </SectionReveal>
     </section>
   );
