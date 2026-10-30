@@ -17,8 +17,8 @@ export function FinalCtaSection() {
       <SectionReveal className="mx-auto w-full max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold tracking-[0.28em] text-[#d6ae64]">TAKE THE FIRST STEP</p>
-          <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">自分の力を結果につなげよう。</h2>
-          <p className="mt-6 text-pretty text-[15px] leading-7 text-slate-200 sm:text-base sm:leading-8">{heroContent.subcopy}</p>
+          <h2 className="mt-6 font-serif text-[28px] leading-[1.4] min-[375px]:text-[2rem] sm:text-5xl sm:leading-[1.3]"><span className="block sm:inline">自分の力を</span><span className="block sm:inline">結果につなげよう。</span></h2>
+          <p className="mt-6 text-[15px] leading-7 text-slate-200 sm:text-base sm:leading-8"><span className="block sm:inline">結果に相応しいメンタルを</span><span className="block sm:inline">育むスポーツメンタルコーチング</span></p>
           <div className="mt-9 grid max-w-2xl gap-3 sm:grid-cols-2">
             <a href={heroContent.primaryCta.href} className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-5 text-center text-sm font-semibold tracking-[0.08em] text-[#031226]">
               {heroContent.primaryCta.label} <span aria-hidden="true" className="ml-3">→</span>
