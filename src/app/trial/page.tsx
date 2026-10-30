@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     url: `${site.url}/trial/`,
     images: [
       {
-        url: "/images/S__3153967_0.jpg",
-        width: 1045,
-        height: 697,
+        url: "/images/oshida-session.webp",
+        width: 1400,
+        height: 934,
         alt: "体験コーチングでアスリートの可能性に寄り添うスポーツメンタルコーチ押田海斗",
       },
     ],
@@ -100,18 +100,18 @@ export default function TrialPage() {
 
       <header>
         <div className="relative isolate flex min-h-60 items-end overflow-hidden bg-[#031226] px-5 py-7 sm:min-h-72 sm:px-8 sm:py-10 lg:min-h-[22rem]">
-          <div className="absolute inset-0 -z-20 lg:left-[30%]">
+          <div className="absolute inset-0 -z-20 lg:left-[50%]">
             <Image
-              src="/images/S__3153967_0.jpg"
-              alt="ノートを手にアスリートとの対話に向き合うスポーツメンタルコーチ押田海斗"
+              src="/images/oshida-session.webp"
+              alt="パソコンを置いた席で、対話に向き合うスポーツメンタルコーチ押田海斗"
               fill
-              sizes="(min-width: 1024px) 70vw, 100vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               loading="eager"
-              className="object-cover object-[60%_12%] lg:object-[60%_4%]"
+              className="object-cover object-[35%_top] lg:object-[35%_top]"
             />
             <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,#031226,transparent_40%)] lg:block" />
           </div>
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,13,29,0.9),rgba(3,13,29,0.15)_75%)]" />
+          <div className="trial-photo-shade absolute inset-0 -z-10" />
           <div className="mx-auto w-full max-w-6xl">
             <p className="text-xs font-semibold tracking-[0.2em] text-[#91e2c6]">{content.eyebrow}</p>
             <h1 className="mt-3 font-serif text-[28px] leading-relaxed sm:text-4xl">{content.title}</h1>

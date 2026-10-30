@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     url: `${site.url}/story/`,
     images: [
       {
-        url: "/images/S__3153966_0.jpg",
-        width: 852,
-        height: 568,
+        url: "/images/oshida-story.webp",
+        width: 1024,
+        height: 1536,
         alt: "スポーツメンタルコーチ押田海斗",
       },
     ],
@@ -138,10 +138,10 @@ export default function StoryPage() {
       <header className="story-page-hero relative isolate overflow-hidden">
         <div className="story-hero-photo absolute inset-0 -z-20">
           <Image
-            src="/images/S__3153966_0.jpg"
-            alt="自身の競技経験とコーチングへの想いを語る押田海斗"
+            src="/images/oshida-story.webp"
+            alt="ソファで笑顔を見せるスポーツメンタルコーチ押田海斗"
             fill
-            sizes="(max-width: 639px) 100vw, 65vw"
+            sizes="(max-width: 639px) 100vw, (max-width: 1440px) 50vw, 720px"
             loading="eager"
             className="-z-20 object-cover"
           />

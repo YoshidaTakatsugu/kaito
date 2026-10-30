@@ -414,7 +414,7 @@ export const structuredData = {
       jobTitle: coach.role,
       description: coach.story,
       url: `${site.url}/profile/`,
-      image: `${site.url}/images/S__3153967_0.jpg`,
+      image: `${site.url}/images/oshida-portrait.webp`,
       affiliation: {
         "@type": "Organization",
         name: "一般社団法人 日本スポーツメンタルコーチ協会",

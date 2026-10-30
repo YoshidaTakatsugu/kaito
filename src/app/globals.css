@@ -194,12 +194,13 @@ body {
   min-height: 320px;
   padding-block: 44px;
 }
-.story-hero-photo { left: 35%; mask-image: linear-gradient(90deg, transparent, #000 35%); }
-.story-page-hero img { object-position: center top; }
+.story-hero-photo { left: 50%; max-width: 720px; mask-image: linear-gradient(90deg, transparent, #000 35%); }
+.story-page-hero img { object-position: center 8%; }
 .story-page-hero h1 { font-size: 36px; line-height: 1.4; }
 .story-hero-shade {
-  background: linear-gradient(90deg, rgba(4,18,37,.94), rgba(4,18,37,.65) 48%, rgba(4,18,37,.15)), linear-gradient(0deg, rgba(4,18,37,.8), transparent 75%);
+  background: linear-gradient(90deg, rgba(4,18,37,.95), rgba(4,18,37,.65) 35%, rgba(4,18,37,.08) 70%), linear-gradient(0deg, rgba(4,18,37,.8), transparent 65%);
 }
+.trial-photo-shade { background: linear-gradient(90deg, rgba(3,13,29,.85), rgba(3,13,29,.2) 35%, transparent 75%); }
 .story-chapter-nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
@@ -234,7 +235,8 @@ body {
 @media (max-width: 639px) {
   .story-page-hero { min-height: 260px; padding-block: 28px; }
   .story-hero-photo { left: 0; mask-image: none; }
-  .story-page-hero img { object-position: 65% 30%; }
+  .story-page-hero img { object-position: center 8%; }
+  .story-hero-shade { background: linear-gradient(90deg, rgba(4,18,37,.7), rgba(4,18,37,.08) 60%), linear-gradient(0deg, rgba(4,18,37,.9), transparent 65%); }
   .story-page-hero h1 { font-size: 26px; }
   .story-chapter-nav { column-gap: 12px; padding-block: 16px; }
   .story-chapter-nav a { gap: 6px; font-size: 12px; }

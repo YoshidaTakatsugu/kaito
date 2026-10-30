@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { coach, coachAchievements, site } from "@/lib/brand";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "日本一を逃し続けた経験こそが、NARERUのコーチングの原点です。",
     url: `${site.url}/profile/`,
+    images: [{ url: "/images/oshida-portrait.webp", width: 1400, height: 934, alt: "スポーツメンタルコーチ押田海斗のポートレート" }],
   },
 };
 
@@ -25,6 +27,7 @@ export default function ProfilePage() {
       "@id": `${site.url}/profile/#person`,
       name: coach.name,
       jobTitle: coach.role,
+      image: `${site.url}/images/oshida-portrait.webp`,
       description:
         "日本一を逃し続けた経験を原点に、勝ちきれないトップアスリートの心技体を整えるスポーツメンタルコーチ。",
       award: coachAchievements.map(
@@ -41,13 +44,23 @@ export default function ProfilePage() {
   const jsonLd = JSON.stringify(profileJsonLd).replace(/</g, "\\u003c");
 
   return (
-    <article className="bg-[#041225] px-5 py-24 text-white sm:px-8">
+    <article className="bg-[#041225] px-5 py-12 text-white sm:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
       <div className="mx-auto grid w-full max-w-7xl gap-16">
-        <header className="grid gap-10 lg:grid-cols-[0.42fr_1fr]">
+        <header className="grid items-center gap-6 sm:grid-cols-[220px_minmax(0,1fr)] sm:gap-10">
+          <figure className="relative mx-auto aspect-[4/5] w-48 overflow-hidden sm:w-full">
+            <Image
+              src="/images/oshida-portrait.webp"
+              alt="ジャケット姿で笑顔を見せるスポーツメンタルコーチ押田海斗"
+              fill
+              sizes="(max-width: 639px) 192px, 220px"
+              loading="eager"
+              className="origin-[50%_25%] scale-[1.2] object-cover object-center"
+            />
+          </figure>
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
               PROFILE
@@ -58,10 +71,10 @@ export default function ProfilePage() {
             <p className="mt-5 text-lg font-semibold text-slate-300">
               {coach.role} / ゴールドライセンス
             </p>
+            <p className="mt-5 font-serif text-xl leading-[1.8] text-cyan-50 sm:text-2xl">
+              日本一を逃し続けた経験こそが、私のコーチングの原点である。
+            </p>
           </div>
-          <p className="font-serif text-2xl leading-[1.85] text-cyan-50 sm:text-3xl">
-            日本一を逃し続けた経験こそが、私のコーチングの原点である。
-          </p>
         </header>
 
         <section className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
