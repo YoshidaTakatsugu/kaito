@@ -81,10 +81,8 @@ export function MediaActivitySection() {
               活動実績・トピックス
             </h2>
           </div>
-          <p className="font-serif text-xl leading-[1.7] text-cyan-50 sm:text-2xl">
-            <span className="block sm:inline">第三者メディアや協会で</span>
-            <span className="block sm:inline">語られた押田海斗の活動を、</span>
-            <span className="block sm:inline">信頼の証として掲載します。</span>
+          <p className="text-pretty font-serif text-[17px] leading-[1.8] text-cyan-50 sm:text-xl">
+            インタビューや動画を通して、押田海斗の活動とコーチングへの想いをお届けします。
           </p>
         </div>
 

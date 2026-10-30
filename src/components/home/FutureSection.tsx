@@ -7,8 +7,8 @@ export function FutureSection() {
       <SectionReveal className="mx-auto w-full max-w-7xl">
         <div className="max-w-5xl">
           <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">FUTURE</p>
-          <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
-            {futureContent.title}
+          <h2 className="mt-5 font-serif text-2xl leading-[1.5] sm:text-4xl">
+            {futureContent.title.split("、").map((line, index) => <span key={line} className="block whitespace-nowrap">{line}{index === 0 ? "、" : ""}</span>)}
           </h2>
           <p className="mt-7 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
             {futureContent.introduction}
