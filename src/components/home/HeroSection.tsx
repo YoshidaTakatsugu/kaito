@@ -9,17 +9,14 @@ export function HeroSection() {
       id="hero"
       className="home-hero relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-[#031226] text-white"
     >
-      <picture className="hero-photo-frame absolute inset-0">
-        <source media="(max-width: 639px)" srcSet="/images/oshida-story.webp" />
-        <Image
-          src="/images/oshida-portrait.webp"
-          alt="笑顔のスポーツメンタルコーチ押田海斗"
-          fill
-          loading="eager"
-          sizes="100vw"
-          className="hero-photo"
-        />
-      </picture>
+      <Image
+        src="/images/Top.jpg"
+        alt="本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート"
+        fill
+        loading="eager"
+        sizes="100vw"
+        className="hero-photo object-cover object-[64%_center] sm:object-[61%_center] lg:object-[70%_8%]"
+      />
       <div className="hero-shade-vertical absolute inset-0 bg-[linear-gradient(180deg,rgba(3,18,38,0.08)_0%,rgba(3,18,38,0.3)_38%,rgba(3,18,38,0.94)_100%)]" />
       <div className="hero-shade-horizontal absolute inset-0 bg-[linear-gradient(90deg,rgba(3,18,38,0.96)_0%,rgba(3,18,38,0.74)_42%,rgba(3,18,38,0.12)_78%)]" />
 

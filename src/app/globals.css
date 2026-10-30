@@ -55,9 +55,6 @@ body {
   font-size: 20px;
 }
 
-.home-hero .hero-photo { object-fit: contain; object-position: right top; }
-.home-hero .hero-photo-frame { left: auto; width: min(100%, calc((100svh - 4rem) * 1.4989)); mask-image: linear-gradient(90deg, transparent, #000 35%); }
-.home-hero .hero-shade-horizontal { background: linear-gradient(90deg, rgba(3,18,38,.96), rgba(3,18,38,.65) 30%, rgba(3,18,38,.05) 62%); }
 
 @media (min-width: 480px) {
   .home-hero .hero-title-result { font-size: 26px; }
@@ -198,8 +195,8 @@ body {
   min-height: 320px;
   padding-block: 44px;
 }
-.story-hero-photo { left: auto; right: max(20px, calc((100vw - 64rem) / 2)); width: 213.333px; max-width: 55%; mask-image: linear-gradient(90deg, transparent, #000 20%); }
-.story-page-hero img { object-position: center; }
+.story-hero-photo { left: 45%; }
+.story-page-hero img { object-position: right center; }
 .story-page-hero h1 { font-size: 36px; line-height: 1.4; }
 .story-hero-shade {
   background: linear-gradient(90deg, rgba(4,18,37,.9), transparent 70%);
@@ -238,7 +235,7 @@ body {
 .story-closing { margin-bottom: 24px; border-bottom: 0; }
 @media (max-width: 639px) {
   .story-page-hero { min-height: 320px; padding-block: 28px; }
-  .story-hero-photo { right: 20px; }
+  .story-hero-photo { left: 0; }
   .story-page-hero img { object-position: right center; }
   .story-page-hero h1 { font-size: 26px; }
   .story-chapter-nav { column-gap: 12px; padding-block: 16px; }
@@ -268,28 +265,19 @@ body {
   }
 
   .home-hero .hero-photo {
-    object-position: center top;
+    object-position: 64% top;
   }
 
-  .home-hero { min-height: 0; }
-  .home-hero .hero-photo-frame { left: 0; bottom: auto; width: 100%; height: 150vw; mask-image: none; }
-
   .home-hero .hero-shade-vertical {
-    bottom: auto;
-    height: 150vw;
-    background: linear-gradient(180deg, rgba(3,18,38,.2), transparent 30%, transparent 85%, #031226);
+    background: linear-gradient(180deg, #031226 0%, transparent 18%, rgba(3,18,38,.08) 38%, #031226 100%);
   }
 
   .home-hero .hero-shade-horizontal {
-    bottom: auto;
-    height: 150vw;
-    background: linear-gradient(90deg, rgba(3,18,38,.45), transparent 75%);
+    background: linear-gradient(90deg, rgba(3,18,38,.75), rgba(3,18,38,.3) 42%, transparent 78%);
   }
 
   .home-hero .hero-content {
-    display: block;
-    min-height: 0;
-    padding-top: 150%;
+    padding-top: 90%;
     padding-bottom: 28px;
   }
 

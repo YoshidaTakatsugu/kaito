@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { coach } from "@/lib/brand";
 import { seminarContent, seminarHref } from "@/lib/seminar";
 
@@ -66,14 +64,6 @@ export function MailSeminarSection() {
             ))}
           </ul>
           <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
-            <Image
-              src="/images/oshida-hero.jpg"
-              alt="無料メールセミナーをお届けするスポーツメンタルコーチ押田海斗"
-              width={64}
-              height={64}
-              sizes="64px"
-              className="size-16 shrink-0 rounded-full object-cover object-top"
-            />
             <p className="text-xs leading-6 text-slate-300">
               {coach.role}
               <span className="block text-base font-semibold text-white">{coach.name}</span>

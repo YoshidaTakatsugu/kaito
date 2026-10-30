@@ -396,7 +396,7 @@ export const structuredData = {
       description: site.description,
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: `${site.url}/images/oshida-portrait.webp`,
+        url: `${site.url}/images/Top.jpg`,
         caption:
           "本番で実力を発揮させるスポーツメンタルコーチ押田海斗のポートレート",
       },

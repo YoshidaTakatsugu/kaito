@@ -1,0 +1,177 @@
+<section id="nareru-mail-lp" aria-labelledby="nareru-mail-title">
+<style>
+#nareru-mail-lp, #nareru-mail-lp * { box-sizing: border-box; }
+#nareru-mail-lp { width: 100%; margin: 0px auto !important; padding: 0px !important; color: rgb(255, 255, 255) !important; background: rgb(7, 26, 50) !important; font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif !important; letter-spacing: 0px !important; }
+#nareru-mail-lp .nareru-hero { display: grid; grid-template-columns: minmax(0px, 1fr); align-items: center; gap: 48px; max-width: 760px; margin: auto; padding: 56px 32px; }
+#nareru-mail-lp .nareru-copy { min-width: 0px; }
+#nareru-mail-lp p.nareru-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0px 0px 20px !important; color: rgb(214, 174, 100) !important; font: 600 12px / 1.6 "Yu Gothic", sans-serif !important; }
+#nareru-mail-lp p.nareru-eyebrow::before { content: ""; width: 30px; height: 1px; background: rgb(214, 174, 100); }
+#nareru-mail-lp #nareru-mail-title { margin: 0px !important; padding: 0px !important; border: 0px !important; color: rgb(255, 255, 255) !important; background: transparent !important; font-family: "Yu Mincho", "Hiragino Mincho ProN", serif !important; font-size: 32px !important; font-weight: 500 !important; line-height: 1.55 !important; letter-spacing: 0px !important; text-align: center !important; }
+#nareru-mail-lp #nareru-mail-title span { display: block; margin-top: 14px; }
+#nareru-mail-lp #nareru-mail-title .nareru-title-first { margin-top: 0px; font-size: 30px !important; color: rgb(232, 201, 128) !important; }
+#nareru-mail-lp #nareru-mail-title .nareru-title-middle { font-size: 24px !important; }
+#nareru-mail-lp #nareru-mail-title .nareru-title-result { font-size: 26px !important; }
+#nareru-mail-lp #nareru-mail-title .nareru-gold { color: rgb(232, 201, 128) !important; }
+#nareru-mail-lp p.nareru-lead { margin: 28px 0px !important; padding: 0px !important; color: rgb(203, 213, 225) !important; font: 400 15px / 1.9 "Yu Gothic", sans-serif !important; }
+#nareru-mail-lp ul.nareru-audience { display: grid; gap: 12px; padding: 0px !important; margin: 0px !important; list-style: none !important; }
+#nareru-mail-lp ul.nareru-audience li { position: relative; padding: 0px 0px 0px 18px !important; margin: 0px !important; color: rgb(241, 245, 249) !important; background: none !important; border: 0px !important; font: 400 14px / 1.8 "Yu Gothic", sans-serif !important; }
+#nareru-mail-lp ul.nareru-audience li::before { content: ""; position: absolute; left: 0px; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: rgb(214, 174, 100); }
+#nareru-mail-lp .nareru-register-intro { max-width: 600px; border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(83, 96, 113) rgb(83, 96, 113) currentcolor; border-image: none; border-radius: 8px 8px 0px 0px; margin: 0px auto !important; padding: 32px 32px 24px !important; background: rgb(12, 34, 61) !important; text-align: left !important; }
+#nareru-mail-lp .nareru-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+#nareru-mail-lp .nareru-badges span { color: rgb(203, 213, 225) !important; font: 400 12px / 1.6 "Yu Gothic", sans-serif !important; }
+#nareru-mail-lp .nareru-badges .nareru-free { padding: 4px 12px; border: 1px solid rgb(119, 105, 71); border-radius: 4px; color: rgb(232, 201, 128) !important; }
+#nareru-mail-lp .nareru-register-intro h2 { padding: 0px !important; margin: 24px 0px 12px !important; border: 0px !important; color: rgb(255, 255, 255) !important; background: none !important; font: 600 22px / 1.6 "Yu Gothic", sans-serif !important; letter-spacing: 0px !important; }
+#nareru-mail-lp .nareru-register-intro h2::before, #nareru-mail-lp .nareru-register-intro h2::after { content: none !important; }
+#nareru-mail-lp .nareru-register-intro p { margin: 0px !important; color: rgb(203, 213, 225) !important; font: 400 14px / 1.8 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) section.freetextSec, body:has(#nareru-mail-lp) section.freetextSec > .inner, body:has(#nareru-mail-lp) section.freetextSec > .inner > .content, body:has(#nareru-mail-lp) section.freetextSec .freetext-area, body:has(#nareru-mail-lp) section.freetextSec .description_area { box-sizing: border-box !important; width: 100% !important; min-width: 0px !important; max-width: none !important; padding: 0px !important; margin: 0px auto !important; background: rgb(7, 26, 50) !important; }
+body:has(#nareru-mail-lp) section.mainvisualSec, body:has(#nareru-mail-lp) section.mainvisualSec h2.h2-cmn { min-height: 0px !important; height: auto !important; padding: 0px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) section.mainvisualSec h2.h2-cmn::before, body:has(#nareru-mail-lp) section.mainvisualSec h2.h2-cmn::after { content: none !important; }
+body:has(#nareru-mail-lp) .page2-subscribe-fixed-button { display: none !important; }
+body:has(#nareru-mail-lp) section.freetextSec .description_area { margin-bottom: 0px !important; }
+body:has(#nareru-mail-lp) section.formSec { margin: 0px !important; padding: 0px 0px 64px !important; background: rgb(7, 26, 50) !important; }
+body:has(#nareru-mail-lp) section.formSec > .inner { max-width: none !important; width: 100% !important; margin: 0px !important; padding: 0px !important; }
+body:has(#nareru-mail-lp) section.formSec div.content { box-sizing: border-box !important; width: 100% !important; max-width: 600px !important; margin: 0px auto !important; padding: 0px 32px 32px !important; border-width: 0px 1px 1px !important; border-style: none solid solid !important; border-color: currentcolor rgb(83, 96, 113) rgb(83, 96, 113) !important; border-image: none !important; border-radius: 0px 0px 8px 8px !important; background: rgb(12, 34, 61) !important; color: rgb(255, 255, 255) !important; box-shadow: none !important; font-family: "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) section.formSec h4.form { margin: 0px 0px 20px !important; padding: 0px !important; border: 0px !important; color: rgb(203, 213, 225) !important; background: none !important; font: 400 13px / 1.6 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) section.formSec h4.form::before, body:has(#nareru-mail-lp) section.formSec h4.form::after { content: none !important; }
+body:has(#nareru-mail-lp) section.formSec #customers_fields { scroll-margin-top: 88px; padding: 0px !important; margin: 0px !important; border: 0px !important; border-radius: 0px !important; background: transparent !important; box-shadow: none !important; }
+body:has(#nareru-mail-lp) section.formSec .google_auth { display: none !important; }
+body:has(#nareru-mail-lp) section.formSec table.table_form, body:has(#nareru-mail-lp) section.formSec table.table_form :is(tbody, tr, td, dl, dd) { display: block !important; box-sizing: border-box !important; width: 100% !important; min-width: 0px !important; max-width: none !important; padding: 0px !important; margin: 0px !important; border: 0px !important; background: transparent !important; color: rgb(255, 255, 255) !important; }
+body:has(#nareru-mail-lp) section.formSec table.table_form tr + tr { margin-top: 20px !important; }
+body:has(#nareru-mail-lp) section.formSec td.name .wrap { display: grid !important; grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr) !important; gap: 12px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) section.formSec table.table_form dt.ttl { margin: 0px 0px 8px !important; padding: 0px !important; color: rgb(241, 245, 249) !important; font: 600 14px / 1.6 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) section.formSec .required { margin-left: 5px !important; padding: 0px !important; border: 0px !important; color: rgb(232, 201, 128) !important; background: transparent !important; font: 400 12px / 1.6 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) section.formSec #customers_fields input[type="text"], body:has(#nareru-mail-lp) section.formSec #customers_fields input[type="email"] { display: block !important; box-sizing: border-box !important; width: 100% !important; min-width: 0px !important; height: 50px !important; margin: 0px !important; padding: 12px !important; border: 1px solid rgb(70, 86, 107) !important; border-radius: 4px !important; color: rgb(255, 255, 255) !important; background: rgb(4, 18, 37) !important; font: 400 16px / 24px "Yu Gothic", sans-serif !important; box-shadow: none !important; }
+body:has(#nareru-mail-lp) section.formSec #customers_fields input:focus-visible { outline: rgb(214, 174, 100) solid 2px !important; outline-offset: 2px !important; }
+body:has(#nareru-mail-lp) section.formSec table.table_form:has(td.invited_friend_name) { display: none !important; }
+body:has(#nareru-mail-lp) section.formSec #button .button-area { width: 100% !important; max-width: none !important; margin: 24px 0px 0px !important; padding: 0px !important; background: none !important; box-shadow: none !important; }
+body:has(#nareru-mail-lp) section.formSec #button a.button.select { display: flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; width: 100% !important; max-width: none !important; min-height: 56px !important; height: auto !important; padding: 14px 16px !important; margin: 0px !important; border: 0px !important; border-radius: 4px !important; color: rgb(3, 18, 38) !important; background: rgb(214, 174, 100) !important; font: 600 16px / 28px "Yu Gothic", sans-serif !important; letter-spacing: 0px !important; text-align: center !important; text-decoration: none !important; box-shadow: none !important; text-shadow: none !important; }
+body:has(#nareru-mail-lp) section.formSec #button a.button.select::before, body:has(#nareru-mail-lp) section.formSec #button a.button.select::after { content: none !important; }
+body:has(#nareru-mail-lp) section.formSec #button a.button.select:hover { background: rgb(232, 201, 128) !important; }
+body:has(#nareru-mail-lp) section.formSec #button a.button.select:focus-visible { outline: rgb(255, 255, 255) solid 2px !important; outline-offset: 4px !important; }
+body:has(#nareru-mail-lp) section.formSec p.att { margin: 16px 0px 0px !important; color: rgb(203, 213, 225) !important; font: 400 12px / 1.9 "Yu Gothic", sans-serif !important; text-align: left !important; }
+body:has(#nareru-mail-lp) section.formSec #errors { color: rgb(255, 199, 194) !important; font: 400 14px / 1.8 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) #main:has(#EntryForm), body:has(#nareru-mail-lp) #main:has(#EntryForm) > .contents-outline, body:has(#nareru-mail-lp) #main:has(#EntryForm) > .contents-outline > .contents, body:has(#nareru-mail-lp) #main:has(#EntryForm) .description_area { box-sizing: border-box !important; width: 100% !important; max-width: none !important; padding: 0px !important; margin: 0px !important; border: 0px !important; border-radius: 0px !important; background: rgb(7, 26, 50) !important; }
+body:has(#nareru-mail-lp) #main:has(#EntryForm) #form_header, body:has(#nareru-mail-lp) #fix_menu_smartphone { display: none !important; }
+body:has(#nareru-mail-lp) #EntryForm { scroll-margin-top: 88px; box-sizing: border-box !important; width: 100% !important; max-width: none !important; padding: 0px 0px 32px !important; margin: 0px !important; border: 0px !important; border-radius: 0px !important; background: rgb(7, 26, 50) !important; color: rgb(255, 255, 255) !important; }
+body:has(#nareru-mail-lp) #EntryForm #hoge { box-sizing: border-box !important; width: 100% !important; max-width: 600px !important; padding: 0px 32px 32px !important; margin: 0px auto 32px !important; border-width: 0px 1px 1px !important; border-style: none solid solid !important; border-color: currentcolor rgb(83, 96, 113) rgb(83, 96, 113) !important; border-image: none !important; border-radius: 0px 0px 8px 8px !important; background: rgb(12, 34, 61) !important; color: rgb(255, 255, 255) !important; box-shadow: none !important; font-family: "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) #EntryForm .customers_fields_wrapper { padding: 0px !important; margin: 0px !important; border: 0px !important; background: transparent !important; }
+body:has(#nareru-mail-lp) #EntryForm .row_input_title:has(.google_auth), body:has(#nareru-mail-lp) #EntryForm #hoge > .row_input:has(#step_mail_subscriber_invited_friend_name), body:has(#nareru-mail-lp) #EntryForm #hoge > .row_input_title:has(+ .row_input #step_mail_subscriber_invited_friend_name) { display: none !important; }
+body:has(#nareru-mail-lp) #EntryForm .row_input_title { padding: 0px !important; margin: 0px 0px 8px !important; border: 0px !important; background: transparent !important; color: rgb(241, 245, 249) !important; font: 600 14px / 1.6 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) #EntryForm .row_input { padding: 0px !important; margin: 0px 0px 20px !important; border: 0px !important; background: transparent !important; color: rgb(241, 245, 249) !important; }
+body:has(#nareru-mail-lp) #EntryForm .row_input_title::before, body:has(#nareru-mail-lp) #EntryForm .row_input_title::after, body:has(#nareru-mail-lp) #EntryForm .row_input::before, body:has(#nareru-mail-lp) #EntryForm .row_input::after { content: none !important; }
+body:has(#nareru-mail-lp) #EntryForm .smapho_flex { display: grid !important; grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr) !important; gap: 12px !important; padding: 0px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) #EntryForm .smapho_flex > div, body:has(#nareru-mail-lp) #EntryForm .label_input_text { box-sizing: border-box !important; width: 100% !important; min-width: 0px !important; padding: 0px !important; margin: 0px !important; color: rgb(241, 245, 249) !important; font: 400 14px / 1.8 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) #EntryForm .smapho_flex:has(input) { margin-top: 8px !important; }
+body:has(#nareru-mail-lp) #EntryForm .label_required { display: inline !important; margin-left: 5px !important; padding: 0px !important; border: 0px !important; border-radius: 0px !important; background: transparent !important; color: rgb(232, 201, 128) !important; font: 400 12px / 1.6 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) #EntryForm #hoge input[type="text"], body:has(#nareru-mail-lp) #EntryForm #hoge input[type="email"] { display: block !important; box-sizing: border-box !important; width: 100% !important; min-width: 0px !important; height: 50px !important; padding: 12px !important; margin: 0px !important; border: 1px solid rgb(70, 86, 107) !important; border-radius: 4px !important; background: rgb(4, 18, 37) !important; color: rgb(255, 255, 255) !important; font: 400 16px / 24px "Yu Gothic", sans-serif !important; box-shadow: none !important; }
+body:has(#nareru-mail-lp) #EntryForm input:focus-visible { outline: rgb(214, 174, 100) solid 2px !important; outline-offset: 2px !important; }
+body:has(#nareru-mail-lp) #EntryForm .shared_project_complete_spacer, body:has(#nareru-mail-lp) #EntryForm #button { box-sizing: border-box !important; width: 100% !important; padding: 0px !important; margin: 0px !important; position: static !important; background: transparent !important; }
+body:has(#nareru-mail-lp) #EntryForm #button a.btn_ok { display: flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; width: 100% !important; min-height: 56px !important; padding: 14px 16px !important; margin: 24px 0px 0px !important; border: 0px !important; border-radius: 4px !important; background: rgb(214, 174, 100) !important; color: rgb(3, 18, 38) !important; font: 600 16px / 28px "Yu Gothic", sans-serif !important; letter-spacing: 0px !important; text-align: center !important; text-decoration: none !important; box-shadow: none !important; text-shadow: none !important; }
+body:has(#nareru-mail-lp) #EntryForm #button a.btn_ok::before, body:has(#nareru-mail-lp) #EntryForm #button a.btn_ok::after { content: none !important; }
+body:has(#nareru-mail-lp) #EntryForm #button a.btn_ok:focus-visible { outline: rgb(255, 255, 255) solid 2px !important; outline-offset: 4px !important; }
+body:has(#nareru-mail-lp) #EntryForm .subscribe_privacy_note { margin: 16px 0px 0px !important; padding: 0px !important; color: rgb(203, 213, 225) !important; font: 400 12px / 1.9 "Yu Gothic", sans-serif !important; text-align: left !important; }
+body:has(#nareru-mail-lp) #EntryForm #errors { color: rgb(255, 199, 194) !important; font: 400 14px / 1.8 "Yu Gothic", sans-serif !important; }
+@media (max-width: 720px) {
+  #nareru-mail-lp .nareru-hero { grid-template-columns: minmax(0px, 1fr); gap: 28px; padding: 36px 24px; max-width: 760px; }
+  #nareru-mail-lp #nareru-mail-title { font-size: 26px !important; }
+  #nareru-mail-lp #nareru-mail-title .nareru-title-first { font-size: 24px !important; }
+  #nareru-mail-lp #nareru-mail-title .nareru-title-middle { font-size: 20px !important; }
+  #nareru-mail-lp #nareru-mail-title .nareru-title-result { font-size: 22px !important; }
+  #nareru-mail-lp .nareru-register-intro { width: calc(100% - 32px); padding: 24px 20px 20px !important; }
+  #nareru-mail-lp .nareru-register-intro h2 { font-size: 20px !important; }
+  body:has(#nareru-mail-lp) section.formSec div.content { width: calc(100% - 32px) !important; padding: 0px 20px 24px !important; }
+  body:has(#nareru-mail-lp) #EntryForm #hoge { width: calc(100% - 32px) !important; padding: 0px 20px 24px !important; }
+}
+body:has(#nareru-mail-lp) main { background: rgb(12, 34, 61) !important; }
+body:has(#nareru-mail-lp) #sponcer_pr_banner_footer_area { border-top: 1px solid rgb(49, 68, 92); background: rgb(12, 34, 61) !important; padding-top: 16px !important; padding-bottom: 16px !important; }
+body:has(#nareru-mail-lp) footer { background: rgb(12, 34, 61) !important; color: rgb(203, 213, 225) !important; padding: 32px 24px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) footer > .inner, body:has(#nareru-mail-lp) footer > .inner > .content { box-sizing: border-box !important; width: 100% !important; max-width: 1080px !important; margin: 0px auto !important; padding: 0px !important; }
+body:has(#nareru-mail-lp) footer .footer-area { gap: 32px; display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 0px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) footer .footerlogo-area, body:has(#nareru-mail-lp) footer .footernav-area { min-width: 0px; width: auto !important; margin: 0px !important; padding: 0px !important; }
+body:has(#nareru-mail-lp) footer .footerlogo-area .logo { box-sizing: border-box; border-radius: 4px; background: rgb(237, 243, 248); width: 184px !important; padding: 12px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) footer .footerlogo-area img { display: block !important; width: 100% !important; height: auto !important; }
+body:has(#nareru-mail-lp) footer .navmenu ul { flex-wrap: wrap; gap: 4px 20px; display: flex !important; flex-direction: row !important; padding: 0px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) footer .navmenu li { margin: 0px !important; width: auto !important; }
+body:has(#nareru-mail-lp) footer .navmenu a { display: inline-flex; align-items: center; min-height: 44px; color: rgb(203, 213, 225) !important; font: 400 13px / 1.7 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) footer .footer-icon { margin: 12px 0px 0px !important; }
+body:has(#nareru-mail-lp) footer .footer-icon ul { flex-wrap: wrap; gap: 12px; display: flex !important; padding: 0px !important; margin: 0px !important; }
+body:has(#nareru-mail-lp) footer .footer-icon li { margin: 0px !important; width: auto !important; }
+body:has(#nareru-mail-lp) footer .footer-icon a { align-items: center; justify-content: center; background: rgb(237, 243, 248); border-radius: 4px; display: flex !important; width: 44px !important; height: 44px !important; }
+body:has(#nareru-mail-lp) footer .footer-icon img { object-fit: contain; width: 24px !important; height: 24px !important; }
+body:has(#nareru-mail-lp) footer + .copyright { border-top: 1px solid rgb(49, 68, 92); background: rgb(3, 13, 29) !important; color: rgb(203, 213, 225) !important; padding: 16px 20px !important; }
+body:has(#nareru-mail-lp) .copyright :is(.inner, .content) { width: 100% !important; max-width: 1080px !important; margin: auto !important; padding: 0px !important; }
+body:has(#nareru-mail-lp) .copyright .copyright-nav ul { flex-wrap: wrap; justify-content: center; gap: 4px 24px; display: flex !important; margin: 0px !important; padding: 0px !important; }
+body:has(#nareru-mail-lp) .copyright .copyright-nav li { margin: 0px !important; }
+body:has(#nareru-mail-lp) .copyright a { display: inline-flex; align-items: center; min-height: 44px; color: rgb(203, 213, 225) !important; font: 400 13px / 1.7 "Yu Gothic", sans-serif !important; }
+body:has(#nareru-mail-lp) .copyright p.p-txt { overflow-wrap: anywhere; margin: 8px 0px 0px !important; color: rgb(203, 213, 225) !important; font: 400 12px / 1.8 "Yu Gothic", sans-serif !important; letter-spacing: 0px !important; }
+body:has(#nareru-mail-lp) footer a:focus-visible, body:has(#nareru-mail-lp) .copyright a:focus-visible { outline: rgb(214, 174, 100) solid 2px; outline-offset: 3px; }
+@media (max-width: 720px) {
+  body:has(#nareru-mail-lp) footer { padding: 28px 20px !important; }
+  body:has(#nareru-mail-lp) footer .footer-area { flex-direction: column; gap: 20px; align-items: flex-start !important; }
+}
+body:has(#nareru-mail-lp) header.top-head { display: none !important; }
+body:has(#nareru-mail-lp) #wrapper:has(header.top-head) { margin: 0px !important; padding: 0px !important; min-height: 0px !important; height: auto !important; }
+#nareru-mail-lp { padding-top: 64px !important; }
+#nareru-lp-header { position: fixed !important; inset: 0px 0px auto !important; z-index: 1000 !important; width: 100% !important; height: 64px !important; margin: 0px !important; padding: 0px !important; background: rgb(3, 13, 29) !important; border-width: 0px 0px 1px !important; border-style: none none solid !important; border-color: currentcolor currentcolor rgb(36, 49, 67) !important; border-image: none !important; color: rgb(255, 255, 255) !important; }
+#nareru-lp-header .nareru-nav { gap: 16px; display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; max-width: 1280px !important; min-height: 64px !important; margin: 0px auto !important; padding: 0px 32px !important; }
+#nareru-lp-header a { color: rgb(203, 213, 225) !important; text-decoration: none !important; border: 0px !important; font: 600 11px / 1.6 "Yu Gothic", sans-serif !important; letter-spacing: 0px !important; }
+#nareru-lp-header a:hover { color: rgb(255, 255, 255) !important; }
+#nareru-lp-header a:focus-visible, #nareru-lp-header summary:focus-visible { outline: rgb(207, 250, 254) solid 2px !important; outline-offset: 3px !important; }
+#nareru-lp-header a.nareru-nav-logo { flex: 0 0 112px; display: block !important; position: relative !important; width: 112px !important; height: 48px !important; overflow: hidden !important; }
+#nareru-lp-header .nareru-nav-logo img { filter: brightness(0) invert(1); display: block !important; width: 112px !important; height: 48px !important; max-width: none !important; margin: 0px !important; object-fit: contain !important; transform: scale(2) !important; }
+#nareru-lp-header .nareru-nav-desktop { display: flex; align-items: center; gap: 20px; }
+#nareru-lp-header .nareru-nav-actions { display: flex; align-items: center; gap: 8px; }
+#nareru-lp-header a.nareru-nav-trial { min-height: 44px; white-space: nowrap; display: flex !important; align-items: center !important; justify-content: center !important; padding: 0px 16px !important; background: rgb(214, 174, 100) !important; color: rgb(3, 18, 38) !important; font-size: 12px !important; }
+#nareru-lp-header .nareru-trial-short { display: none; }
+#nareru-lp-header .nareru-nav-mobile { display: none; }
+#nareru-lp-header .nareru-nav-mobile summary { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: 0px; padding: 0px; border: 1px solid rgb(70, 86, 107); cursor: pointer; list-style: none; }
+#nareru-lp-header summary::-webkit-details-marker { display: none; }
+#nareru-lp-header .nareru-menu-icon { display: grid; gap: 5px; width: 20px; }
+#nareru-lp-header .nareru-menu-icon i { display: block; width: 20px; height: 1px; background: rgb(255, 255, 255); }
+#nareru-lp-header details[open] .nareru-menu-icon i:first-child { transform: translateY(6px) rotate(45deg); }
+#nareru-lp-header details[open] .nareru-menu-icon i:nth-child(2) { opacity: 0; }
+#nareru-lp-header details[open] .nareru-menu-icon i:last-child { transform: translateY(-6px) rotate(-45deg); }
+#nareru-lp-header .nareru-nav-panel { position: absolute; top: 64px; left: 0px; right: 0px; max-height: calc(100dvh - 64px); overflow-y: auto; padding: 16px 24px; background: rgb(3, 18, 38); border-bottom: 1px solid rgb(70, 86, 107); }
+#nareru-lp-header .nareru-nav-panel a { align-items: center; min-height: 54px; display: flex !important; padding: 10px 0px !important; border-bottom: 1px solid rgb(36, 49, 67) !important; font-size: 14px !important; }
+@media (max-width: 1279px) {
+  #nareru-lp-header .nareru-nav-desktop { display: none; }
+  #nareru-lp-header .nareru-nav-mobile { display: block; }
+}
+@media (max-width: 639px) {
+  #nareru-lp-header .nareru-nav { gap: 8px; padding: 0px 20px !important; }
+  #nareru-lp-header .nareru-trial-short { display: inline; }
+  #nareru-lp-header .nareru-trial-full { display: none; }
+  #nareru-lp-header a.nareru-nav-trial { padding: 0px 12px !important; font-size: 11px !important; }
+}
+#nareru-mail-lp .nareru-author { margin: 24px 0px 0px !important; color: rgb(203, 213, 225) !important; font: 400 12px / 1.8 "Yu Gothic", sans-serif !important; }
+#nareru-mail-lp .nareru-author strong { font-size: 15px; color: rgb(255, 255, 255) !important; }
+</style>
+<header id="nareru-lp-header"><nav aria-label="NARERU グローバルナビゲーション" class="nareru-nav"><a class="nareru-nav-logo" href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/#hero" aria-label="NARERU ホームへ"><img src="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/images/logo2.png" width="112" height="48" alt="NARERUのロゴ"></a>
+<div class="nareru-nav-desktop"><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/">ホーム</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/mental-coaching/">スポーツメンタルコーチングとは</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/story/">ストーリー</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/columns/">コラム</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/faq/">よくある質問</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/contact/">お問い合わせ</a></div>
+<div class="nareru-nav-actions"><a class="nareru-nav-trial" href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/trial/"><span class="nareru-trial-short">体験予約</span><span class="nareru-trial-full">体験コーチング</span></a>
+<details class="nareru-nav-mobile">
+<summary aria-label="ナビゲーションメニュー"><span aria-hidden="true" class="nareru-menu-icon"><i></i><i></i><i></i></span></summary>
+<div class="nareru-nav-panel"><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/">ホーム</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/trial/">体験コーチング</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/mental-coaching/">スポーツメンタルコーチングとは</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/story/">ストーリー</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/columns/">コラム</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/faq/">よくある質問</a><a href="https://kaito-git-customer-preview-20260906-yoshidatakatsugus-projects.vercel.app/contact/">お問い合わせ</a></div>
+</details>
+</div>
+</nav></header>
+<div class="nareru-hero">
+<div class="nareru-copy">
+<p class="nareru-eyebrow"><span style="color: #e8c980;">本気で結果を目指すアスリートへ</span></p>
+<h1 id="nareru-mail-title"><span style="color: #e8c980;"><span class="nareru-title-first">「ネガティブ思考」</span><span style="color: #ffffff;"><span class="nareru-title-middle">から抜け出し、</span><span class="nareru-title-result nareru-gold"><span style="color: #ffffff;">試合で実力を発揮する</span><span style="background-color: transparent; font-size: 32px; letter-spacing: 0px; display: inline !important;">6つの方法</span></span></span></span></h1>
+<p class="nareru-lead" style="text-align: left;">スポーツメンタルコーチ押田海斗が現役復帰し、<br>自ら競技の中で実践。<br>その中で、特に効果を感じた６つの方法を厳選してお届けします。</p>
+<ul class="nareru-audience">
+<li>試合中、目の前のプレーに集中したい</li>
+<li>プレッシャーの中でも、自分らしく戦いたい</li>
+<li>練習で積み上げた力を、本番の結果につなげたい</li>
+</ul>
+<p class="nareru-author">NARERU スポーツメンタルコーチ<br><strong>押田海斗</strong></p></div>
+
+</div>
+<div class="nareru-register-intro">
+<div class="nareru-badges"><span class="nareru-free">登録・購読無料</span><span>メールでお届け</span></div>
+<h2>無料ステップメール</h2>
+<p>お名前とメールアドレスをご入力ください。</p>
+<p style="margin-top: 12px !important; font-size: 12px !important;">お名前とメールアドレスは、講座の登録・配信のために使用します。配信はメール内のリンクからいつでも停止できます。</p>
+</div>
+</section>
