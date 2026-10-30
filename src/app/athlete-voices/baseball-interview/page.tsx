@@ -1,0 +1,79 @@
+import type { Metadata } from "next";
+
+import { VoiceSection } from "@/components/home/VoiceSection";
+import { featuredAthleteVoice, site } from "@/lib/brand";
+
+const description =
+  "スポーツメンタルコーチングを受けたアスリートと保護者の声。高めてきた能力が本番の結果につながり始めた変化をご紹介します。";
+
+export const metadata: Metadata = {
+  title: featuredAthleteVoice.title,
+  description,
+  alternates: { canonical: "/athlete-voices/baseball-interview/" },
+  openGraph: {
+    title: `アスリートの声 | ${site.name}`,
+    description,
+    url: `${site.url}/athlete-voices/baseball-interview/`,
+  },
+};
+
+export default function AthleteVoicesPage() {
+  const pageUrl = `${site.url}/athlete-voices/baseball-interview/`;
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "アスリートの声",
+        description,
+        inLanguage: "ja",
+        about: { "@id": `${site.url}/#service` },
+        hasPart: {
+          "@type": "WebPageElement",
+          "@id": `${pageUrl}#voice`,
+          name: featuredAthleteVoice.title,
+        },
+        mainEntity: {
+          "@type": "Article",
+          articleSection: "選手インタビュー",
+          headline: featuredAthleteVoice.title,
+          inLanguage: "ja",
+          about: { "@id": `${site.url}/#service` },
+          articleBody: featuredAthleteVoice.questions
+            .map((item) => [item.question, ...item.answers].join("\n"))
+            .join("\n\n"),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "ホーム", item: site.url },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "アスリートの声",
+            item: `${site.url}/athlete-voices/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: featuredAthleteVoice.title,
+            item: pageUrl,
+          },
+        ],
+      },
+    ],
+  }).replace(/</g, "\\u003c");
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd }}
+      />
+      <VoiceSection />
+    </>
+  );
+}

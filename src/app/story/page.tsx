@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { CoachStorySection } from "@/components/home/CoachStorySection";
-import { site, storyContent } from "@/lib/brand";
+import { site } from "@/lib/brand";
 import { storyPageContent as content, type StoryBlock } from "@/lib/story";
 
 export const metadata: Metadata = {
@@ -103,12 +102,6 @@ export default function StoryPage() {
             name: chapter.title,
             description: chapter.blocks.map((block) => block.text).join(""),
           })),
-          {
-            "@type": "WebPageElement",
-            "@id": `${pageUrl}#story`,
-            name: "競技実績と、選手への想い",
-            description: storyContent.closingParagraphs[1],
-          },
         ],
       },
       {
@@ -164,9 +157,6 @@ export default function StoryPage() {
               {chapterLabels[index]}
             </a>
           ))}
-          <a href="#story">
-            <span>06</span>実績と想い
-          </a>
         </nav>
         {content.chapters.map((chapter, index) => (
           <section
@@ -187,7 +177,6 @@ export default function StoryPage() {
             <StoryBlocks blocks={chapter.blocks} />
           </section>
         ))}
-        <CoachStorySection />
       </div>
     </article>
   );

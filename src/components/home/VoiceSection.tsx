@@ -21,7 +21,7 @@ export function VoiceSection() {
           <p className="text-[11px] font-semibold tracking-[0.22em] text-[#8ed9e7]">
             ATHLETE VOICES
           </p>
-          <h1 className="mt-4 font-serif">アスリートの声</h1>
+          <h1 className="mt-4 font-serif">選手インタビュー</h1>
         </div>
         <p className="absolute bottom-3 right-5 text-[10px] text-slate-200 sm:right-8">
           イメージ写真
@@ -128,6 +128,7 @@ export function VoiceSection() {
         </section>
 
         <footer className="voices-page-footer">
+          <Link href="/athlete-voices/" className="mb-5 inline-flex min-h-11 items-center text-sm text-[#e8c980]">アスリートの声一覧へ戻る</Link>
           <p className="text-xs leading-[1.8] text-slate-300">
             現在、多くのアスリートが変化を体感中。順次公開予定です
           </p>

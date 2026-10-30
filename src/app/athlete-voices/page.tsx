@@ -1,73 +1,34 @@
 import type { Metadata } from "next";
-
-import { VoiceSection } from "@/components/home/VoiceSection";
-import { featuredAthleteVoice, site } from "@/lib/brand";
-
-const description =
-  "スポーツメンタルコーチングを受けたアスリートと保護者の声。高めてきた能力が本番の結果につながり始めた変化をご紹介します。";
+import Image from "next/image";
+import Link from "next/link";
+import { featuredAthleteVoice as voice } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "アスリートの声",
-  description,
+  description: "スポーツメンタルコーチングを受けた選手と保護者の変化を、インタビューでご紹介します。",
   alternates: { canonical: "/athlete-voices/" },
-  openGraph: {
-    title: `アスリートの声 | ${site.name}`,
-    description,
-    url: `${site.url}/athlete-voices/`,
-  },
 };
 
 export default function AthleteVoicesPage() {
-  const pageUrl = `${site.url}/athlete-voices/`;
-  const jsonLd = JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": `${pageUrl}#webpage`,
-        url: pageUrl,
-        name: "アスリートの声",
-        description,
-        inLanguage: "ja",
-        about: { "@id": `${site.url}/#service` },
-        hasPart: {
-          "@type": "WebPageElement",
-          "@id": `${pageUrl}#voice`,
-          name: featuredAthleteVoice.title,
-        },
-        mainEntity: {
-          "@type": "Article",
-          articleSection: "選手インタビュー",
-          headline: featuredAthleteVoice.title,
-          inLanguage: "ja",
-          about: { "@id": `${site.url}/#service` },
-          articleBody: featuredAthleteVoice.questions
-            .map((item) => [item.question, ...item.answers].join("\n"))
-            .join("\n\n"),
-        },
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "ホーム", item: site.url },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "アスリートの声",
-            item: pageUrl,
-          },
-        ],
-      },
-    ],
-  }).replace(/</g, "\\u003c");
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLd }}
-      />
-      <VoiceSection />
-    </>
+    <div className="bg-[#041225] px-5 py-8 text-white sm:px-8 sm:py-12">
+      <div className="mx-auto max-w-5xl">
+        <header>
+          <p className="text-xs font-semibold tracking-[0.2em] text-cyan-100">ATHLETE VOICES</p>
+          <h1 className="mt-3 font-serif text-[28px] sm:text-4xl">アスリートの声</h1>
+        </header>
+        <div className="mt-7 grid gap-7 sm:grid-cols-2">
+          <article>
+            <Link href="/athlete-voices/baseball-interview/" className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64]">
+              <div className="relative aspect-video overflow-hidden rounded border border-white/15">
+                <Image src="/images/voices-baseball.webp" alt="野球場を見つめる選手（イメージ写真）" fill sizes="(max-width: 639px) 100vw, 480px" className="object-cover object-[center_70%]" />
+                <span className="absolute bottom-2 right-2 bg-[#041225]/80 px-2 py-1 text-[10px] text-slate-200">イメージ写真</span>
+              </div>
+              <h2 className="mt-3 text-base font-semibold leading-[1.7] group-hover:text-[#e8c980] sm:text-lg">{voice.title}</h2>
+            </Link>
+          </article>
+        </div>
+      </div>
+    </div>
   );
 }

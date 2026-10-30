@@ -165,7 +165,7 @@ body {
 .voices-prose { font-size: 15px; line-height: 1.85; color: #cbd5e1; }
 .voices-prose p + p { margin-top: 12px; }
 .voices-answer { padding-bottom: 20px; }
-.voices-parent { margin-top: 24px; }
+.voices-parent { margin-top: 20px; padding: 20px; border: 1px solid #c7f3ff25; background: #0b1c30; box-shadow: inset 0 1px 0 #ffffff08; }
 .voices-parent-lead { margin-bottom: 20px; padding-left: 16px; border-left: 2px solid #d6ae64; font-family: var(--font-site-serif); font-size: 20px; line-height: 1.7; }
 .voices-page-footer { padding-block: 28px 48px; }
 @media (max-width: 639px) {
@@ -255,8 +255,8 @@ body {
 
 @media (max-width: 639px) {
   .home-page > section:not(#hero) {
-    padding-top: 56px;
-    padding-bottom: 40px;
+    padding-top: 28px;
+    padding-bottom: 24px;
   }
 
   main > section,
