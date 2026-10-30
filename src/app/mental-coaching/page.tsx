@@ -235,7 +235,7 @@ export default function MentalCoachingPage() {
                 <Paragraphs items={content.teachingComparison.paragraphs} />
               </div>
 
-              <figure className="mt-7 overflow-hidden border border-[#d6ae64]/25 bg-[#f7f5ee] p-2 sm:p-4">
+              <figure className="mt-7 overflow-hidden border border-[#d6ae64]/25 bg-[#041225]">
                 <Image
                   src={content.teachingComparison.image.src}
                   alt={content.teachingComparison.image.alt}
@@ -353,7 +353,7 @@ export default function MentalCoachingPage() {
                 <Paragraphs items={content.visibleResults.introduction} />
               </div>
 
-              <figure className="mt-7 overflow-hidden border border-[#d6ae64]/25 bg-[#f7f5ee] p-2 sm:p-4">
+              <figure className="mt-7 overflow-hidden border border-[#d6ae64]/25 bg-[#041225]">
                 <Image
                   src={content.visibleResults.image.src}
                   alt={content.visibleResults.image.alt}

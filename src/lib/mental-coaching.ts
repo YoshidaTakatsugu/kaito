@@ -23,10 +23,10 @@ export const mentalCoachingPage = {
       "一方で、自分自身の考えを整理し、納得した答えを見つけ、自ら行動していくためには、コーチングが力を発揮するのです。",
     ],
     image: {
-      src: "/images/teaching-coaching-comparison.png",
+      src: "/images/teaching-coaching-navy.webp",
       alt: "ティーチングは答えを外から与え、コーチングは選手の内側から答えと力を引き出す違いを示した比較図",
-      width: 1300,
-      height: 732,
+      width: 1536,
+      height: 1024,
     },
   },
   sportsMentalDifference: {
@@ -134,10 +134,10 @@ export const mentalCoachingPage = {
       },
     ],
     image: {
-      src: "/images/neurological-levels.png",
+      src: "/images/neurological-levels-navy.webp",
       alt: "結果・環境、行動、能力、信念・価値観、セルフイメージの5階層と相互の影響を示すニューロロジカルレベル図",
-      width: 1300,
-      height: 732,
+      width: 1586,
+      height: 992,
     },
     explanation: [
       "これらは、どれか一つだけで結果を決めるものではなく、互いに影響し合っています。",
