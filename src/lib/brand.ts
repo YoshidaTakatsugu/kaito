@@ -71,7 +71,7 @@ export const empathyContent = {
 } as const;
 
 export const futureContent = {
-  title: "メンタルコーチングで、手に入れる未来",
+  title: "メンタルコーチングで獲得できる未来とは",
   introduction:
     "スポーツメンタルコーチングでは、『理想の結果』に相応しいメンタルへ導くサポートをしていきます。結果に相応しいメンタルを獲得することで、",
   benefits: [

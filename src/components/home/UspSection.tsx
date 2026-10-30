@@ -10,7 +10,7 @@ export function UspSection() {
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">WHY KAITO OSHIDA</p>
             <h2 className="mt-5 font-serif text-2xl leading-[1.5] sm:text-4xl">
               <span className="mb-2 block font-sans text-sm leading-[1.7] text-slate-300 sm:text-base">スポーツメンタルコーチ</span>
-              <span className="block whitespace-nowrap">押田海斗 4つの強み</span>
+              <span className="inline-block whitespace-nowrap border-b-2 border-[#d6ae64] pb-2 font-semibold">押田海斗 <span className="font-sans text-[36px] leading-none text-[#e8c980] sm:text-[48px]">4</span>つの強み</span>
             </h2>
           </div>
           <p className="text-pretty font-serif text-[17px] leading-[1.8] text-cyan-50 sm:text-xl">
