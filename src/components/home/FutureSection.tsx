@@ -27,7 +27,10 @@ export function FutureSection() {
               </li>
             ))}
           </ol>
-          <p className="mt-8 font-serif text-xl leading-[1.7] text-cyan-50 sm:text-2xl">{futureContent.closing}</p>
+          <p className="mt-8 font-serif text-xl leading-[1.7] text-cyan-50 sm:text-2xl">
+            <span className="block">そんな自分へ、</span>
+            <span className="block">少しずつ近づいていきます。</span>
+          </p>
         </div>
 
       </SectionReveal>
