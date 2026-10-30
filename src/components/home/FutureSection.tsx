@@ -9,7 +9,7 @@ export function FutureSection() {
           <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">FUTURE</p>
           <h2 className="mt-5 font-serif text-2xl leading-[1.5] sm:text-4xl">
             <span className="block whitespace-nowrap">{futureContent.title.replace("獲得できる未来とは", "")}</span>
-            <span className="block whitespace-nowrap">獲得できる未来とは</span>
+            <span className="block whitespace-nowrap"><span aria-hidden="true" className="whitespace-pre">{"     "}</span>獲得できる未来とは</span>
           </h2>
           <p className="mt-7 text-pretty text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
             {futureContent.introduction}

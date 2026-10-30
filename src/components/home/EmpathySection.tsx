@@ -26,7 +26,7 @@ export function EmpathySection() {
                   <path d="m7 11 4 4L21 5" />
                 </svg>
                 <p className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">
-                  {index === 0 ? <><span className="block sm:inline">練習ではできるのに</span><span className="block sm:inline">試合になるとできない</span></> : worry}
+                  {index === 0 ? <><span className="block sm:inline">練習ではできるのに</span><span className="block sm:inline">試合になるとできない</span></> : index === 4 ? <><span className="block">自分ならもっと活躍できるはずだと、</span><span className="block">モヤモヤしている</span></> : worry}
                 </p>
               </article>
             ))}

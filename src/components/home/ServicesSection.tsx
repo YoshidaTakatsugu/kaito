@@ -52,7 +52,7 @@ export function ServicesSection() {
                     {detail.label}
                   </dt>
                   <dd className="text-sm font-semibold leading-[1.85] text-white sm:text-base">
-                    {detail.value}
+                    {detail.label === "実施方法" ? <><span className="block">{detail.value.split(" (")[0]}</span><span className="block">({detail.value.split(" (")[1]}</span></> : detail.value}
                   </dd>
                 </div>
               ))}

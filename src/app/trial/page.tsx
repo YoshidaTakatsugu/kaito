@@ -198,7 +198,7 @@ export default function TrialPage() {
               <div key={item.label} className="grid gap-2 border-b border-white/10 py-4 sm:grid-cols-[6rem_1fr] sm:gap-5">
                 <dt className="text-xs font-semibold leading-6 text-[#91e2c6]">{item.label}</dt>
                 <dd>
-                  {item.values.map(value => <p key={value} className="text-sm font-semibold leading-[1.8]">{value}</p>)}
+                  {item.values.map(value => <p key={value} className="text-sm font-semibold leading-[1.8]">{item.label === "実施方法" ? <><span className="block">{value.split(" (")[0]}</span><span className="block">({value.split(" (")[1]}</span></> : value}</p>)}
                   {"note" in item ? <p className="mt-2 text-xs font-normal leading-[1.8] text-slate-400">{item.note}</p> : null}
                 </dd>
               </div>
