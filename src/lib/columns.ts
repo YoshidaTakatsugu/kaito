@@ -1,5 +1,4 @@
 import { coach, site } from "./brand";
-import { documentColumns } from "./column-documents";
 
 export type ColumnFaq = { question: string; answer: string };
 export type ColumnBlock = {
@@ -19,12 +18,12 @@ export type ColumnArticle = {
   faqs: ColumnFaq[];
 };
 
-export async function getColumns() {
-  return documentColumns;
+export async function getColumns(): Promise<ColumnArticle[]> {
+  return [];
 }
 
 export async function getColumnBySlug(slug: string) {
-  return documentColumns.find((article) => article.slug === slug) ?? null;
+  return (await getColumns()).find((article) => article.slug === slug) ?? null;
 }
 
 export function buildColumnJsonLd(article: ColumnArticle) {

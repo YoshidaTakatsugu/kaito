@@ -33,7 +33,9 @@ export default async function ColumnsPage() {
         </div>
       </header>
       <section aria-label="コラム一覧と検索" className="px-5 py-10 sm:px-8 sm:py-14">
-        <div className="mx-auto max-w-5xl"><ColumnSearch articles={columns} /></div>
+        <div className="mx-auto max-w-5xl">
+          {columns.length ? <ColumnSearch articles={columns} /> : <p className="border-y border-white/15 py-6 text-sm leading-7 text-slate-300">記事を準備中です。</p>}
+        </div>
       </section>
     </div>
   );
