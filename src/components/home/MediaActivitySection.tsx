@@ -72,17 +72,17 @@ export function MediaActivitySection() {
         <div className="grid gap-6 sm:gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
-              MEDIA & ACTIVITY
+              VIDEOS & INTERVIEWS
             </p>
             <h2
-              aria-label="活動実績・トピックス"
+              aria-label="動画・インタビュー"
               className="mt-5 whitespace-nowrap font-serif text-2xl leading-[1.4] sm:text-4xl lg:text-[2.5rem] lg:leading-[1.3]"
             >
-              活動実績・トピックス
+              動画・インタビュー
             </h2>
           </div>
           <p className="text-pretty font-serif text-[17px] leading-[1.8] text-cyan-50 sm:text-xl">
-            インタビューや動画を通して、押田海斗の活動とコーチングへの想いをお届けします。
+            本番で力を発揮するためのメンタルのヒントや押田海斗の想いを、<wbr />動画やインタビューを通してお届けします。
           </p>
         </div>
 
