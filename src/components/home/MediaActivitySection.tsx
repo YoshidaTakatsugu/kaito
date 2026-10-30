@@ -81,8 +81,10 @@ export function MediaActivitySection() {
               動画・インタビュー
             </h2>
           </div>
-          <p className="text-pretty font-serif text-[17px] leading-[1.8] text-cyan-50 sm:text-xl">
-            本番で力を発揮するためのメンタルのヒントや押田海斗の想いを、<wbr />動画やインタビューを通してお届けします。
+          <p className="font-serif text-[14px] leading-[1.8] text-cyan-50 min-[390px]:text-[15px] sm:text-xl">
+            <span className="block">本番で力を発揮するための</span>
+            <span className="block">メンタルのヒントや、押田海斗の想いを、</span>
+            <span className="block">動画やインタビューを通してお届けします。</span>
           </p>
         </div>
 
