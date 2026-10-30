@@ -8,8 +8,9 @@ export function EmpathySection() {
         <header>
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">EMPATHY</p>
-            <h2 className="mt-6 text-balance font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">
-              {empathyContent.title}
+            <h2 className="mt-6 font-serif text-[28px] leading-[1.4] min-[375px]:text-[2rem] sm:text-5xl sm:leading-[1.3]">
+              <span className="block">こんな悩みを</span>
+              <span className="block">抱えていませんか？</span>
             </h2>
           </div>
         </header>
