@@ -21,8 +21,7 @@ export default function AthleteVoicesPage() {
           <article>
             <Link href="/athlete-voices/baseball-interview/" className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64]">
               <div className="relative aspect-video overflow-hidden rounded border border-white/15">
-                <Image src="/images/voices-baseball.webp" alt="野球場を見つめる選手（イメージ写真）" fill sizes="(max-width: 639px) 100vw, 480px" className="object-cover object-[center_70%]" />
-                <span className="absolute bottom-2 right-2 bg-[#041225]/80 px-2 py-1 text-[10px] text-slate-200">イメージ写真</span>
+                <Image src="/images/nareru-voices-thumbnail.webp" alt="ネイビー背景のNARERUロゴ" fill sizes="(max-width: 639px) 100vw, 480px" className="bg-[#061a33] object-contain" />
               </div>
               <h2 className="mt-3 text-base font-semibold leading-[1.7] group-hover:text-[#e8c980] sm:text-lg">{voice.title}</h2>
             </Link>

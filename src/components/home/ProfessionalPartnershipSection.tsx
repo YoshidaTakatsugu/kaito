@@ -10,7 +10,7 @@ export function ProfessionalPartnershipSection() {
           href="https://jsmc-assoc.com/"
           target="_blank"
           rel="noreferrer"
-          className="group mx-auto mt-10 block max-w-xl border border-cyan-100/15 bg-white p-7 text-[#041225] transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64]"
+          className="group mx-auto mt-10 block max-w-xl border border-cyan-100/15 bg-white p-4 text-[#041225] transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64] sm:p-7"
           aria-label="一般社団法人 日本スポーツメンタルコーチ協会の公式サイトを開く"
         >
           <Image
@@ -21,7 +21,10 @@ export function ProfessionalPartnershipSection() {
             sizes="(max-width: 640px) 86vw, 36rem"
             className="mx-auto h-auto max-h-36 w-auto max-w-full object-contain"
           />
-          <p className="mt-6 text-sm font-semibold leading-7 sm:text-base">一般社団法人　日本スポーツメンタルコーチ協会</p>
+          <p className="mt-6 font-semibold leading-7">
+            <span className="block text-xs">一般社団法人</span>
+            <span className="block whitespace-nowrap text-[13px] min-[375px]:text-sm sm:text-base">日本スポーツメンタルコーチ協会</span>
+          </p>
           <span className="mt-3 inline-block text-xs font-semibold tracking-[0.16em] text-[#0b5f8f]">OFFICIAL SITE →</span>
         </a>
       </div>
