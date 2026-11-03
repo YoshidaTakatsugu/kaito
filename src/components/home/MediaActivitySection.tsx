@@ -68,7 +68,7 @@ const mediaActivityItems = [
 export function MediaActivitySection() {
   return (
     <section id="media" className="bg-[#061a33] px-5 py-20 text-white sm:px-8 sm:py-24">
-      <div className="mx-auto w-full max-w-7xl">
+      <SectionReveal soft className="mx-auto w-full max-w-7xl">
         <div className="grid gap-6 sm:gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">
@@ -91,7 +91,8 @@ export function MediaActivitySection() {
         <div className="mt-8 sm:mt-14">
           <MediaActivityCards items={mediaActivityItems} />
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }
+import { SectionReveal } from "./SectionReveal";

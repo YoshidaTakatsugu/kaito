@@ -6,7 +6,7 @@ import { SectionReveal } from "./SectionReveal";
 export function ServicesSection() {
   return (
     <section id="services" className="bg-[#061a33] px-5 py-20 text-white sm:px-8 sm:py-24">
-      <SectionReveal className="mx-auto w-full max-w-7xl">
+      <SectionReveal soft className="mx-auto w-full max-w-7xl">
         <header className="grid gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">

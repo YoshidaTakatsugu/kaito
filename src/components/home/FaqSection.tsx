@@ -4,7 +4,7 @@ import { SectionReveal } from "./SectionReveal";
 export function FaqSection() {
   return (
     <section id="faq" className="bg-[#061a33] px-5 py-20 text-white sm:px-8 sm:py-24">
-      <SectionReveal className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.42fr_1fr]">
+      <SectionReveal soft className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.42fr_1fr]">
         <header>
           <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">FAQ</p>
           <h2 className="mt-6 font-serif text-[2rem] leading-[1.4] sm:text-5xl sm:leading-[1.3]">よくある質問</h2>

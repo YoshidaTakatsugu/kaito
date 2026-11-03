@@ -358,6 +358,7 @@ main a.inline-flex > span[aria-hidden="true"] { transition: transform 180ms ease
 }
 
 @media (prefers-reduced-motion: reduce) {
+  [data-soft-reveal] { opacity: 1 !important; transform: none !important; }
   *, *::before, *::after { transition-duration: 0s !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   :where(main a.inline-flex, .motion-button, main button[type="submit"], .scroller-arrow):active { transform: none; }
   main a.inline-flex:hover > span[aria-hidden="true"], main a.inline-flex:focus-visible > span[aria-hidden="true"] { transform: none; }
@@ -365,3 +366,5 @@ main a.inline-flex > span[aria-hidden="true"] { transition: transform 180ms ease
     scroll-behavior: auto;
   }
 }
+
+@media print { [data-soft-reveal] { opacity: 1 !important; transform: none !important; } }

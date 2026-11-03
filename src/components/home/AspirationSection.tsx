@@ -4,7 +4,7 @@ import { SectionReveal } from "./SectionReveal";
 export function AspirationSection() {
   return (
     <section id="problem" className="bg-[#041225] px-5 py-20 text-white sm:px-8 sm:py-24">
-      <SectionReveal className="mx-auto w-full max-w-7xl">
+      <SectionReveal soft className="mx-auto w-full max-w-7xl">
         <header>
           <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">ASPIRATION</p>

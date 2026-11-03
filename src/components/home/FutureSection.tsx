@@ -5,7 +5,7 @@ import { SectionReveal } from "./SectionReveal";
 export function FutureSection() {
   return (
     <section id="future" className="bg-[#061a33] px-5 py-20 text-white sm:px-8 sm:py-24">
-      <SectionReveal className="mx-auto w-full max-w-7xl">
+      <SectionReveal soft className="mx-auto w-full max-w-7xl">
         <div className="max-w-5xl">
           <p className="text-xs font-semibold tracking-[0.28em] text-cyan-100">FUTURE</p>
           <h2 className="mt-5 font-serif text-[23px] leading-[1.5] min-[360px]:text-2xl sm:text-4xl">

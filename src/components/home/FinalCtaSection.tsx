@@ -14,7 +14,7 @@ export function FinalCtaSection() {
         className="-z-20 object-cover object-right opacity-35 sm:object-[68%_center]"
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,18,38,0.98),rgba(3,18,38,0.72),rgba(3,18,38,0.45))]" />
-      <SectionReveal className="mx-auto w-full max-w-7xl">
+      <SectionReveal soft className="mx-auto w-full max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold tracking-[0.28em] text-[#d6ae64]">TAKE THE FIRST STEP</p>
           <h2 className="mt-6 font-serif text-[28px] leading-[1.4] min-[375px]:text-[2rem] sm:text-5xl sm:leading-[1.3]"><span className="block sm:inline">自分の力を</span><span className="block sm:inline">結果につなげよう。</span></h2>

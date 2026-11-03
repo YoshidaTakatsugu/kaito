@@ -1,4 +1,5 @@
 import { coach } from "@/lib/brand";
+import { SectionReveal } from "./SectionReveal";
 import { seminarContent, seminarHref } from "@/lib/seminar";
 
 export function MailSeminarSection() {
@@ -8,7 +9,7 @@ export function MailSeminarSection() {
       aria-labelledby="seminar-heading"
       className="border-y border-white/10 bg-[#071a32] px-5 py-12 text-white sm:px-8 sm:py-24"
     >
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-x-16">
+      <SectionReveal soft className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-x-16">
         <div className="min-w-0">
           <p className="text-xs font-semibold text-[#d6ae64]">
             {seminarContent.name}
@@ -70,7 +71,7 @@ export function MailSeminarSection() {
             </p>
           </div>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }
