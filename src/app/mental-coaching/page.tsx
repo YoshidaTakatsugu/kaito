@@ -368,7 +368,13 @@ export default function MentalCoachingPage() {
                 eyebrow="OUR PURPOSE"
                 lines={["スポーツメンタルコーチングが", "目指すもの"]}
               />
-              <Paragraphs items={content.goal.paragraphs} />
+              <div className="mental-coaching-prose space-y-4 text-base leading-[1.8] text-slate-300">
+                {content.goal.paragraphs.map((paragraph, index) => (
+                  <p key={paragraph}>
+                    {index === 2 ? <>その先にあるのは、<strong className="font-semibold text-cyan-50">積み上げてきた力を本番で発揮し、理想の結果へつなげられる状態</strong>です。</> : paragraph}
+                  </p>
+                ))}
+              </div>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <Link
