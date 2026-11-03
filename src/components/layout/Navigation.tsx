@@ -45,7 +45,7 @@ export function Navigation() {
         <div className="flex items-center gap-2">
           <Link
             href={trialNavigationItem.href}
-            className="inline-flex min-h-11 items-center justify-center border border-[#d6ae64]/70 bg-[#d6ae64] px-3 text-[0.68rem] font-semibold tracking-[0.06em] text-[#031226] transition-colors duration-200 hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-4 sm:text-xs sm:tracking-[0.08em]"
+            className="motion-button inline-flex min-h-11 items-center justify-center border border-[#d6ae64]/70 bg-[#d6ae64] px-3 text-[0.68rem] font-semibold tracking-[0.06em] text-[#031226] transition-colors duration-200 hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-4 sm:text-xs sm:tracking-[0.08em]"
           >
             <span className="sm:hidden">体験予約</span>
             <span className="hidden sm:inline">{trialNavigationItem.label}</span>

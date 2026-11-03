@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Disclosure } from "@/components/ui/Disclosure";
+import { HorizontalScroller } from "@/components/ui/HorizontalScroller";
 
 import { site } from "@/lib/brand";
 import { trialPageContent as content } from "@/lib/trial";
@@ -161,14 +163,14 @@ export default function TrialPage() {
         <div className="mx-auto max-w-6xl">
           <p className="text-xs font-semibold tracking-[0.2em] text-[#e8c980]">THREE BENEFITS</p>
           <h2 className="mt-3 font-serif text-[22px] leading-[1.5] sm:text-3xl">{content.benefits.title.replace("3つのこと", "")}<span className="block sm:inline">3つのこと</span></h2>
-          <div role="region" aria-label="体験コーチングの3つのメリット" tabIndex={0} className="trial-benefits-scroller mt-6 grid auto-cols-[90%] grid-flow-col snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64] md:auto-cols-auto md:grid-flow-row md:grid-cols-3 md:overflow-visible md:pb-0">
+          <HorizontalScroller label="体験コーチングの3つのメリット" className="trial-benefits-scroller mt-6 grid auto-cols-[90%] grid-flow-col snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6ae64] md:auto-cols-auto md:grid-flow-row md:grid-cols-3 md:overflow-visible md:pb-0">
             {content.benefits.items.map((benefit, index) => {
               const examples = "examples" in benefit ? <blockquote className="space-y-1 border-l-2 border-[#d6ae64]/60 pl-3 text-cyan-50">{benefit.examples.map(example => <p key={example}>{example}</p>)}</blockquote> : null;
               return (
                 <article key={benefit.title} className="min-w-0 snap-start border border-white/15 bg-white/[0.035] p-5 sm:p-6">
                   <p className="text-sm font-semibold text-[#91e2c6]" aria-hidden="true">0{index + 1}</p>
                   <h3 className="mt-3 text-lg font-semibold leading-[1.6]">{benefit.title}</h3>
-                  <details className="group mt-4 border-t border-white/15">
+                  <Disclosure className="group mt-4 border-t border-white/15">
                     <summary className="flex min-h-11 cursor-pointer list-none items-center py-3 text-sm font-semibold text-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6ae64] [&::-webkit-details-marker]:hidden">
                       <span className="group-open:hidden">詳しく見る</span><span className="hidden group-open:inline">説明を閉じる</span>
                     </summary>
@@ -179,11 +181,11 @@ export default function TrialPage() {
                       {index !== 1 ? examples : null}
                       {"closing" in benefit ? <p>{benefit.closing}</p> : null}
                     </div>
-                  </details>
+                  </Disclosure>
                 </article>
               );
             })}
-          </div>
+          </HorizontalScroller>
         </div>
       </section>
 
@@ -232,12 +234,12 @@ export default function TrialPage() {
           </header>
           <div className="border-t border-white/15">
             {content.faq.items.map((item, index) => (
-              <details key={item.question} className="group border-b border-white/10" open={index === 0}>
+              <Disclosure key={item.question} className="group border-b border-white/10" open={index === 0}>
                 <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold leading-[1.8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6ae64] [&::-webkit-details-marker]:hidden">
                   <span>{item.question}</span><span aria-hidden="true" className="text-xl font-normal text-[#91e2c6] group-open:rotate-45">+</span>
                 </summary>
                 <div className="space-y-2 pb-4 text-sm leading-[1.8] text-slate-300">{item.answers.map(answer => <p key={answer}>{answer}</p>)}</div>
-              </details>
+              </Disclosure>
             ))}
           </div>
         </div>

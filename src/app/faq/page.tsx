@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Disclosure } from "@/components/ui/Disclosure";
 
 import { SectionReveal } from "@/components/home/SectionReveal";
 import { site } from "@/lib/brand";
@@ -145,7 +146,7 @@ export default function FaqPage() {
 
             <div className="border-t border-cyan-100/20">
               {category.items.map((item, itemIndex) => (
-                <details
+                <Disclosure
                   key={item.number}
                   className="group border-b border-cyan-100/15"
                   open={categoryIndex === 0 && itemIndex === 0}
@@ -177,7 +178,7 @@ export default function FaqPage() {
                       ))}
                     </div>
                   </div>
-                </details>
+                </Disclosure>
               ))}
             </div>
           </SectionReveal>

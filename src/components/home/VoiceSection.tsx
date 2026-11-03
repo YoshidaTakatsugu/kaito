@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Disclosure } from "@/components/ui/Disclosure";
 import { featuredAthleteVoice as voice } from "@/lib/brand";
 
 export function VoiceSection() {
@@ -83,7 +84,7 @@ export function VoiceSection() {
           </header>
           <div className="voices-questions">
             {voice.questions.map((item, index) => (
-              <details key={item.question} open={index === 0} className="group">
+              <Disclosure key={item.question} open={index === 0} className="group">
                 <summary>
                   <span>{item.question}</span>
                   <span
@@ -98,7 +99,7 @@ export function VoiceSection() {
                     <p key={answer}>{answer}</p>
                   ))}
                 </div>
-              </details>
+              </Disclosure>
             ))}
           </div>
         </section>

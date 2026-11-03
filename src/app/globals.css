@@ -334,7 +334,33 @@ body {
   }
 }
 
+:where(main a.inline-flex, .motion-button, main button[type="submit"]) {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 120ms ease;
+}
+:where(main a.inline-flex, .motion-button, main button[type="submit"]):active:not(:disabled) { transform: scale(.985); }
+main a.inline-flex > span[aria-hidden="true"] { transition: transform 180ms ease; }
+[data-disclosure] > summary { transition: color 160ms ease; touch-action: manipulation; }
+[data-disclosure] > summary:active { color: #e8c980; }
+.scroller-controls { display: flex; align-items: center; gap: 12px; min-height: 52px; margin-top: 4px; }
+.scroller-arrow { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #c7f3ff35; color: #e8c980; background: transparent; cursor: pointer; transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease, opacity 160ms ease; }
+.scroller-arrow:disabled { opacity: .3; cursor: default; }
+.scroller-arrow:active:not(:disabled) { transform: scale(.96); }
+.scroller-arrow:focus-visible { outline: 2px solid #d6ae64; outline-offset: 3px; }
+.scroller-position { display: block; flex: 1; min-width: 0; height: 2px; background: #c7f3ff30; transition: background-color 180ms ease; }
+.scroller-position.is-current { background: #d6ae64; }
+@media (min-width: 768px) { .scroller-controls { display: none; } }
+@media (hover: hover) and (pointer: fine) {
+  main a.inline-flex:hover > span[aria-hidden="true"], main a.inline-flex:focus-visible > span[aria-hidden="true"] { transform: translateX(4px); }
+  [data-disclosure] > summary:hover { color: #e8c980; }
+  .scroller-arrow:hover:not(:disabled) { background: #d6ae6414; border-color: #d6ae64; }
+  .media-card-scroller article { transition: border-color 180ms ease; }
+  .media-card-scroller article:hover { border-color: #d6ae6480; }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0s !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  :where(main a.inline-flex, .motion-button, main button[type="submit"], .scroller-arrow):active { transform: none; }
+  main a.inline-flex:hover > span[aria-hidden="true"], main a.inline-flex:focus-visible > span[aria-hidden="true"] { transform: none; }
   html {
     scroll-behavior: auto;
   }

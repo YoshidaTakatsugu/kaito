@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { HorizontalScroller } from "@/components/ui/HorizontalScroller";
 import {
   LazyMotion,
   MotionConfig,
@@ -23,15 +24,6 @@ export type MediaActivityItem = {
 
 type MediaActivityCardsProps = {
   items: readonly MediaActivityItem[];
-};
-
-const listVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
 };
 
 const cardVariants: Variants = {
@@ -59,21 +51,18 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
   return (
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation}>
-        <m.div
+        <HorizontalScroller
           className="media-card-scroller grid auto-cols-[86%] grid-flow-col snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 md:auto-cols-auto md:grid-flow-row md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 xl:grid-cols-3"
-          role="region"
-          aria-label="活動実績・トピックス一覧"
-          tabIndex={0}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-          variants={listVariants}
+          label="動画・インタビュー一覧"
         >
         {items.map((item) => (
           <m.article
             key={item.id}
             className="group min-w-0 snap-start overflow-hidden border border-cyan-100/15 bg-white/[0.045] md:shadow-[0_24px_80px_rgba(0,0,0,0.2)]"
             variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
           >
             <a
               href={item.url}
@@ -88,7 +77,7 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
                   alt={getThumbnailAlt(item)}
                   fill
                   sizes="(max-width: 767px) 86vw, (max-width: 1279px) 50vw, 31vw"
-                  className="object-cover object-center opacity-[0.86] transition-transform duration-500 group-hover:scale-[1.035]"
+                  className="object-cover object-center opacity-[0.86]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#041225]/88 via-[#041225]/24 to-transparent" />
                 <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-cyan-100/20 bg-[#041225]/72 px-3 py-2 text-xs font-semibold tracking-[0.16em] text-cyan-50 backdrop-blur-sm">
@@ -122,7 +111,7 @@ export function MediaActivityCards({ items }: MediaActivityCardsProps) {
             </a>
           </m.article>
         ))}
-        </m.div>
+        </HorizontalScroller>
       </LazyMotion>
     </MotionConfig>
   );
