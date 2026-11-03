@@ -57,17 +57,25 @@ export const heroContent = {
   },
 } as const;
 
-export const empathyContent = {
-  title: "こんな悩みを抱えていませんか？",
-  worries: [
-    "練習ではできるのに試合になるとできない",
-    "プレッシャーを感じて試合が怖くなる",
-    "大事な場面で力を発揮できず、思うような結果につながらない",
-    "ネガティブなことばかり考えてしまう",
-    "自分ならもっと活躍できるはずだと、モヤモヤしている",
+export const aspirationContent = {
+  title: "こんな想いを、胸に抱いていませんか？",
+  aspirations: [
+    "今よりもっと強くなりたい",
+    "自分の可能性をもっと広げたい",
+    "全国大会で活躍したい",
+    "日本一、世界一という目標を叶えたい",
+    "積み重ねてきた努力を結果につなげたい",
+    "自分の限界を超え、まだ見ぬ景色を見てみたい",
   ],
-  closing:
-    "「もっとできるはず」を、結果につなげる。メンタルから、その一歩を。",
+  introduction: "スポーツメンタルコーチングは、メンタルに悩みを抱えるアスリートだけのためではありません。",
+  emphasis: "もっと強くなりたい。もっと上を目指したい。",
+  paragraphs: [
+    "そんな想いを持ち、挑戦し続けるすべてのアスリートのためのものです。",
+    "目指すステージが変われば、求められる力も変わっていきます。",
+    "だからこそ、技術やフィジカルを磨き続けるのと同じように、メンタルも次の目標に相応しいものへと育てていくことが大切です。",
+  ],
+  closingLead: "その想いを、結果につなげるために。",
+  closing: "一緒に挑戦し続けます。",
 } as const;
 
 export const futureContent = {
@@ -374,7 +382,7 @@ export const faqs = [
 ] as const;
 
 export const homePageSections = [
-  ["#problem", empathyContent.title, empathyContent.closing],
+  ["#problem", aspirationContent.title, aspirationContent.introduction],
   ["#future", futureContent.title, futureContent.introduction],
   [
     "#usp",

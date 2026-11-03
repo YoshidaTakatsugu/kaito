@@ -1,4 +1,4 @@
-import { EmpathySection } from "@/components/home/EmpathySection";
+import { AspirationSection } from "@/components/home/AspirationSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { FutureSection } from "@/components/home/FutureSection";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="home-page">
       <HeroSection />
-      <EmpathySection />
+      <AspirationSection />
       <FutureSection />
       <UspSection />
       <MediaActivitySection />
