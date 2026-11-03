@@ -93,7 +93,7 @@ body {
 .mental-section-meta p { font-size: 11px; letter-spacing: .16em; color: #8ed9e7; font-weight: 600; }
 .mental-section-meta a { flex-shrink: 0; font-size: 11px; color: #a7bacb; padding: 8px 0 8px 8px; }
 .mental-section-heading h2 { margin-top: 12px; font-family: var(--font-site-serif); font-size: 32px; line-height: 1.5; font-weight: 400; }
-.mental-section-heading h2 span { display: block; overflow-wrap: normal; word-break: keep-all; }
+.mental-section-heading h2 span { display: block; overflow-wrap: anywhere; word-break: normal; text-wrap: balance; }
 .mental-coaching-page .mental-coaching-prose { max-width: 46rem; font-size: 15px; line-height: 1.85; }
 .mental-reading-section .grid .mental-section-heading { margin-bottom: 0; }
 .mental-reading-section h3 { font-size: 20px; line-height: 1.7; }

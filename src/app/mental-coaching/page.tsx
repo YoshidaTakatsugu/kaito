@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { conceptContent, logicContent, site } from "@/lib/brand";
+import { site } from "@/lib/brand";
 import { mentalCoachingPage as content } from "@/lib/mental-coaching";
 
 export const metadata: Metadata = {
@@ -31,8 +31,6 @@ type ParagraphsProps = {
 };
 
 const sections = [
-  { id: "logic", label: "本番で力を出せない理由" },
-  { id: "concept", label: "NARERUのコンセプト" },
   { id: "coaching", label: "コーチングとは" },
   { id: "method", label: "ティーチングとの違い" },
   { id: "accel-brake", label: "スポーツメンタルの役割" },
@@ -176,47 +174,10 @@ export default function MentalCoachingPage() {
           </nav>
         </aside>
         <div className="mental-reading-content">
-          <section id="logic" className="mental-reading-section">
-            <SectionHeading
-              number="01"
-              eyebrow="LOGIC"
-              lines={["なぜ本番で", "力を発揮できないのか？"]}
-            />
-            <h3 className="mental-logic-conclusion">
-              {logicContent.conclusion}
-            </h3>
-            <Paragraphs items={[logicContent.description]} />
-          </section>
-          <section id="concept" className="mental-reading-section">
-            <SectionHeading
-              number="02"
-              eyebrow="NARERU CONCEPT"
-              lines={["結果に相応しい", "自分になれる。"]}
-            />
-            <figure className="mental-concept-image">
-              <Image
-                src="/images/mental-running.webp"
-                alt="朝の光の中、自分のペースで前へ進むランナーたち"
-                width={1100}
-                height={619}
-                sizes="(max-width: 1023px) 100vw, 900px"
-              />
-            </figure>
-            <Paragraphs items={[conceptContent.body]} />
-            <ol className="mental-result-cycle">
-              {["メンタル", "行動", "結果"].map((label, index) => (
-                <li key={label}>
-                  <span>0{index + 1}</span>
-                  {label}
-                </li>
-              ))}
-            </ol>
-          </section>
-
           <section id="coaching" className="mental-reading-section">
             <div className="grid gap-6">
               <SectionHeading
-                number="03"
+                number="01"
                 eyebrow="COACHING"
                 lines={[content.coaching.title]}
               />
@@ -228,7 +189,7 @@ export default function MentalCoachingPage() {
             <div className="mx-auto w-full max-w-7xl">
               <div className="grid gap-6">
                 <SectionHeading
-                  number="04"
+                  number="02"
                   eyebrow="METHOD"
                   lines={["ティーチングと", "コーチングの違い"]}
                 />
@@ -255,9 +216,9 @@ export default function MentalCoachingPage() {
             <div className="mx-auto w-full max-w-7xl">
               <div className="grid gap-6">
                 <SectionHeading
-                  number="05"
+                  number="03"
                   eyebrow="ACCEL & BRAKE"
-                  lines={["コーチングと", "スポーツメンタルの違い"]}
+                  lines={["コーチングと", "スポーツメンタルコーチングの違い"]}
                 />
                 <Paragraphs
                   items={content.sportsMentalDifference.introduction}
@@ -270,8 +231,7 @@ export default function MentalCoachingPage() {
                     ACCEL / コーチング
                   </p>
                   <h3 className="mental-role-title mt-3 font-semibold">
-                    <span>目標へ進むための</span>
-                    <span>アクセルを強める</span>
+                    {content.sportsMentalDifference.accelerator.title}
                   </h3>
                   <Paragraphs
                     items={
@@ -286,8 +246,7 @@ export default function MentalCoachingPage() {
                     RELEASE THE BRAKE / スポーツメンタル
                   </p>
                   <h3 className="mental-role-title mt-3 font-semibold">
-                    <span>ブレーキを緩めて</span>
-                    <span>アクセルを活かす</span>
+                    {content.sportsMentalDifference.brake.title}
                   </h3>
                   <Paragraphs
                     items={content.sportsMentalDifference.brake.beforeExamples}
@@ -308,7 +267,7 @@ export default function MentalCoachingPage() {
             <div className="grid gap-6">
               <div>
                 <SectionHeading
-                  number="06"
+                  number="04"
                   eyebrow="IDEAL MINDSET"
                   lines={["結果に相応しい", "メンタルとは？"]}
                 />
@@ -346,7 +305,7 @@ export default function MentalCoachingPage() {
             <div className="mx-auto w-full max-w-7xl">
               <div className="grid gap-6">
                 <SectionHeading
-                  number="07"
+                  number="05"
                   eyebrow="SELF-IMAGE"
                   lines={["目に見える結果は、", "どこから生まれるのか"]}
                 />
@@ -368,21 +327,21 @@ export default function MentalCoachingPage() {
               </figure>
 
               <div className="mt-7 grid gap-7">
-                <dl className="border-t border-cyan-100/15">
+                <ul className="list-disc space-y-2 border-t border-cyan-100/15 pl-5 pt-4 text-sm leading-[1.8] text-cyan-50 marker:text-[#d6ae64]">
+                  {content.visibleResults.levels.map(level => <li key={level.name}>{level.name}</li>)}
+                </ul>
+                <div className="mental-coaching-prose space-y-4 text-slate-300">
                   {content.visibleResults.levels.map((level) => (
                     <div
                       key={level.name}
-                      className="border-b border-cyan-100/15 py-4"
+                      className="text-sm leading-[1.8]"
                     >
-                      <dt className="text-base font-semibold text-cyan-50">
-                        {level.name}
-                      </dt>
-                      <dd className="mt-2 text-sm leading-[1.8] text-slate-300">
+                      <p>
                         {level.description}
-                      </dd>
+                      </p>
                     </div>
                   ))}
-                </dl>
+                </div>
 
                 <div className="mental-coaching-prose space-y-4 text-base leading-[1.8] text-slate-300">
                   {content.visibleResults.explanation.map((paragraph, index) =>
@@ -405,9 +364,9 @@ export default function MentalCoachingPage() {
           <section id="purpose" className="mental-reading-section">
             <div>
               <SectionHeading
-                number="08"
+                number="06"
                 eyebrow="OUR PURPOSE"
-                lines={["スポーツメンタルの", "目指すもの"]}
+                lines={["スポーツメンタルコーチングが", "目指すもの"]}
               />
               <Paragraphs items={content.goal.paragraphs} />
 
