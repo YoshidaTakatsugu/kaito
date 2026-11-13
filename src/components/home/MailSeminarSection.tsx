@@ -46,7 +46,8 @@ export function MailSeminarSection() {
           </p>
           <a
             href={seminarHref}
-            className="mt-6 flex min-h-14 w-full items-center justify-center gap-3 rounded bg-[#d6ae64] px-4 py-3 text-center text-sm font-semibold leading-6 text-[#031226] transition-colors hover:bg-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            data-press-tone="solid"
+            className="motion-button mt-6 flex min-h-14 w-full items-center justify-center gap-3 rounded bg-[#d6ae64] px-4 py-3 text-center text-sm font-semibold leading-6 text-[#031226] transition-colors hover:bg-[#e8c980] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             {seminarContent.ctaLabel}<span aria-hidden="true">→</span>
           </a>

@@ -24,7 +24,14 @@ export function FutureSection() {
                 <span className="text-xs font-semibold tracking-[0.15em] text-[#d6ae64]">
                   0{index + 1}
                 </span>
-                <span className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">{benefit}</span>
+                <span className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">
+                  {index === 2 || index === 3 ? (
+                    <>
+                      {benefit.split("、")[0]}、<br />
+                      {benefit.split("、").slice(1).join("、")}
+                    </>
+                  ) : benefit}
+                </span>
               </li>
             ))}
           </ol>
@@ -32,7 +39,7 @@ export function FutureSection() {
             <span className="block">そんな自分へ、</span>
             <span className="block">少しずつ近づいていきます。</span>
           </p>
-          <Link href="/mental-coaching/" className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-[#d6ae64] px-3 py-3 text-center text-sm font-semibold leading-6 text-[#e8c980] transition-colors hover:bg-[#d6ae64] hover:text-[#031226] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto sm:px-6">
+          <Link href="/mental-coaching/" data-press-tone="outline" className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-[#d6ae64] px-3 py-3 text-center text-sm font-semibold leading-6 text-[#e8c980] transition-colors hover:bg-[#d6ae64] hover:text-[#031226] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto sm:px-6">
             <span>スポーツメンタルコーチングとは</span>
             <span aria-hidden="true" className="shrink-0">→</span>
           </Link>

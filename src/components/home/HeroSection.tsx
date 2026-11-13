@@ -44,6 +44,7 @@ export function HeroSection() {
           <div className="hero-actions mt-7 grid max-w-xl gap-3 sm:grid-cols-2">
             <a
               href={heroContent.primaryCta.href}
+              data-press-tone="solid"
               className="inline-flex min-h-12 items-center justify-center bg-[#d6ae64] px-5 text-center text-sm font-semibold tracking-[0.08em] text-[#031226] transition-colors duration-200 hover:bg-[#e8c980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               {heroContent.primaryCta.label}
@@ -53,6 +54,7 @@ export function HeroSection() {
             </a>
             <a
               href={heroContent.secondaryCta.href}
+              data-press-tone="outline"
               className="inline-flex min-h-12 items-center justify-center border border-white/40 bg-[#031226]/45 px-5 text-center text-sm font-semibold tracking-[0.06em] text-white backdrop-blur-sm transition-colors duration-200 hover:border-white/75 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               {heroContent.secondaryCta.label}

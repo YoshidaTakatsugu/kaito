@@ -27,7 +27,9 @@ export function AspirationSection() {
                   <path d="m7 11 4 4L21 5" />
                 </svg>
                 <p className="text-pretty text-[15px] font-semibold leading-7 text-slate-100 sm:text-base">
-                  {aspiration}
+                  {aspiration === "自分の限界を超え、まだ見ぬ景色を見てみたい" ? (
+                    <>自分の限界を超え、<br />まだ見ぬ景色を見てみたい</>
+                  ) : aspiration}
                 </p>
               </li>
             ))}

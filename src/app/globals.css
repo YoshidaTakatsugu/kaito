@@ -335,9 +335,15 @@ body {
 }
 
 :where(main a.inline-flex, .motion-button, main button[type="submit"]) {
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 120ms ease;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease-out;
 }
-:where(main a.inline-flex, .motion-button, main button[type="submit"]):active:not(:disabled) { transform: scale(.985); }
+:where(main a.inline-flex, .motion-button, main button[type="submit"]):is(:active, [data-pressed]):not(:disabled) {
+  transform: translateY(2px) scale(.975);
+  box-shadow: inset 0 2px 4px #00000030;
+  transition-duration: 70ms;
+}
+[data-press-tone="outline"]:is(:active, [data-pressed]), .home-hero [data-press-tone="outline"]:is(:active, [data-pressed]) { background-color: #d6ae6433; border-color: #e8c980; color: #ffffff; }
+:is([data-press-tone="solid"], main button[type="submit"]):is(:active, [data-pressed]):not(:disabled) { background-color: #c39a51; }
 main a.inline-flex > span[aria-hidden="true"] { transition: transform 180ms ease; }
 [data-disclosure] > summary { transition: color 160ms ease; touch-action: manipulation; }
 [data-disclosure] > summary:active { color: #e8c980; }
@@ -360,7 +366,7 @@ main a.inline-flex > span[aria-hidden="true"] { transition: transform 180ms ease
 @media (prefers-reduced-motion: reduce) {
   [data-soft-reveal] { opacity: 1 !important; transform: none !important; }
   *, *::before, *::after { transition-duration: 0s !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-  :where(main a.inline-flex, .motion-button, main button[type="submit"], .scroller-arrow):active { transform: none; }
+  :is(main a.inline-flex, .motion-button, main button[type="submit"], .scroller-arrow):is(:active, [data-pressed]):not(:disabled) { transform: none; }
   main a.inline-flex:hover > span[aria-hidden="true"], main a.inline-flex:focus-visible > span[aria-hidden="true"] { transform: none; }
   html {
     scroll-behavior: auto;
