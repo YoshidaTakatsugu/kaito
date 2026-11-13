@@ -16,7 +16,7 @@ export function HeroCopyMotion() {
             <m.span
               key={line}
               aria-hidden="true"
-              className={`block hero-title-emphasis ${
+              className={`block whitespace-nowrap hero-title-emphasis ${
                 index === 0 ? "hero-title-lead text-[#d6ae64]" : "hero-title-result text-white"
               }`}
             >
