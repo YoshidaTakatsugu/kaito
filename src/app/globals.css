@@ -52,11 +52,11 @@ body {
 }
 
 .home-hero .hero-title .hero-title-lead {
-  font-size: min(44px, 5.8cqw);
+  font-size: calc(min(44px, 5.8cqw) + 8px);
 }
 
 .home-hero .hero-title .hero-title-result {
-  font-size: min(32px, 4.3cqw);
+  font-size: calc(min(32px, 4.3cqw) + 8px);
 }
 
 .mental-page-hero { min-height: 360px; padding-block: 48px; }
