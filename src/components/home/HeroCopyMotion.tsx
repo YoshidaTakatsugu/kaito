@@ -24,7 +24,7 @@ export function HeroCopyMotion() {
             </m.span>
           ))}
         </h1>
-        <p className="hero-author mt-3 whitespace-nowrap text-base font-medium leading-7 text-white sm:text-lg">
+        <p className="hero-author mt-3 whitespace-nowrap text-sm font-medium leading-7 text-white sm:text-lg">
           {heroContent.author}
         </p>
       </m.div>
