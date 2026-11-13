@@ -24,6 +24,9 @@ export function HeroCopyMotion() {
             </m.span>
           ))}
         </h1>
+        <p className="hero-author mt-3 whitespace-nowrap text-sm font-medium leading-6 text-white sm:text-base">
+          {heroContent.author}
+        </p>
       </m.div>
     </LazyMotion>
   );

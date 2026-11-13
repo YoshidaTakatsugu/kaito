@@ -42,13 +42,14 @@ export const mobileNavigationItems = [
 
 export const heroContent = {
   title:
-    "可能性の限界は 想像しているずっと先にある 全てのアスリートに 目標を叶えるメンタルを",
+    "試合で実力を出し切れない選手に その力を結果につなげるメンタルコーチング",
   titleLines: [
     "可能性の限界は",
     "想像しているずっと先にある",
-    "全てのアスリートに",
-    "目標を叶えるメンタルを",
+    "試合で実力を出し切れない選手に",
+    "その力を結果につなげるメンタルコーチング",
   ],
+  author: "スポーツメンタルコーチ｜押田海斗",
   subcopy: "結果に相応しいメンタルを育むスポーツメンタルコーチング",
   primaryCta: { label: "体験コーチングに申し込む", href: "/trial/apply/" },
   secondaryCta: {
